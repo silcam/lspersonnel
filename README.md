@@ -1,6 +1,7 @@
 # README
 
 C'est le README pour le database LSPersonnel!
+ok c'est mon premier code 
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
