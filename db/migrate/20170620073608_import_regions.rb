@@ -10,6 +10,7 @@ class ImportRegions < ActiveRecord::Migration[5.1]
         failed_records << line unless Region.create(id: id, name: name)
       end
     end
+    p "Failed Records:"
     failed_records.each{|line| p line}
   end
 
