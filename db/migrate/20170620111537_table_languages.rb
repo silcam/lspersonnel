@@ -1,6 +1,8 @@
 class TableLanguages < ActiveRecord::Migration[5.1]
   def change
-    create_table languages
-    add_column :languages, :name, :string
+    create_table :languages do |t|
+      t.string :name
+      t.timestamps
+    end
   end
 end
