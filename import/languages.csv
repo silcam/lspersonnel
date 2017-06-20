@@ -1,24 +1,24 @@
 "id"|"Language"|"FrenchText"|"RegionID"|"Department"|"Details"
-3|"Nomaande"|"sur la langue nomaandé (lemande)"|1|"parlée dans le Deàpartement du Mbam-et-Inoubou"|
-6|"Mkaa'"|"sur la langue mkaa' (bakaka)"|2|"parlée dans le Deàpartement du Moungo"|
-7|"Kako"|"sur la langue kako"|4|"parlée dans le Deàpartement de la Kadey"|
-8|"Karang"|"sur la langue karang"|6|"parleàe dans le Deàpartement du Mayo-Rey"|
-9|"Mbodomo"|"sur la langue gbaya mbodomo"|4|"parlée dans le Deàpartement du Lom-et-Djeàrem"|
-10|"Yemba"|"sur la langue yemba"|8|"parleàe dans le Deàpartement de la Meànoua"|
-11|"Oku"|"sur la langue oku"|10|"parlée dans le Deàpartement de la Bui"|
-12|"Mofu-Gudur"|"sur la langue mofu-gudur"|7|"parleàe dans le Deàpartement du Mayo-Tsanaga"|
-13|"Mekaa"|"sur la langue mekaa"|4|"parlée dans le Deàpartement du Haut-Nyong"|
-14|"Ngomba"|"sur la langue ngomba"|8|"parlée dans le Deàpartement des Bamboutos"|
-16|"Moloko"|"sur la langue moloko"|7|"parleàe dans les Deàpartements du Mayo-Sava et du Diamareà"|
-17|"Nugunu"|"sur la langue nugunu"|1|"parlée dans le Deàpartement du Mbam et Inoubou"|
-18|"Manyu Literacy"|"sur les langues ejagham, kenyang et denya"|9|"parlées dans les Deàpartements de la Manyu et de la Meàmeà"|"Ejagham, Kenyang and Denya"
-19|"Konzime"|"sur la langue koozime"|4|"parlée dans le Deàpartement du Haut-Nyong"|
-20|"Noni"|"sur la langue nooni"|10|"parlée dans les Deàpartements de la Bui, de la Donga-Mantung et de la Menchum"|
+3|"Nomaande"|"sur la langue nomaandé (lemande)"|1|"parlée dans le Département du Mbam-et-Inoubou"|
+6|"Mkaa'"|"sur la langue mkaa' (bakaka)"|2|"parlée dans le Département du Moungo"|
+7|"Kako"|"sur la langue kako"|4|"parlée dans le Département de la Kadey"|
+8|"Karang"|"sur la langue karang"|6|"parlée dans le Département du Mayo-Rey"|
+9|"Mbodomo"|"sur la langue gbaya mbodomo"|4|"parlée dans le Département du Lom-et-Djérem"|
+10|"Yemba"|"sur la langue yemba"|8|"parlée dans le Département de la Ménoua"|
+11|"Oku"|"sur la langue oku"|10|"parlée dans le Département de la Bui"|
+12|"Mofu-Gudur"|"sur la langue mofu-gudur"|7|"parlée dans le Département du Mayo-Tsanaga"|
+13|"Mekaa"|"sur la langue mekaa"|4|"parlée dans le Département du Haut-Nyong"|
+14|"Ngomba"|"sur la langue ngomba"|8|"parlée dans le Département des Bamboutos"|
+16|"Moloko"|"sur la langue moloko"|7|"parlée dans les Départements du Mayo-Sava et du Diamaré"|
+17|"Nugunu"|"sur la langue nugunu"|1|"parlée dans le Département du Mbam et Inoubou"|
+18|"Manyu Literacy"|"sur les langues ejagham, kenyang et denya"|9|"parlées dans les Départements de la Manyu et de la Mémé"|"Ejagham, Kenyang and Denya"
+19|"Konzime"|"sur la langue koozime"|4|"parlée dans le Département du Haut-Nyong"|
+20|"Noni"|"sur la langue nooni"|10|"parlée dans les Départements de la Bui, de la Donga-Mantung et de la Menchum"|
 21|"Survey"|"sociolinguistiques"|11|"qui seront menées sur l'ensemble du territoire national"|
 22|"Mundani"||12|"parlée"|
-23|"Limbum"|"sur la langue limbum"|10|"parlée dans le Deàpartement de la Donga-Mantung"|
+23|"Limbum"|"sur la langue limbum"|10|"parlée dans le Département de la Donga-Mantung"|
 24|"Kuo"||12|"parlée"|
-25|"Ngyemboon"|"sur la langue ngiemboon"|8|"parlée dans les Deàpartements des Bamboutos et Menoua"|
+25|"Ngyemboon"|"sur la langue ngiemboon"|8|"parlée dans les Départements des Bamboutos et Menoua"|
 26|"Tikar"||12|"parlée"|
 27|||12||
 28|"Bakossi"||12|"parlée"|
@@ -27,47 +27,47 @@
 31|"Gude"||12|"parlée"|
 32|"Yamba"||12|"parlée"|
 33|"Bana"||12||
-34|"Denya"|"sur la langue denya"|9|"parlée dans le Deàpartement de la Manyu"|
+34|"Denya"|"sur la langue denya"|9|"parlée dans le Département de la Manyu"|
 35|"Ejagham"||12||
-36|"Kenyang"|"sur la langue kenyang"|9|"parlée dans le Deàpartement de la Manyu"|
+36|"Kenyang"|"sur la langue kenyang"|9|"parlée dans le Département de la Manyu"|
 37|"Podoko"||12||
 38|"Daba"||12||
 39|"Lamnso'"|"sur la langue lamnso'"|10|"parlée le Département du Bui"|
-40|"Mbuko"|"sur la langue mbuko"|7|"parlée dans les Deàpartements du Diamareà et du Mayo-Sava"|
+40|"Mbuko"|"sur la langue mbuko"|7|"parlée dans les Départements du Diamaré et du Mayo-Sava"|
 41|"Mandara"||12||
-42|"Manyu Linguistics"|"sur les langues kenyang et denya"|9|"parlées dans les Deàpartements de la Manyu et de la Meàmeà"|"Kenyang and Denya"
-44|"Aghem"|"sur la langue aghem"|10|"parleààe dans le Deàpartement de la Menchum"|
+42|"Manyu Linguistics"|"sur les langues kenyang et denya"|9|"parlées dans les Départements de la Manyu et de la Mémé"|"Kenyang and Denya"
+44|"Aghem"|"sur la langue aghem"|10|"parlée dans le Département de la Menchum"|
 45|"Mankou"||12||
-46|"Kotoko"|"sur la langue mpadí (varieàteà kotoko de Makari )"|7|"parleàe dans le Deàpartement du Logone et Chari"|
-47|"Pelasla"|"sur la langue pelasla"|7|"parlée dans le Deàpartement du Mayo-Sava"|
-48|"Elip, Mmaala et Yangben"|"sur les langues Elip, Mmaala et Yangben."|1|"parlées dans le Deàpartement du Mbam."|
-49|"Bafut, Kom et Lamnso'"|"sur les langues bafut, kom et lamnso'"|10|"parlées dans les Deàpartements de la Mezam, Menchum et Bui"|
-50|"Yambeta, Nomaande, Nugunu et Nuasue"|"sur les langues yambeta, nomaandeà, nugunu, nuasue"|1|"parlées dans le Deàpartement du Mbam et Inoubou"|
-51|"Mambaï"|"sur la langue mambaï"|6|"parlée dans les Deàpartements de la Beànoueà et du Mayo-Louti"|
-54|"Buwal"|"sur la langue buwal"|7|"parleàe le deàpartement du Mayo - Tsanaga"|
+46|"Kotoko"|"sur la langue mpadí (variété kotoko de Makari )"|7|"parlée dans le Département du Logone et Chari"|
+47|"Pelasla"|"sur la langue pelasla"|7|"parlée dans le Département du Mayo-Sava"|
+48|"Elip, Mmaala et Yangben"|"sur les langues Elip, Mmaala et Yangben."|1|"parlées dans le Département du Mbam."|
+49|"Bafut, Kom et Lamnso'"|"sur les langues bafut, kom et lamnso'"|10|"parlées dans les Départements de la Mezam, Menchum et Bui"|
+50|"Yambeta, Nomaande, Nugunu et Nuasue"|"sur les langues yambeta, nomaandé, nugunu, nuasue"|1|"parlées dans le Département du Mbam et Inoubou"|
+51|"Mambaï"|"sur la langue mambaï"|6|"parlée dans les Départements de la Bénoué et du Mayo-Louti"|
+54|"Buwal"|"sur la langue buwal"|7|"parlée le Département du Mayo - Tsanaga"|
 56|||12||
 60|"Uldeme"||12||
-65|"Bikele"|"sur la langue bikele"|4|"parleàe dans le Deàpartement du Haut - Nyong"|
-66|"Yambassa  Central ( 542 )"|"sur la langue yambassa central ( 542 )"|1|"parleàe dans le Deàpartement du Mbam et Inoubou"|
+65|"Bikele"|"sur la langue bikele"|4|"parlée dans le Département du Haut - Nyong"|
+66|"Yambassa  Central ( 542 )"|"sur la langue yambassa central ( 542 )"|1|"parlée dans le Département du Mbam et Inoubou"|
 67|"[none selected]"|"[none selected]"|12||
 68|"Manyu Project"||12||
 69|"Ouldeme"||12||
 70|"Melokwo"||12||
 71|"Limbum & Yamba"||12||
 72|"Bakaka"||12||
-76|"Kwanja"|"sur la langue kwanja"|5|"parleàe dans le Deàpartement du Mayo - Banyo"|
-77|"Mambila"|"sur la langue mambila"|5|"parleàe dans le Deàpartement du Mayo - Banyo"|
-79|"Meàreà"|"sur la langue  meàreà"|7|"parleàe dans le Deàpartement du Diamareà"|
-82|"Ouldeàmeà et Vameà"|"sur les langues Ouldeàmeà et Vameà"|7|"parleàes dans le Deàpartement du Mayo-Sava"|
-83|"Tivoid"|"sur la langue tivoid"|9|"parleàe dans le Deàpartement de la Manyu"|
-84|"Fulfulde"|"sur la langue fulfulde"|7|"parleàe dans le Deàpartement du Diamare"|
+76|"Kwanja"|"sur la langue kwanja"|5|"parlée dans le Département du Mayo - Banyo"|
+77|"Mambila"|"sur la langue mambila"|5|"parlée dans le Département du Mayo - Banyo"|
+79|"Méré"|"sur la langue  méré"|7|"parlée dans le Département du Diamaré"|
+82|"Ouldémé et Vamé"|"sur les langues Ouldémé et Vamé"|7|"parlées dans le Département du Mayo-Sava"|
+83|"Tivoid"|"sur la langue tivoid"|9|"parlée dans le Département de la Manyu"|
+84|"Fulfulde"|"sur la langue fulfulde"|7|"parlée dans le Département du Diamare"|
 86|"Mpongpong"|"sur la langue mpongpong"|4|"parlée dans le Départment de la Boumba-et-Ngoko"|
 87|"Gavar"|"sur la langue gavar"|7|"parlée dans le Département du Mayo-Tsanaga"|
 88|"Bangolan"|"sur la langue bangolan"|10|"parlée dans le Département du Ngoketunjia"|
 89|||12||
 90|"Mbədam"|"sur la langue  mbədam"|7|"parlée dans le Département du Mayo-Tsanaga"|
 91|||||
-73|"Hdi"|"sur la langue hedi"|7|"parleàe dans le deàpartement du Mayo-Tsanaga"|
+73|"Hdi"|"sur la langue hedi"|7|"parlée dans le Département du Mayo-Tsanaga"|
 93|"Mungong"|"sur la langue mungong"|10|"parlée dans le Département de la Menchum"|
 94|"Iyive"|"sur la langue iyive"|9|"parlée dans le Département de la Manyu"|
 95|"Sari"|"sur la langue sari"|10|"parlée dans le Département de la Donga-Mantung"|
@@ -85,28 +85,28 @@
 110|"Nuasué"|"sur la langue nuasué"|1|"parlée dans le Département du Mbam et Inoubou"|
 111|"Ngombalé"|"sur la langue ngombalé"|8|"parlée dans le Département des Bamboutos"|
 112|"Batanga, Banɔʼɔ"|"sur les langues batanga, banɔʼɔ"|14|"parlées dans le Département de lʼOcéan"|
-1|"Mada"|"sur la langue mada"|7|"parleàe dans le Deàpartement du Mayo-Sava"|
-4|"Vameà"|"sur la langue vameà"|7|"parleàe dans le Deàpartement du Mayo-Sava"|
-53|"Lagwan"|"sur la langue lagwan"|7|"parleàe dans le deàpartement du Logone-et-Chari"|
-15|"Hdeàà"|"sur la langue hdi"|7|"parleàe dans le Deàpartement du Mayo-Tsanaga"|
-55|"Kwasio (Ngumba)"|"sur la langue kwasio ( ngumba )"|14|"dans le deààpartement  de l'Oceàan"|
-74|"Bamunka"|"sur la langue bamunka"|10|"parleàe dans le Deàpartement du Ngo - Ketunjia"|
-58|"Babanki"|"sur la langue babanki"|10|"parleàe dans le Deàpartement de la Mezam"|
-43|"Muyang"|"sur la langue muyang"|7|"parleàe dans le Deàpartement du Mayo-Sava"|
-2|"Kom"|"sur la langue kom"|10|"parleàe dans le Deàpartement du Boyo"|
-80|"Kom et Fe'efe'e"|"sur les langues kom et fe'efe'e"|13|"parleàes dans les Deàpartements de Boyo et du Haut-Nkam"|
-59|"Bambalang"|"sur la langue bambalang"|10|"parleàe dans le Deàpartement du Ngo-keàtunjia"|
-64|"Foulfouldeà"|"sur la langue  foulfouldeàˆ"|10|"dans toute la région du Nord - Ouest"|
-78|"Bamukumbit ( Mangkong )"|"sur la langue bamoukoumbit (Mangkong)"|10|"parleàe dans le Deàpartement du Ngo - Ketunjia"|
-63|"Mfumte"|"sur la langue Mfumte"|10|"parleàe dans le Deàpartement de la Donga-Mantum"|
+1|"Mada"|"sur la langue mada"|7|"parlée dans le Département du Mayo-Sava"|
+4|"Vamé"|"sur la langue vamé"|7|"parlée dans le Département du Mayo-Sava"|
+53|"Lagwan"|"sur la langue lagwan"|7|"parlée dans le Département du Logone-et-Chari"|
+15|"Hdi"|"sur la langue hdi"|7|"parlée dans le Département du Mayo-Tsanaga"|
+55|"Kwasio (Ngumba)"|"sur la langue kwasio ( ngumba )"|14|"dans le département  de l'Océan"|
+74|"Bamunka"|"sur la langue bamunka"|10|"parlée dans le Département du Ngo - Ketunjia"|
+58|"Babanki"|"sur la langue babanki"|10|"parlée dans le Département de la Mezam"|
+43|"Muyang"|"sur la langue muyang"|7|"parlée dans le Département du Mayo-Sava"|
+2|"Kom"|"sur la langue kom"|10|"parlée dans le Département du Boyo"|
+80|"Kom et Fe'efe'e"|"sur les langues kom et fe'efe'e"|13|"parlées dans les Départements de Boyo et du Haut-Nkam"|
+59|"Bambalang"|"sur la langue bambalang"|10|"parlée dans le Département du Ngo-kétunjia"|
+64|"Foulfouldé"|"sur la langue  foulfouldéˆ"|10|"dans toute la région du Nord - Ouest"|
+78|"Bamukumbit ( Mangkong )"|"sur la langue bamoukoumbit (Mangkong)"|10|"parlée dans le Département du Ngo - Ketunjia"|
+63|"Mfumte"|"sur la langue Mfumte"|10|"parlée dans le Département de la Donga-Mantum"|
 62|"Lefa'"|"sur la langue lefa'"|1|"parlée dans le Département du Mbam et Inoubou"|
 85|"Weh"|"sur la langue weh"|10|"parlée dans le Département de la Menchum"|
-5|"Baka"|"sur la langue baka"|4|"parleàe dans les Deààpartements du Haut-Nyong et de la Boumba-et-Ngoko"|
-61|"Bafanji"|"sur la langue bafanji"|10|"parleàe dans le Deàpartement du Ngo-Ketunjia"|
-57|"Nchane"|"sur langue nchane"|10|"parleàe dans le deàpartement de la Donga-Mantung"|
+5|"Baka"|"sur la langue baka"|4|"parlée dans les Départements du Haut-Nyong et de la Boumba-et-Ngoko"|
+61|"Bafanji"|"sur la langue bafanji"|10|"parlée dans le Département du Ngo-Ketunjia"|
+57|"Nchane"|"sur langue nchane"|10|"parlée dans le Département de la Donga-Mantung"|
 102|"Moghamo"|"sur la langue moghamo"|10|"parlée dans le Département de la Momo"|
 108|"Makaa"|"sur la langue makaa"|4|"parlée dans le département du Haut-Nyong"|
 52|"Kemedzung"|"sur la langue kemedzung"|10|"parlée dans le département de la Donga-Mantung"|
 92|"Yassa ( Iyasa ou yasa )"|"sur la langue yassa ( iyasa ou yasa )"|14|"parlée dans le Département de l' Océan"|
-81|"Kenswei Nsei ( Bamessing )"|"sur la langue kenswey nsey ( bamessing )"|13|"parleàe dans le Deàpartememt du Ngo-Kentunjia"|
+81|"Kenswei Nsei ( Bamessing )"|"sur la langue kenswey nsey ( bamessing )"|13|"parlée dans le Départememt du Ngo-Kentunjia"|
 104|"survey E-N"|"sur les enquêtes socio-culturelles"|7|" dans le Département du Mayo-Sava"|

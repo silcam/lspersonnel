@@ -1,7 +1,7 @@
 "id"|"Surname"|"Forename"|"LastPrimaryReportSubmitted"|"ResearchProposalSubmitted"|"Furlough"|"Category"|"Job"|"ResearchProposalStatus"|"NotActive"|"FinalDepartureDate"|"DateOfArrivalInBranch"|"Notes"|"FirstPermit"|"PrimaryReportStatus"|"NationalityFrID"|"TitleID"|"InterestID"|"Years"|"FrenchDate"|"FrDatePRletter"|"SelectToPrint"|"StartDate"|"EndDate"|"SelectforQR"|"MainLang"|"FutureActivities"
 2|"SPREDA"|"Janice O."|"31/01/2001 00:00:00"||1|1|"Researcher"|4|0||"01/01/1975 00:00:00"||0|1|3|2|2|"un an"|"31 janvier 2001"||0|||1|1|
-3|"SHULTZ"|"George"|"17/10/1997 00:00:00"|"31/03/1997 00:00:00"|0|4|"Researcher"|4|1||"01/09/1988 00:00:00"||0|1|2|1|1|"un an"|"19 aouêt 1999"||0|||1|2|"* analyser la strucutre de la phrase en langue Kom (Cela inclurait l'identification et la description de la phrase nom, verbe, adjective, adverbe et preàpositionnelle) 
-* former les assistants en traduction aè travailler comme traducteurs indeàpendants"
+3|"SHULTZ"|"George"|"17/10/1997 00:00:00"|"31/03/1997 00:00:00"|0|4|"Researcher"|4|1||"01/09/1988 00:00:00"||0|1|2|1|1|"un an"|"19 aouêt 1999"||0|||1|2|"* analyser la strucutre de la phrase en langue Kom (Cela inclurait l'identification et la description de la phrase nom, verbe, adjective, adverbe et prépositionnelle) 
+* former les assistants en traduction aè travailler comme traducteurs indépendants"
 4|"WILKENDORF"|"Patricia"|"10/08/2001 00:00:00"||0|1|"Researcher"|4|0||"01/01/1983 00:00:00"||0|1|2|3|2|"un an"|"30 juillet 2001"||0|"22 septembre 1998"|"22 aouêt 1999"|1|3|
 5|"TAYLOR"|"Carolyn"|"30/06/1994 00:00:00"||0|4|"CABTAL liaison"|4|1||"01/01/1981 00:00:00"||0|1|2|3|2|"un an"|"22 novembre 1999"||0|"octobre 1996"|"septembre 1997"|0|3|
 8|"SPIELMANN"|"Kent"|"01/09/1998 00:00:00"|"01/09/1998 00:00:00"|1|4|"Researcher"|4|1|"21/06/1998 00:00:00"|"01/01/1995 00:00:00"||0|1|2|1|1|"un an"|"28 aouêt 1998"||0|"juin 1997"|"mai 1998"|1|72|
@@ -12,16 +12,16 @@
 17|"BLOOD"|"Cynthia"|"12/07/1996 00:00:00"||1|4|"Researcher"|4|1|"01/06/2000 00:00:00"|"10/01/1995 00:00:00"||0|1|2|3|2|"un an"|"22 novembre 1999"|"14 mai 1996"|0|"octobre 1996"|"septembre 1997"|1|11|
 18|"DAVIS"|"Leslie"|"01/04/1997 00:00:00"|"10/01/1995 00:00:00"|1|1|"Researcher"|4|1|"01/06/1998 00:00:00"|"01/03/1989 00:00:00"||0|1|2|3|2|"un an"|||0|||1|11|
 19|"POHLIG"|"James"|"16/09/1995 00:00:00"|"17/11/1995 00:00:00"|1|1|"Researcher"|4|1|"12/06/1996 00:00:00"|"01/09/1990 00:00:00"||0|1|2|1|1|"un an"|||0|||1|12|
-21|"JACKSON"|"Christopher"|"26/05/1998 00:00:00"|"02/10/2001 00:00:00"|1|2|"Researcher"|4|0||"01/09/1994 00:00:00"||0|4|2|1|1|"un an"|"03 septembre 2001"||0|"30 juin 2001"|"29 juin 2002"|1|18|"* Compleàter la preàparation et l'essai du deuxieàme livre eàleàmentaire en Kenyang avec la collaboration de EYONG Martin. Deàvelopper trois 
-sujets de base sur la fabrication du savon, la sensibilisation sur le SIDA et le traitement de la diarrheàe."
-22|"JONES"|"J. Randall"|"30/05/2001 00:00:00"|"30/05/2001 00:00:00"|0|2|"Researcher"|4|0||"01/01/1991 00:00:00"||0|1|2|1|1|"un an"|"22 mai 2001"||0|||1|2|"*Etudier un theème d'actualiteà et un centre d'inteàreêt dans le discours narratif de KOM. Ce travail contribuera aè une bonne compreàhension
-linguistique du deàveloppement de la litteàrature en langue KOM. Produire une litteàrature sur le paludisme."
+21|"JACKSON"|"Christopher"|"26/05/1998 00:00:00"|"02/10/2001 00:00:00"|1|2|"Researcher"|4|0||"01/09/1994 00:00:00"||0|4|2|1|1|"un an"|"03 septembre 2001"||0|"30 juin 2001"|"29 juin 2002"|1|18|"* Compléter la préparation et l'essai du deuxième livre élémentaire en Kenyang avec la collaboration de EYONG Martin. Développer trois 
+sujets de base sur la fabrication du savon, la sensibilisation sur le SIDA et le traitement de la diarrhée."
+22|"JONES"|"J. Randall"|"30/05/2001 00:00:00"|"30/05/2001 00:00:00"|0|2|"Researcher"|4|0||"01/01/1991 00:00:00"||0|1|2|1|1|"un an"|"22 mai 2001"||0|||1|2|"*Etudier un theème d'actualité et un centre d'intérêt dans le discours narratif de KOM. Ce travail contribuera aè une bonne compréhension
+linguistique du développement de la littérature en langue KOM. Produire une littérature sur le paludisme."
 25|"LUX"|"David"|"05/11/2004 00:00:00"|"26/01/2001 00:00:00"|0|1|"Researcher"|4|0||"01/09/1989 00:00:00"||0|4|2|1|1|"un an"|"05 novembre  2004"||0|||1|20|
-27|"STARR"|"Alan"|"22/01/2007 00:00:00"|"22/03/2007 00:00:00"|1|1|"Researcher"|4|0||"01/01/1989 00:00:00"||1|4|2|1|1|"un an"|"22 mars 2007"||0|"01 avril 2007"|"31 mars 2008"|1|16|"* Analyse du discours de l'histoire d'une vie reàelle."
+27|"STARR"|"Alan"|"22/01/2007 00:00:00"|"22/03/2007 00:00:00"|1|1|"Researcher"|4|0||"01/01/1989 00:00:00"||1|4|2|1|1|"un an"|"22 mars 2007"||0|"01 avril 2007"|"31 mars 2008"|1|16|"* Analyse du discours de l'histoire d'une vie réelle."
 28|"BOW"|"Catherine"|"25/09/1997 00:00:00"|"29/05/1996 00:00:00"|1|1|"Researcher"|4|1||"01/09/1995 00:00:00"|"GRIP"|1|1|8|3|1|"six mois"|"25 septembre 1997"||0|"31 mai 1997"|"31 octobre 1997"|1|16|
 29|"OHLMANN"|"Vaughn"|"26/04/1995 00:00:00"||0|2|"Centre Manager/ SIL representative GNRO"|4|0||"01/01/1993 00:00:00"||0|1|2|1|1|"un an"|||0|||1|8|
 30|"PATMAN"|"Keith"|"11/07/1995 00:00:00"||1|4|"Researcher"|4|1|"02/08/1998 00:00:00"|"01/09/1987 00:00:00"||0|1|2|1|1|"un an"|||0|||1|17|
-31|"SEGUIN"|"Lawrence"|"30/09/1997 00:00:00"||0|4|"National training Department"|4|0||"01/04/1988 00:00:00"||0|1|4|1|1|"un an"|"24 juin 1999"||0|"1 octobre 1998"|"30 septembre 1999"|0|34|" l'approfondissement de son analyse du kenyang et du denya pour eàtudier le discours (jusqu'ici il a traiteà des structures grammaticales jusqu'au niveau de la phrase)."
+31|"SEGUIN"|"Lawrence"|"30/09/1997 00:00:00"||0|4|"National training Department"|4|0||"01/04/1988 00:00:00"||0|1|4|1|1|"un an"|"24 juin 1999"||0|"1 octobre 1998"|"30 septembre 1999"|0|34|" l'approfondissement de son analyse du kenyang et du denya pour étudier le discours (jusqu'ici il a traité des structures grammaticales jusqu'au niveau de la phrase)."
 32|"BEAVON"|"Keith"|"08/08/1995 00:00:00"||0|2|"Translation Consultant"|4|0||"01/01/1976 00:00:00"||0|1|2|1|1|"un an"|||0|||1|19|
 33|"ALLISON"|"Sean"|"18/08/2006 00:00:00"|"15/06/2005 00:00:00"|0|1|"Linguist : MINRESI Researcher"|4|0||"14/09/1997 00:00:00"||0|3|4|1|1|"un an"|"18 aouêt 2006"||0|"30 juin 2005"|"29 juin 2005"|1|46|"
 * Elaborartion d'un syllabaire de transition ( francãais - mpade )."
@@ -52,8 +52,8 @@ linguistique du deàveloppement de la litteàrature en langue KOM. Produire une 
 66|"KELLER"|"Ernst"|||1|4|"Computer Services Department Manager"|0|1|"01/05/1998 00:00:00"|"01/09/1991 00:00:00"||0|0|7|1|1|"un an"|||0|||0|67|
 67|"DAWSON"|"Roger"|||1|4|"Computer Services Specialist"|0|1|"01/01/1999 00:00:00"|"19/12/1996 00:00:00"||0|0|12|5|3||||0|||0|67|
 70|"SCHMIDT"|"Patrick"|||0|4|"CABTAL Director of Development"||1||"07/07/1997 00:00:00"||0||12|5|3||||0|||0|67|
-71|"CLYMER"|"Renee E."|"01/12/1997 00:00:00"||1|4|"Literacy intern"|4|1|"06/12/1998 00:00:00"|"21/07/1996 00:00:00"|"GRIP"|0|1|2|3|2|"un an"|"23 mars 1999"||0|"15 deàcembre 1997"|"14 deàcembre 1998"|1|18|
-73|"BEYER"|"Greg"|"27/12/2004 00:00:00"|"26/01/2001 00:00:00"|0|2|"Researcher"|4|0||"05/01/1997 00:00:00"||0|1|2|1|1|"un an"|"27 deàcembre 2004"||0|||1|34|
+71|"CLYMER"|"Renee E."|"01/12/1997 00:00:00"||1|4|"Literacy intern"|4|1|"06/12/1998 00:00:00"|"21/07/1996 00:00:00"|"GRIP"|0|1|2|3|2|"un an"|"23 mars 1999"||0|"15 décembre 1997"|"14 décembre 1998"|1|18|
+73|"BEYER"|"Greg"|"27/12/2004 00:00:00"|"26/01/2001 00:00:00"|0|2|"Researcher"|4|0||"05/01/1997 00:00:00"||0|1|2|1|1|"un an"|"27 décembre 2004"||0|||1|34|
 74|"RAMIREZ"|"Cristi"|||1|4|"Literacy intern"|4|1|"06/12/1998 00:00:00"|"05/01/1997 00:00:00"|"GRIP"|0|1|2|3|2|"un an"|"7 decembre 1998"||0|"1 septembre 1997"|"31 aout 1997"|0|42|
 75|"HENDRICKS"|"Elaine"|||1|4|"Computer Services"|0|1|"01/07/1999 00:00:00"|"01/01/1998 00:00:00"||0|0|12|5|3||||0|||0|67|
 76|"BRYE"|"Edward"|"26/09/2002 00:00:00"|"27/02/2001 00:00:00"|0|2|"Researcher"|4|0||"11/01/1998 00:00:00"||0|1|2|1|1|"un an"|"26 septembre 2002"||0|||0|21|
@@ -62,8 +62,8 @@ linguistique du deàveloppement de la litteàrature en langue KOM. Produire une 
 81|"RADICH"|"Shawna"|"09/07/2001 00:00:00"|"29/09/1998 00:00:00"|1|1|"GRIP"|4|1|"01/12/1999 00:00:00"|"11/01/1998 00:00:00"||1|1|2|3|2|"un an"|"27 juin 2001"||0|||0|20|
 82|"PEWTON"|"Suzie"|||1|1|"Literacy"|0|1|"15/12/1998 00:00:00"|"16/07/1998 00:00:00"||0|0|12|5|3||||0|||0|67|
 83|"THWING"|"Rhonda"|||0|2|"Assistnat Director of Academic Affairs"|0|0||||0|0|12|5|3||||0|||0|67|
-84|"BRYE"|"Elizabeth"|"26/09/2002 00:00:00"|"27/02/2001 00:00:00"|0|2|"Surveyor"|4|0||"11/01/1998 00:00:00"||0|1|2|2|2|"un an"|"27 feàvrier 2001"||0|||0|21|"* Mesuer au cours des enqueêtes sociolinguistiques la communication au sein de plusieurs varieàteàs de langues camerounaises avec l'objectif  
-d'identifier les opportuniteàs de deàveloppement du projet de langue et/ou de le maximiser s'il existe deàjaè."
+84|"BRYE"|"Elizabeth"|"26/09/2002 00:00:00"|"27/02/2001 00:00:00"|0|2|"Surveyor"|4|0||"11/01/1998 00:00:00"||0|1|2|2|2|"un an"|"27 février 2001"||0|||0|21|"* Mesuer au cours des enqueêtes sociolinguistiques la communication au sein de plusieurs variétés de langues camerounaises avec l'objectif  
+d'identifier les opportunités de développement du projet de langue et/ou de le maximiser s'il existe déjà."
 85|"ANDRUS"|"Michael"|"21/01/2003 00:00:00"|"31/01/2003 00:00:00"|1|1|"Linguist"|4|0||"01/05/1994 00:00:00"||0|1|2|1|1|"un an"|"21 janvier 2003"||0|"31 janvier 2003"|"30 janvier 2004"|1|20|"* Production des livres de calcul et lecture en langue noni."
 87|"DILLER"|"Jason F."|||1|4|"Survey Intern"|4|1|"01/08/1999 00:00:00"|"01/09/1998 00:00:00"||0|1|2|1|1|"un an"|"29 janvier 1999"||0|||0|21|
 88|"JORDAN-DILLER"|"Kari A."|||1|4|"Survey Intern"|4|1|"01/08/1999 00:00:00"|"01/09/1998 00:00:00"||0|1|2|2|2|"un an"|"29 janvier 1999"||0|||0|21|
@@ -71,36 +71,36 @@ d'identifier les opportuniteàs de deàveloppement du projet de langue et/ou de 
 92|"HEELEY"|"Matthew"|"26/01/2001 00:00:00"||1|1|"SALT"|4|1|"01/03/2000 00:00:00"|||0|1|3|1|1|"un an"|"26 janvier 2001"||0|||1|13|
 93|"CLAYTON"|"Fiona"|"26/01/2001 00:00:00"||1|1|"SALT"|4|1|"01/12/2000 00:00:00"|"01/01/2000 00:00:00"||0|1|3|3|2|"un an"|"26 janvier 2001"||0|||1|13|
 94|"HUNT"|"Jason"|"26/01/2001 00:00:00"||1|4|"SALT"|4|1|"01/03/2000 00:00:00"|||0|1|3|1|1|"un an"|"26 janvier 2001"||0|||1|13|
-95|"BARLOW"|"Robert Andrew"|||1|1|"Researcher"|4|1|"01/05/2000 00:00:00"|||0|4|2|1|1|"un an"|"08 MAI 2000"||0|"juin 1999"||0|11|"former les traducteurs de la langue maternelle dans l'analyse du Discours, eàtudier les traits du discours et eàcrire une description des traits du discours."
+95|"BARLOW"|"Robert Andrew"|||1|1|"Researcher"|4|1|"01/05/2000 00:00:00"|||0|4|2|1|1|"un an"|"08 MAI 2000"||0|"juin 1999"||0|11|"former les traducteurs de la langue maternelle dans l'analyse du Discours, étudier les traits du discours et écrire une description des traits du discours."
 98|"AYOTTE"|"MICHAEL ROBERT"|"18/02/2002 00:00:00"||1|1|"Researcher"|4|0||"01/05/2000 00:00:00"||0|4|2|1|1|"un an"|"13 mai 2005"||0|"01 juillet 2005"|"30 juin 2006"|0|55|"* Apprendre la langue kwasio ( ngumba ) et quelques aspects de la culture de  ce peuple. Produire une esquisse anthropologique et de continuer avec l'analyse linguistique."
 99|"LAMBERTY"|"Melinda"|"17/06/2002 00:00:00"|"12/12/2000 00:00:00"|0|4|"LANGUAGE PROGRAMS ASSISTANT"|4|0||"01/05/2000 00:00:00"||1|1|2|3|2|"un an"|"17juin 2002"||0|||0|21|
 101|"WILSON"|"Raymond"|"10/08/2001 00:00:00"|"20/12/2000 00:00:00"|1|1|"RESEARCHER"|4|0|"24/07/2001 00:00:00"|||1|1|3|1|1|"un an"|"3 aouêt 2001"||0|||0|47|
-104|"ANDERSON"|"Heidi"|"13/12/2001 00:00:00"|"30/05/2001 00:00:00"|1|1|"Researcher"|4|0|"15/12/2001 00:00:00"|"01/05/2001 00:00:00"||1|1|2|3|2|"un an"|"13 deàcembre 2001"||0|||0|21|
-105|"KRUEGER"|"Susanne"|"13/12/2001 00:00:00"|"30/05/2001 00:00:00"|1|1|"Researcher"|4|0|"05/12/2001 00:00:00"|"30/04/2001 00:00:00"||1|1|1|3|2|"un an"|"13 deàcembre 2001"||0|||0|21|
-108|"THOMPSON"|"Jess"||"10/08/2001 00:00:00"|1|1|"Researcher"|4|0||||1|3|2|1|1|"un an"|"30 juillet 2001"||0|"31 juillet 2001"|"30 juillet 2002"|0|21|"* Evaluer l'utilisation de la langue locale dans les cadres religieux au sein de plusieurs varieàteàs de langues avec l'objectif d'encourager 
+104|"ANDERSON"|"Heidi"|"13/12/2001 00:00:00"|"30/05/2001 00:00:00"|1|1|"Researcher"|4|0|"15/12/2001 00:00:00"|"01/05/2001 00:00:00"||1|1|2|3|2|"un an"|"13 décembre 2001"||0|||0|21|
+105|"KRUEGER"|"Susanne"|"13/12/2001 00:00:00"|"30/05/2001 00:00:00"|1|1|"Researcher"|4|0|"05/12/2001 00:00:00"|"30/04/2001 00:00:00"||1|1|1|3|2|"un an"|"13 décembre 2001"||0|||0|21|
+108|"THOMPSON"|"Jess"||"10/08/2001 00:00:00"|1|1|"Researcher"|4|0||||1|3|2|1|1|"un an"|"30 juillet 2001"||0|"31 juillet 2001"|"30 juillet 2002"|0|21|"* Evaluer l'utilisation de la langue locale dans les cadres religieux au sein de plusieurs variétés de langues avec l'objectif d'encourager 
 l'emploi de celles-ci dans ces cadres."
 109|"EBBINGHAUS"|"Rita"|"19/07/2002 00:00:00"|"02/10/2001 00:00:00"|1|1|"Researcher"|4|0|"31/03/2003 00:00:00"|"30/04/2001 00:00:00"||1|1|1|3|2|"un an"|"19 juillet 2002"||0|"30 juin 2001"|"29 juin 2002"|1|35|
 110|"ANGUS"|"Stephanie"|"19/07/2002 00:00:00"|"02/10/2001 00:00:00"|1|1|"Researcher"|4|0|"31/05/2003 00:00:00"|"30/04/2001 00:00:00"||1|1|3|3|2|"un an"|"19 juillet 2002"||0|"30 juin 2001"|"29 juin 2002"|1|35|
-111|"GREGG"|"George"|"18/02/2002 00:00:00"|"03/12/2001 00:00:00"|1|1|"Researcher"|4|0|"04/02/2002 00:00:00"|"05/11/2001 00:00:00"||1|1|2|1|1|"4 mois"|"18 feàvrier 2002"||0|"01 novembre 2001"|"28 feàvrier 2001"|0|21|
+111|"GREGG"|"George"|"18/02/2002 00:00:00"|"03/12/2001 00:00:00"|1|1|"Researcher"|4|0|"04/02/2002 00:00:00"|"05/11/2001 00:00:00"||1|1|2|1|1|"4 mois"|"18 février 2002"||0|"01 novembre 2001"|"28 février 2001"|0|21|
 112|"ANDERSON"|"Brian"|||0|2|"Computer Services Department Manager"|0|0||"01/12/1998 00:00:00"||0|0|12|5|3||||0|||0|67|
 113|"Godfrey"|"Andy"|||0|2|"Computer Services Department"|0|0||"01/03/2001 00:00:00"||0|0|12|5|3||||0|||0|67|
 114|"Smith"|"Scott"|||0|2|"Administrative Assistant"|0|0||"01/08/2001 00:00:00"||0|0|12|5|3||||0|||0|67|
 115|"GEIGER"|"Vreni"|||0|2|"Assistant Director of Administration"|0|0||||0|0|12|5|3||||0|||0|67|
 116|"MARTIN"|"Gordon"|||0|1|"Literacy Coordinator"|0|0||||0|0|12|5|3||||0|||0|67|
 117|"MUELLER"|"Christoph"|||0|2|"Translation Department"|0|0|"01/06/2003 00:00:00"|"01/08/2001 00:00:00"||0|0|12|5|3||||0|||0|67|
-118|"CRAWFORD"|"Karyn Rose"|"06/01/2003 00:00:00"|"10/01/2002 00:00:00"|1|1|"Researcher"|4|0||||1|1|4|2|2|"un an"|"6 janvier 2003"||0|"01 deàcembre 2001"|"30 novembre 2002"|0|21|
-121|"SCHRAG"|"Brian Edward"|"07/02/2005 00:00:00"|"18/11/2003 00:00:00"|0|1|"Researcher"|4|0||"30/03/2002 00:00:00"||0|4|2|1|1|"un an"|" 07 feàvrier 2005"||0|"1 octobre 2003"|"30 septembre 2004"|0|25|
-122|"PRITTIE"|"Rebecca Louise"|"06/01/2003 00:00:00"|"02/08/2002 00:00:00"|1|1|"Reseacher"|4|0||||1|1|3|3|2|"7 mois"|"6 janvier 2003"||0|"1 juin 2002"|"31 deàcembre 2002"|0|48|
-123|"TRUDELL"|"Joel"||"20/12/2002 00:00:00"|0|1|"MINREST Researcher"|4|0||||0|3|2|1|1|"un an"|"31 octobre 2002"||0|"01 novembre 2002"|"31 octobre 2003"|0|39|"* Produire une eàtude sociolinguistique de l'utilisation de l'alphabeàtisation parmi les locuteurs lamnso'."
-124|"TRUDELL"|"Barbara"||"20/12/2002 00:00:00"|0|1|"MINREST Researcher"|4|0||||1|3|2|2|2|"un an"|"31 octobre 2002"||0|"01 novembre 2002"|"31 octobre 2003"|0|49|"* Produire une eàtude de la nature et de l'impact des langues kom, lamnso' et bafut dans l'eàducation formelle et non-formelle de la Province du Nord - Ouest."
+118|"CRAWFORD"|"Karyn Rose"|"06/01/2003 00:00:00"|"10/01/2002 00:00:00"|1|1|"Researcher"|4|0||||1|1|4|2|2|"un an"|"6 janvier 2003"||0|"01 décembre 2001"|"30 novembre 2002"|0|21|
+121|"SCHRAG"|"Brian Edward"|"07/02/2005 00:00:00"|"18/11/2003 00:00:00"|0|1|"Researcher"|4|0||"30/03/2002 00:00:00"||0|4|2|1|1|"un an"|" 07 février 2005"||0|"1 octobre 2003"|"30 septembre 2004"|0|25|
+122|"PRITTIE"|"Rebecca Louise"|"06/01/2003 00:00:00"|"02/08/2002 00:00:00"|1|1|"Reseacher"|4|0||||1|1|3|3|2|"7 mois"|"6 janvier 2003"||0|"1 juin 2002"|"31 décembre 2002"|0|48|
+123|"TRUDELL"|"Joel"||"20/12/2002 00:00:00"|0|1|"MINREST Researcher"|4|0||||0|3|2|1|1|"un an"|"31 octobre 2002"||0|"01 novembre 2002"|"31 octobre 2003"|0|39|"* Produire une étude sociolinguistique de l'utilisation de l'alphabétisation parmi les locuteurs lamnso'."
+124|"TRUDELL"|"Barbara"||"20/12/2002 00:00:00"|0|1|"MINREST Researcher"|4|0||||1|3|2|2|2|"un an"|"31 octobre 2002"||0|"01 novembre 2002"|"31 octobre 2003"|0|49|"* Produire une étude de la nature et de l'impact des langues kom, lamnso' et bafut dans l'éducation formelle et non-formelle de la Province du Nord - Ouest."
 127|"GARDNER"|"Jessica Kaye"|"01/11/2004 00:00:00"|"18/11/2003 00:00:00"|1|1|"MINREST Researcher"|4|0||"01/05/2003 00:00:00"||1|1|2|3|2|"un an"|"01 novembre 2004"||0|"1 octobre 2003"|"30 septembre 2004"|0|36|
-128|"ANONBY"|"Erik John"||"02/12/2003 00:00:00"|0|1|"Linguist MINREST Researcher"|4|0||"01/10/2003 00:00:00"||1|4|4|1|1|"un an"|"10 novembre 2003"||0|"1 deàcembre 2003"|"30 novembre 2004"|0|51|"* Faire des recherches sur la phonologie de la langue mambaïþ. Contribuer au deàveloppement d'une orthographe scientifique. Susciter la  participation des locuteurs du mambaïþ dans la creàtion d'un lexique."
-129|"MAMALIS"|"Megan Brooke"|"29/10/2004 00:00:00"|"02/12/2003 00:00:00"|1|1|"Linguist MINREST Researcher"|4|0|"01/07/2004 00:00:00"|"01/05/2003 00:00:00"||1|1|2|3|2|"un an"|"1 novembre 2004"||0|"1 deàcembre 2003"|"30 nvembre 2004"|0|16|
-131|"TEFERA"|"Endalew"||"06/10/2004 00:00:00"|0|1||4|0||||1|3|9|1|1|"un an"|"27 juillet 2004"||0|"5 juin 2004"|"4 juin 2005"|0|21|"* Examiner le roêle des eàglises, organisations nationales et internationales dans la promotion de l'alphabeàtisation en langues nationales et des 
-eàcoles bibliques."
-132|"COTON"|"Jennifer"||"06/10/2004 00:00:00"|0|1||4|0||"19/06/2004 00:00:00"||1|3|3|3|2|"un an"|"20 aouêt 2004"||0|"1 juillet 2004"|"30 juin 2005"|0|69|"* Faire une eàtude sur les identiteàs dynamiques au Cameroun. Comment les identiteàs locales et nationales sont construites et connecteàes?
+128|"ANONBY"|"Erik John"||"02/12/2003 00:00:00"|0|1|"Linguist MINREST Researcher"|4|0||"01/10/2003 00:00:00"||1|4|4|1|1|"un an"|"10 novembre 2003"||0|"1 décembre 2003"|"30 novembre 2004"|0|51|"* Faire des recherches sur la phonologie de la langue mambaïþ. Contribuer au développement d'une orthographe scientifique. Susciter la  participation des locuteurs du mambaïþ dans la crétion d'un lexique."
+129|"MAMALIS"|"Megan Brooke"|"29/10/2004 00:00:00"|"02/12/2003 00:00:00"|1|1|"Linguist MINREST Researcher"|4|0|"01/07/2004 00:00:00"|"01/05/2003 00:00:00"||1|1|2|3|2|"un an"|"1 novembre 2004"||0|"1 décembre 2003"|"30 nvembre 2004"|0|16|
+131|"TEFERA"|"Endalew"||"06/10/2004 00:00:00"|0|1||4|0||||1|3|9|1|1|"un an"|"27 juillet 2004"||0|"5 juin 2004"|"4 juin 2005"|0|21|"* Examiner le roêle des églises, organisations nationales et internationales dans la promotion de l'alphabétisation en langues nationales et des 
+écoles bibliques."
+132|"COTON"|"Jennifer"||"06/10/2004 00:00:00"|0|1||4|0||"19/06/2004 00:00:00"||1|3|3|3|2|"un an"|"20 aouêt 2004"||0|"1 juillet 2004"|"30 juin 2005"|0|69|"* Faire une étude sur les identités dynamiques au Cameroun. Comment les identités locales et nationales sont construites et connectées?
 Example de langue ouldeme et d'autres dans le Mayo-Plata."
-134|"RUFF"|"Joy Naomi"|"15/02/2006 00:00:00"|"28/12/2004 00:00:00"|0|1|"Linguist MINRESTS Researcher"|4|0||"01/04/2004 00:00:00"||0|3|3|3|2|"un an"|"15 feàvrier 2006"||0|"01 janvier 2005"|"31 deàcembre 2005"|0|53|
+134|"RUFF"|"Joy Naomi"|"15/02/2006 00:00:00"|"28/12/2004 00:00:00"|0|1|"Linguist MINRESTS Researcher"|4|0||"01/04/2004 00:00:00"||0|3|3|3|2|"un an"|"15 février 2006"||0|"01 janvier 2005"|"31 décembre 2005"|0|53|
 135|"VILJOEN"|"Michael Ralph Thomas"|"18/06/2009 00:00:00"|"18/06/2009 00:00:00"|0|1|"Linguist MINREST Researcher"|4|0||"01/04/2004 00:00:00"||0|4|8|1|1|"un an"|"18 juin 2009"||0|"01 avril 2007"|"31 mars 2008"|0|54|
 149|"HENSON"|"Bonnie Jean"||"30/05/2005 00:00:00"|1|1||4|0||"01/04/2005 00:00:00"||0|4|2|2|2|"un an"|"11 mars 2008"||0|"31 mai 2005"|"30 mai 2006"|0|65|
 1|"SPREDA"|"Klaus W."|"30/01/2001 00:00:00"||1|2|"Regional Cosultant"|4|0||"01/01/1975 00:00:00"||0|4|1|4|1|"un an"|"6 janvier 2001"||0|||1||
@@ -116,24 +116,24 @@ Example de langue ouldeme et d'autres dans le Mayo-Plata."
 6|"KINNAIRD"|"William"|"12/09/2006 00:00:00"|"30/06/2005 00:00:00"|0|1|"Linguist: MINRESI Researcher"|4|0||"01/09/1992 00:00:00"||0|4|3|1|1|"un an"|"12 septembre 2006"||0|"30 juin 2005"|"29 mai 2006"|1|4|
 139|"BOUTWELL"|"Richard Lee"|"07/11/2014 00:00:00"|"27/04/2015 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0|||"Linguist"|1|2|2|1|1|"un an"|"27 avril 2015"||1|"02 mai 2015"|"30 April 2016"|0|57|"Faire une étude du ton dans le syntagme nominal de la langue nchane."
 170|"FREELAND"|"Lance Edward"|"29/08/2011 00:00:00"|"24/03/2014 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0||||0|4|2|1|1|"un an"|"24 mars 2014"||0|"01 mars 2014"|"28 février 2015"|0|88|"* Enregistrer, transcrire et interlinéariser cinq textes de la langue bangolan."
-152|"SORSAMO"|"Hannu"|"22/01/2007 00:00:00"|"06/06/2006 00:00:00"|1|1|"Linguist: MINRESI Researcher"|4|0||||0|4|14|1|1|"un an"|"22 janvier 2007"||0|"13 feàvrier 2006"|"12 feàvrier 2007"|0|74|
-155|"SAINT- ANDRE"|"Nathalie"||"16/08/2006 00:00:00"|1|1|"Linguist: MINRESI Resesrcher"|4|0||"01/09/2005 00:00:00"||0|1|5|3|2|"un an"|"16 aouêt 2006"||0|"16 aouêt 2006"|"15 aouêt 2007"|0|76|"* Analyse des facteurs qui favorisent l'utilisation des eàcrits en langue kwanja."
+152|"SORSAMO"|"Hannu"|"22/01/2007 00:00:00"|"06/06/2006 00:00:00"|1|1|"Linguist: MINRESI Researcher"|4|0||||0|4|14|1|1|"un an"|"22 janvier 2007"||0|"13 février 2006"|"12 février 2007"|0|74|
+155|"SAINT- ANDRE"|"Nathalie"||"16/08/2006 00:00:00"|1|1|"Linguist: MINRESI Resesrcher"|4|0||"01/09/2005 00:00:00"||0|1|5|3|2|"un an"|"16 aouêt 2006"||0|"16 aouêt 2006"|"15 aouêt 2007"|0|76|"* Analyse des facteurs qui favorisent l'utilisation des écrits en langue kwanja."
 157|"WALTER"|"Stephen Leslie"|"12/11/2012 00:00:00"|"29/08/2011 00:00:00"|0|1|"Linguist: MINRESI Researcher"|4|0||"01/07/2006 00:00:00"||0|4|2|4|1|"un an"|"13 novembre 2012"||0|"1 Octobre 2011"|"30Septembre 12"|0|2|
 23|"HEATH"|"Daniel"|"23/07/2009 00:00:00"|"22/03/2007 00:00:00"|0|1|"Researcher"|4|0||"01/01/1978 00:00:00"||0|4|2|1|1|"un an"|"23 juillet 2009"||0|"01 avril 2007"|"31mars 2008"|1|13|
 197|"ROSSINGTON"|"Bruce Christopher"||"12/05/2014 00:00:00"|0|1|"Linguist MINRESI RESEARCHER"|4|0||||1|1|3|1|1|"un an"|"12 mai 2014"||0|"15 mai 2014"|"14 mai 2015"|0|106|"* Evaluer certaines conclusions provisoires sur l'analyse du discours de la langue numala."
 13|"HARRO"|"Gretchen"|"24/06/2009 00:00:00"|"24/06/2009 00:00:00"|0|1|"Researcher"|4|0||"01/01/1983 00:00:00"||0|4|2|3|2|"un an"|"24 juin 2009"||0|"01 octobre 2007"|"30 septembre 08"|1|10|
 151|"SHRYOCK"|"Aaron Michael"|"06/11/2014 00:00:00"|"10/03/2014 00:00:00"|0|1|"Linguist: MINRESI Researcher"|4|0||||0|2|2|4|1|"un an"|"06 novembre 2014"||0|"01 mars 2014"|"28 février 2015"|0|53|
-154|"CHERPILLOD"|"Ireène"||"16/08/2006 00:00:00"|1|1|"Linguiste MINRESI Researcher"|4|0|"09/01/2005 00:00:00"|||1|1|7|2|2|"un an"|"16 aouêt 2006"||0|"16 aouêt 2006"|"15 aouêt 2007"|0|77|"* Le deàveloppement de projets rentables pour soutenir l'alphabeàtisation."
+154|"CHERPILLOD"|"Ireène"||"16/08/2006 00:00:00"|1|1|"Linguiste MINRESI Researcher"|4|0|"09/01/2005 00:00:00"|||1|1|7|2|2|"un an"|"16 aouêt 2006"||0|"16 aouêt 2006"|"15 aouêt 2007"|0|77|"* Le développement de projets rentables pour soutenir l'alphabétisation."
 156|"SIMPSON"|"Hazel J."|"22/01/2007 00:00:00"|"16/08/2006 00:00:00"|1|1|"Linguist: MINRESI Researcher"|4|0||||0|4|3|2|2|"un an"|"22 janvier 2007"||0|"16 aouêt 2006"|"15 aouêt 2007"|0|78|
 145|"DEVISSER"|"Christine Jane"|"27/01/2014 00:00:00"|"12/11/2015 00:00:00"|0|1|"Linguist: MINRESI Researcher"|4|0||||0|4|4|3|2|"un an"|"20 janvier 2014"||0|"4 Janvier 2013"|"31Décembre 2013"|0|78|
-158||||"13/10/2006 00:00:00"|0|1||4|0||"01/01/2005 00:00:00"||1|4|15|1|1|"un an"|"13 novembre 2006"||0|"1 deàcembre 06"|"30 novembre 07"|0|74|"Les traditions associeàes aè la naissance et la manieère d'eàlever les jumeaux dans la reàgion de bamunka."
-143|"GROVE"|"Daniel"|"31/01/2008 00:00:00"|"13/10/2006 00:00:00"|0|1||4|0||||1|2|4|1|1|"un an"|"31 janvier 2008"||0|"1 deàcembre 06"|"30 novembre 07"|0|59|
+158||||"13/10/2006 00:00:00"|0|1||4|0||"01/01/2005 00:00:00"||1|4|15|1|1|"un an"|"13 novembre 2006"||0|"1 décembre 06"|"30 novembre 07"|0|74|"Les traditions associées aè la naissance et la manieère d'élever les jumeaux dans la région de bamunka."
+143|"GROVE"|"Daniel"|"31/01/2008 00:00:00"|"13/10/2006 00:00:00"|0|1||4|0||||1|2|4|1|1|"un an"|"31 janvier 2008"||0|"1 décembre 06"|"30 novembre 07"|0|59|
 86|"HAMM"|"Cameron Dean"|"22/05/2013 00:00:00"|"27/04/2015 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0|"01/12/1999 00:00:00"|"01/09/1998 00:00:00"|"Linguist: MINRESI Rsearcher"|0|4|4|1|1|"un an"|"27 mai 2015"||0|"02 mai 2015"|"30 avril 2016"|0|61|"Faire une étude du discours narratif de la langue bafanji."
 7|"LEONARD"|"Yves"|"24/02/2010 00:00:00"|"22/03/2007 00:00:00"|0|1|"Researcher"|4|0||"01/01/1994 00:00:00"||0|4|4|1|1|"un an"|"29 mars 2010"||0|"01 avril 2007"|"31 mars 2008"|1|5|
 161|"KINNAIRD"|"Annuka"|"08/01/2010 00:00:00"|"27/06/2008 00:00:00"|1|1||4|0|||"Linguist: MINRESI Researcher"|0|4|14|2|2|"un an"|"08 janvier 2010"||0|"01 juillet 2008"|"30 juin 2009"|0|82|
 146|"MCLEAN"|"Gregory Lioyd"|"07/11/2014 00:00:00"|"09/04/2013 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0||||0|2|4|1|1|"un an"|"07 novembre 2014"||0|"09 Juillet 2013"|"30 Juin 2014"|0|63|
 162|"DEVRIES"|"Aaron"|"04/03/2009 00:00:00"|"07/06/2008 00:00:00"|1|1|"Linguist: MINRESI Researcher"|4|0||||1|4|4|1|1|"un an"|"4 mars 2009"||0|"01 aouêt 2008"|"30 juin 2009"|0|81|
-165|"LUIDER"|"Jennifer"|"08/01/2010 00:00:00"|"20/08/2008 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0||||0|4|4|3|2|"un an"|"08 janvier 2010"||0|"02 janvier 2009"|"31 deàcembre 09"|0|59|
+165|"LUIDER"|"Jennifer"|"08/01/2010 00:00:00"|"20/08/2008 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0||||0|4|4|3|2|"un an"|"08 janvier 2010"||0|"02 janvier 2009"|"31 décembre 09"|0|59|
 14|"HAYNES"|"Nancy"|"24/06/2009 00:00:00"|"11/10/2007 00:00:00"|0|1|"Researcher"|4|0||"01/01/1983 00:00:00"||0|4|2|3|2|"un an"|"24 juin 2009"||0|"01 octobre 2007"|"30 septembre 08"|1|10|
 159|"SODER"|"JOAKIM"|"14/03/2009 00:00:00"|"11/10/2007 00:00:00"|1|1|"Linguist: MINRESI Researcher"|4|0||||0|4|16|1|1|"un an"|"4 mars 2009"||0|"01 octobre 2007"|"30 septembre 08"|0|81|
 164|"TONG CHUN YU"|"Edward"|"13/01/2008 00:00:00"|"20/08/2008 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0||||0|4|4|1|1|"un an"|"14 janvier 2011"||0|"1 septembre 08"|"30 aouêt 2009"|0|84|
@@ -157,7 +157,7 @@ Example de langue ouldeme et d'autres dans le Mayo-Plata."
 185|" MICHAEL"|" Nathan Earl"|"10/10/2013 00:00:00"|"10/03/2014 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0||||0|1|2|1|1|"un an"|"24 mars 2014"||0|"01 mars 2014"|"28 février 2015"|0|63|"*Faire une analyse du discours narratif de la langue mfumte."
 34|"DUKE"|"Daniel Joseph"|"27/08/2010 00:00:00"|"01/04/2013 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0||"01/09/1994 00:00:00"||1|1|2|1|1|"un an"|"08 Avril 2013"||0|"01 Juillet 2013"|"30 Juin 2014"|0|103|"Faire une étude du syntagme nominale de la langue gyele"
 207|"ZUBOT"|"Esther"||"26/07/2016 00:00:00"|0|1|"Linguist MINRESI Researcher"|2|0||||0|4|19|2|2|"un an"|"le 26 juillet 2016"||0|"01 août 2016"|"31 juillet 2017"|0|57|"* Faire une description du système tonal du syntagme verbal de la langue nchane."
-120|"BOMBAY"|"Rebecca Elaine"|"26/09/2002 00:00:00"|"10/01/2002 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0|"25/07/2002 00:00:00"|"01/12/2001 00:00:00"||1|4|4|2|2|"un an"|"26 septembre 2002"||0|"01 deàcembre 2001"|"30 novembre 2002"|0|21|
+120|"BOMBAY"|"Rebecca Elaine"|"26/09/2002 00:00:00"|"10/01/2002 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0|"25/07/2002 00:00:00"|"01/12/2001 00:00:00"||1|4|4|2|2|"un an"|"26 septembre 2002"||0|"01 décembre 2001"|"30 novembre 2002"|0|21|
 191|"SCHERRER"|"Marie Elaine"|"07/03/2013 00:00:00"|"10/03/2014 00:00:00"|0|1|"Linguist MINRESI Researcher"|4|0||||0|4|2|3|2|"un an"|"24 mars 2014"||0|"01 mars 2014"|"28 février 2015"|0|96|"* Elaborer une revision du précis d'orthographe de la langue guemzek."
 174|"GRANT"|"Deryn Elise"|"07/03/2013 00:00:00"|"23/08/2010 00:00:00"|0|1|"MINRESI Linguist Researcher"|4|0||||0|4|4|3|2|"un an"|"07 mars 2013"||0|"1 september 10"|"31 août 2011"|0|92|
 11|"ULFERS"|"Robert Ernst"|"24/04/2012 00:00:00"|"13/01/2011 00:00:00"|0|1|"Researcher"|4|0||"01/05/1990 00:00:00"||0|4|2|1|1|"un an"|"24 avril 2012"||0|"4 janvier 2011"|"31décembre 11"|1|8|
