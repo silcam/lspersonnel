@@ -1,0 +1,10 @@
+<h1>Languages#index</h1>
+<h1>Language#index</h1>
+<h1> languages list<h1>
+<% @languages.each do |language| %>
+<p><%= language.name %></p>
+<% end %>
+<%= form_tag "/language" , method: "post" do %>
+  <input type="text" name="name"  placeholder="name language" required/>
+  <input type="submit" value="Add language"/>
+<% end %>  
