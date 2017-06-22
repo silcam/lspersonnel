@@ -1,6 +1,7 @@
 class PeopleController < ApplicationController
     def index
         @people = Person.all
+        @languages = Language.all
     end
 
     def show
@@ -8,7 +9,9 @@ class PeopleController < ApplicationController
     end
 
     def create
-
+      Person.create last_name: params[:last_name], first_name: params[:first_name], category: params[:category], job: params[:job], arrival: params[:arrival], departure: params[:departure], nationality: params[:nationality], title: params[:title], gender: params[:gender], language_id: params[:language]
+      redirect_to "/people"
+      puts params
     end
 
     def new

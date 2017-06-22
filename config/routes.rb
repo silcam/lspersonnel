@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'languages/index'
+  get 'languages'=>'languages#index'
+  post 'languages'=>'languages#create'
+  post 'people'=>'people#create'
 
   get 'pages/home'
 

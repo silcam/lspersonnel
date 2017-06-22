@@ -1,10 +1,31 @@
-<h1>Languages#index</h1>
-<h1>Language#index</h1>
-<h1> languages list<h1>
-<% @languages.each do |language| %>
-<p><%= language.name %></p>
-<% end %>
-<%= form_tag "/language" , method: "post" do %>
-  <input type="text" name="name"  placeholder="name language" required/>
-  <input type="submit" value="Add language"/>
-<% end %>  
+<h1 class="text-info page-header"> languages list</h1>
+<div class="row-fluid">
+  <div class="span5 offset3">
+    <%= form_tag "/languages" , method: "post" do %>
+      <legend> New language</legend>
+      <input type="text" name="name"  placeholder="name language" required/>
+      <select name="region" required>
+          <option value="">Region</option>
+           <% @regions.each do |region| %>
+           <option value="<%= region.id %>"> <%= region.name %> </option>  
+           <% end %>
+        </select>
+      <button type="submit" class="btn btn-success">Add</button>
+    <% end %>  
+    <table class="table table-bordered table-striped">
+        <tr>
+          <td class="">id_language</td>
+          <td>language</td>
+          <td>id region</td>
+        </tr>
+
+        <% @languages.each do |language| %>
+        <tr>
+           <td><%= language.id %></td>
+           <td><%= language.name %></td>
+           <td><%= language.region_id %></td>
+        </tr>
+        <% end %>
+   </table>
+  </div>
+</div>
