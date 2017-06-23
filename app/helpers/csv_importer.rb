@@ -38,9 +38,9 @@ class CSVImporter
 
   def self.extract_date(s, format)
     return if s.nil? || s.length < format.length
-    y = s[format.index('yyyy')]
-    m = s[format.index('mm')]
-    d = s[format.index('dd')]
+    y = s[format.index('yyyy'), 4]
+    m = s[format.index('mm'), 2]
+    d = s[format.index('dd'), 2]
     return "#{y}-#{m}-#{d}"
   end
 end
