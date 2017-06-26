@@ -23,7 +23,7 @@
         <tr>
            <td><%= language.id %></td>
            <td><%= language.name %></td>
-           <td><%= language.region_id %></td>
+           <td><%= Region.find(language.region_id ).name%></td>
         </tr>
         <% end %>
    </table>

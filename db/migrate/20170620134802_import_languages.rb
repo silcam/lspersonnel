@@ -20,3 +20,4 @@ class ImportLanguages < ActiveRecord::Migration[5.1]
     # Nothing
   end
 end
+

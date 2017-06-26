@@ -50,7 +50,7 @@
          <td>Nationality</td>
          <td>title</td>
          <td>genter</td>
-         <td>id_language</td>
+         <td>language</td>
        </tr>
        <% @people.each do |person| %>
        <tr>
@@ -64,7 +64,7 @@
           <td><%= person.nationality %></td>
           <td><%= person.title %></td>
           <td><%= person.gender %></td>
-          <td><%= person.language_id %></td>
+          <td><%= Language.find(person.language_id).name %></td>
         </tr>
        <% end %>
   </table>
