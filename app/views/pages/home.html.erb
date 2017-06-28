@@ -1,2 +1,76 @@
-<h1>Lspersonnel</h1>
-<p></p>
+<nav class="navbar navbar-inner navbar-fixed-top">
+  <ul class="nav navbar-nav">
+     <li><a href="/" title="home"><%= image_tag("home.png", :alt=>"home") %> Home </a></li>
+     <li><a href="/people" title="see people list"> <%= image_tag("people.png", :alt=>"home") %> People </a></li>
+     <li><a href="/languages" title="see languages list"> <%= image_tag("lang.png", :alt=>"home") %> Languages</a></li>
+     <li><a href="/add_person" title="new person"><%= image_tag("user.png", :alt=>"home") %> Add Person</a></li>
+     <li><a href="/add_language" title="new lang"> <%= image_tag("lang.png", :alt=>"home") %> Add Language</a></li>
+     <li><a href="/" title="search"><%= image_tag("search.png", :alt=>"home") %> Search</a></li>
+  </ul>
+</nav>
+<br/><br/><br/><br/>
+<h1 class="text-center">Dashboard</h1>
+<div class="row-fluid">
+    <div class="span3 offset2 btn btn-inverse btn-large">
+      <h4 class="page-header"><%= image_tag("user.png", :alt=>"home") %> Number of People</h4>
+      <p class="dashboard">
+          <%=  @people.size %>
+      </p>
+    </div>
+    <div class="span3 btn btn-inverse btn-large">
+      <h4 class="page-header"><%= image_tag("lang.png", :alt=>"home") %> Number of Languages</h4>
+       <p class="dashboard">
+          <%=  @lang.size %>
+      </p>
+    </div>
+    <div class="span3 btn btn-inverse btn-large">
+      <h4 class="page-header"><%= image_tag("region.png", :alt=>"home") %> Number of Regions</h4>
+       <p class="dashboard">
+           <%=  @region.size %>
+      </p>
+    </div>
+</div>
+<div class="row-fluid"><br/><br/>
+  <div class="span4 offset4 well">
+    <h4 class="text-center">Search Person<br/><%= image_tag("user.png", :alt=>"home") %></h4>
+    <%= form_tag "/pages", method: "post" do %>
+      <input type="search" name="key_word" placeholder="Input key word first name" style="height: 36px; width:65%;"/> 
+      <button type="submit" class="btn btn-large btn-info">Search</button>
+    <% end %>
+  </div>
+</div>
+<div class="row-fluid">
+  <h4 class="page-header">search results</h4>
+  <table class="table table-bordered table-striped">
+       <tr>
+         <td>Action</td>
+         <td>last name</td>
+         <td>fist name</td>
+         <td>category</td>
+         <td>Job</td>
+         <td>arrival</td>
+         <td>departure</td>
+         <td>Nationality</td>
+         <td>title</td>
+         <td>genter</td>
+         <td>language</td>
+       </tr>
+        <% if @request != nil
+            @request.each do |person|
+        %>
+       <tr>
+          <td><a href="">Delete</a></td>
+          <td><%= person.first_name %></td>
+          <td><%= person.last_name %></td>
+          <td><%= person.category %></td>
+          <td><%= person.job %></td>
+          <td><%= person.arrival %></td>
+          <td><%= person.departure %></td>
+          <td><%= person.nationality %></td>
+          <td><%= person.title %></td>
+          <td><%= person.gender %></td>
+          <td><%= Language.find(person.language_id).name %></td>
+        </tr>
+       <% end end %>
+  </table>
+</div>

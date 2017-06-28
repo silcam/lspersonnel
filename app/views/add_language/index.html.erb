@@ -7,26 +7,20 @@
      <li><a href="/add_language" title="new lang"> <%= image_tag("lang.png", :alt=>"home") %> Add Language</a></li>
      <li><a href="/" title="search"><%= image_tag("search.png", :alt=>"home") %> Search</a></li>
   </ul>
-</nav><br/><br/>
-
-<h1 class="text-center"><%= image_tag("lang.png", :alt=>"people") %></h1>
-    <h3 class="page-header text-info text-center">Languages list <button class="btn"> <%= image_tag("print.png", :alt=>"print") %> Print list</button></h3>
+</nav><br/><br/><br/>
+<h3 class="page-header text-info text-center">New language <br/><%= image_tag("lang.png", :alt=>"home") %></h3>
 <div class="row-fluid">
-  <div class="span8 offset2">  
-    <table class="table table-bordered table-striped">
-        <tr>
-          <td class="">id_language</td>
-          <td>language</td>
-          <td>id region</td>
-        </tr>
-
-        <% @languages.each do |language| %>
-        <tr>
-           <td><%= language.id %></td>
-           <td><%= language.name %></td>
-           <td><%= Region.find(language.region_id ).name%></td>
-        </tr>
-        <% end %>
-   </table>
+  <div class="span6 offset4">
+    <%= form_tag "/add_language" , method: "post" do %>
+      <input type="text" name="name"  placeholder="name language" required/>
+      <select name="region" required>
+          <option value="">Region</option>
+           <% @regions.each do |region| %>
+           <option value="<%= region.id %>"> <%= region.name %> </option>  
+           <% end %>
+        </select>
+      <button type="submit" class="btn btn-success">Add</button>
+<% end %>
   </div>
 </div>
+ 
