@@ -1,0 +1,31 @@
+<br/><div class="row-fluid">
+     <div class="span3 offset3 well">
+         <%= image_tag("user.png", :alt=>"user") %>
+     </div>
+     <div class="span3">
+         <h2 class=""> <%= @person.first_name %> <%= @person.last_name %></h2>
+         <table class="table table-striped">
+             <tr>
+                 <td class="text-warning">Job: </td>
+                 <td><%= @person.job %></td>
+             </tr>
+              <tr>
+                 <td class="text-warning">Gender: </td>
+                 <td><%= @person.gender %></td>
+             </tr>
+              <tr>
+                 <td class="text-warning">Arrival</td>
+                 <td><%= @person.arrival %></td>
+             </tr>
+              <tr>
+                 <td class="text-warning">Language</td>
+                 <td><%= @lang.find(@person.language_id).name %></td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td><a href="" class="btn btn-danger">Delete</a></td>
+             </tr>
+         </table>
+         
+     </div>
+</div>

@@ -21,5 +21,11 @@ class PeopleController < ApplicationController
     if params[:key_word] != nil
       @request = Person.where(first_name: params[:key_word].capitalize)
     end
+
+    def show
+      @person = Person.find(params[:id])
+      @lang= Language.all
+    end
+    
   end
 end

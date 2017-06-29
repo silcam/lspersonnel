@@ -20,7 +20,7 @@
        <% @people.each do |person| %>
        <tr>
           <td><%= person.id %></td>
-          <td><%= person.first_name %></td>
+          <td><a href="/people/<%= person.id%>"><%= person.first_name %></a></td>
           <td><%= person.last_name %></td>
           <td><%= person.category %></td>
           <td><%= person.job %></td>
