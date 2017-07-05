@@ -1,15 +1,15 @@
 
 <div class="row-fluid">
     <h3 class="page-header text-info text-center">New Person<br/><%= image_tag("user.png", :alt=>"home") %></h3>
-    <%= form_tag "/people", method: "post" do%>
+    <%= form_for :person do |form| %>
       <div class="span3 offset1">
         <legend>Infos Person</legend>
-        <input class="input" type="text" name="last_name" placeholder="Last name" required/><br/>
-        <input class="input" type="text" name="first_name" placeholder="Lirst name" required/><br/>
-        <input class="input" type="text" name="nationality" placeholder="Nationality" required/><br/>
-        <input class="input" type="text" name="title" placeholder="Title" required/><br/>
-        Gender: Women <input type="radio" name="gender" value="F"/> 
-                Boy:<input type="radio" name="gender" value="M" />
+        <%= form.text_field :last_name, placeholder: 'Last name', required: true %><br>
+        <%= form.text_field :first_name, placeholder: 'First name' %><br>
+        <%= form.text_field :nationality, placeholder: 'Nationality' %><br>
+        <%= form.text_field :title, placeholder: 'Title' %><br>
+        <%= form.radio_button :gender, 'F',  %>Female
+        <%= form.radio_button :gender, 'M' %>Male<br>
       </div>
 
        <div class="span3">
