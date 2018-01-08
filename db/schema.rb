@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180105143259) do
+ActiveRecord::Schema.define(version: 20180108134848) do
 
   create_table "involvements", force: :cascade do |t|
     t.integer "language_id"
@@ -28,6 +28,30 @@ ActiveRecord::Schema.define(version: 20180105143259) do
     t.datetime "updated_at", null: false
     t.integer "region_id"
     t.index ["region_id"], name: "index_languages_on_region_id"
+  end
+
+  create_table "leave_reasons", force: :cascade do |t|
+    t.string "reason"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "leave_reasons_leaves", force: :cascade do |t|
+    t.integer "leave_id"
+    t.integer "leave_reason_id"
+    t.index ["leave_id"], name: "index_leave_reasons_leaves_on_leave_id"
+    t.index ["leave_reason_id"], name: "index_leave_reasons_leaves_on_leave_reason_id"
+  end
+
+  create_table "leaves", force: :cascade do |t|
+    t.integer "person_id"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["end_date"], name: "index_leaves_on_end_date"
+    t.index ["person_id"], name: "index_leaves_on_person_id"
+    t.index ["start_date"], name: "index_leaves_on_start_date"
   end
 
   create_table "people", force: :cascade do |t|

@@ -3,6 +3,7 @@ class Person < ApplicationRecord
 
   has_many :involvements
   has_many :languages, through: :involvements
+  has_many :leaves
 
   validates :first_name, presence: true
   validates :last_name, presence: true
