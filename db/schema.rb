@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622133212) do
+ActiveRecord::Schema.define(version: 20180105143259) do
+
+  create_table "involvements", force: :cascade do |t|
+    t.integer "language_id"
+    t.integer "person_id"
+    t.integer "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["language_id"], name: "index_involvements_on_language_id"
+    t.index ["person_id"], name: "index_involvements_on_person_id"
+  end
 
   create_table "languages", force: :cascade do |t|
     t.string "name"
@@ -30,10 +40,8 @@ ActiveRecord::Schema.define(version: 20170622133212) do
     t.string "nationality"
     t.string "title"
     t.string "gender", limit: 1
-    t.integer "language_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["language_id"], name: "index_people_on_language_id"
   end
 
   create_table "regions", force: :cascade do |t|
