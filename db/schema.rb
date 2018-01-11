@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108134848) do
+ActiveRecord::Schema.define(version: 20180108152049) do
 
   create_table "involvements", force: :cascade do |t|
     t.integer "language_id"
@@ -66,6 +66,18 @@ ActiveRecord::Schema.define(version: 20180108134848) do
     t.string "gender", limit: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "periodic_documents", force: :cascade do |t|
+    t.string "type"
+    t.string "quarter"
+    t.date "issue_date"
+    t.date "expiry_date"
+    t.date "submission_date"
+    t.integer "person_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["person_id"], name: "index_periodic_documents_on_person_id"
   end
 
   create_table "regions", force: :cascade do |t|

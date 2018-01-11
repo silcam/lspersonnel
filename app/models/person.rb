@@ -4,6 +4,8 @@ class Person < ApplicationRecord
   has_many :involvements
   has_many :languages, through: :involvements
   has_many :leaves
+  has_many :quarterly_reports
+  has_many :primary_reports
 
   validates :first_name, presence: true
   validates :last_name, presence: true

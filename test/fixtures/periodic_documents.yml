@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  issue_date: 2018-01-08
+  expiry_date: 2018-01-08
+  submission_date: 2018-01-08
+
+two:
+  type: 
+  issue_date: 2018-01-08
+  expiry_date: 2018-01-08
+  submission_date: 2018-01-08
