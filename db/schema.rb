@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180108152049) do
+ActiveRecord::Schema.define(version: 20180111133919) do
 
   create_table "involvements", force: :cascade do |t|
     t.integer "language_id"
@@ -52,6 +52,25 @@ ActiveRecord::Schema.define(version: 20180108152049) do
     t.index ["end_date"], name: "index_leaves_on_end_date"
     t.index ["person_id"], name: "index_leaves_on_person_id"
     t.index ["start_date"], name: "index_leaves_on_start_date"
+  end
+
+  create_table "min_forms", force: :cascade do |t|
+    t.string "top_left"
+    t.string "top_right"
+    t.string "centre"
+    t.string "permit_no"
+    t.string "decree1"
+    t.string "decree1_fr"
+    t.string "decree2"
+    t.string "decree2_fr"
+    t.string "decree3"
+    t.string "decree3_fr"
+    t.string "decree4"
+    t.string "decree4_fr"
+    t.string "decree5"
+    t.string "decree5_fr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "people", force: :cascade do |t|
