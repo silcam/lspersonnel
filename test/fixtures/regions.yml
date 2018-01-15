@@ -3,9 +3,16 @@
 # This model initially had no columns defined. If you add columns to the
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+
+Adamawa:
+  en: Adamawa
+  fr: Adamaoua
+  full_en: Adamawa Region
+  full_fr: Région de l'Adamaoua
+  region_code: CM-AD
+Centre:
+  en: Centre
+  fr: Centre
+  full_en: Centre Region
+  full_fr: Région du Centre
+  region_code: CM-CE

@@ -4,8 +4,7 @@ class InvolvementTest < ActiveSupport::TestCase
 
   test "Validity" do
 
-    cent = Region.new
-    cent.name = "Centre"
+    cent = Region.where(region_code: "CM-CE").first
 
     lang = Language.new
     lang.name = "TESTLANG"

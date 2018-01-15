@@ -1,0 +1,57 @@
+---
+regions:
+  CM-AD:
+    en: Adamawa
+    fr: Adamaoua
+    full_en: Adamawa Region
+    full_fr: Région de l'Adamaoua
+  CM-CE:
+    en: Centre
+    fr: Centre
+    full_en: Centre Region
+    full_fr: Région du Centre
+  CM-ES:
+    en: East
+    fr: Est
+    full_en: East Region
+    full_fr: Région de l'Est
+  CM-EN:
+    en: Far North
+    fr: Extrême-Nord
+    full_en: Far North Region
+    full_fr: Région de l'Extrême-Nord
+  CM-LT:
+    en: Littoral
+    fr: Littoral
+    full_en: Littoral Region
+    full_fr: Région du Littoral
+  CM-NO:
+    en: North
+    fr: Nord
+    full_en: North Region
+    full_fr: Région du Nord
+  CM-NW:
+    en: North-West
+    fr: Nord-Ouest
+    full_en: Northwest Region
+    full_fr: Région du Nord-Ouest
+  CM-SU:
+    en: South
+    fr: Sud
+    full_en: South Region
+    full_fr: Région du Sud
+  CM-SW:
+    en: South-West
+    fr: Sud-Ouest
+    full_en: Southwest Region
+    full_fr: Région du Sud-Ouest
+  CM-OU:
+    en: West
+    fr: Ouest
+    full_en: West Region
+    full_fr: Région de l'Ouest
+  CM-CM: # I made this one up, but it's in the old database, it is not part of the ISO-3166-2:CM spec
+    en: Cameroon
+    fr: Cameroun
+    full_en: Throughout Cameroon
+    full_fr: Sur l'ensemble du territoire national

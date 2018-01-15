@@ -30,3 +30,23 @@ minform.decree4_fr = data["decree4_fr"]
 minform.decree5 = data["decree5"]
 minform.decree5_fr = data["decree5_fr"]
 minform.save
+
+# Delete all regions first.
+Region.all.each do |r|
+  r.delete
+end
+
+data = YAML.load_file('db/regions.yml')
+
+data["regions"].each do |k,v|
+  region = Region.new
+
+  region.region_code = k
+  region.en = v["en"]
+  region.fr = v["fr"]
+  region.full_en = v["full_en"]
+  region.full_fr = v["full_fr"]
+
+  region.save
+
+end

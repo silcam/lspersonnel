@@ -19,8 +19,7 @@ class PersonTest < ActiveSupport::TestCase
 
 
   test "person can be associated with language through involvement" do
-    region = Region.new
-    region.name = "Centre"
+    region = Region.where(region_code: "CM-AD").first
     assert(region.valid?, "region should be valid")
 
     person = Person.new
