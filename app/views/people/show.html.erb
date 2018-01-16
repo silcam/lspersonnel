@@ -1,31 +1,81 @@
-<br/><div class="row-fluid">
-     <div class="span3 offset3 well">
-         <%= image_tag("user.png", :alt=>"user") %>
-     </div>
-     <div class="span3">
-         <h2 class=""> <%= @person.first_name %> <%= @person.last_name %></h2>
-         <table class="table table-striped">
-             <tr>
-                 <td class="text-warning">Job: </td>
-                 <td><%= @person.job %></td>
-             </tr>
-              <tr>
-                 <td class="text-warning">Gender: </td>
-                 <td><%= @person.gender %></td>
-             </tr>
-              <tr>
-                 <td class="text-warning">Arrival</td>
-                 <td><%= @person.arrival %></td>
-             </tr>
-              <tr>
-                 <td class="text-warning">Language</td>
-                 <td><%= @lang.find(@person.language_id).name %></td>
-             </tr>
-             <tr>
-                 <td></td>
-                 <td><a href="" class="btn btn-danger">Delete</a></td>
-             </tr>
-         </table>
-         
-     </div>
+<div class="row-fluid">
+  <div class="span9 offset1">
+    <h2 class=""> <%= @person.first_name %> <%= @person.last_name %></h2>
+
+    <%= link_to("Edit", edit_person_path(@person), { class: "btn btn-primary" }) %><br />
+    <br />
+
+    <table class="table table-striped">
+      <tr>
+        <td>Category: </td>
+        <td><%= @person.category %></td>
+      </tr>
+      <tr>
+        <td>Job: </td>
+        <td><%= @person.job %></td>
+      </tr>
+      <tr>
+        <td>Title: </td>
+        <td><%= @person.title %></td>
+      </tr>
+      <tr>
+        <td>Nationality: </td>
+        <td><%= @person.nationality %></td>
+      </tr>
+      <tr>
+        <td>Gender: </td>
+        <td><%= @person.gender %></td>
+      </tr>
+      <tr>
+        <td>Arrival</td>
+        <td><%= @person.arrival %></td>
+      </tr>
+      <tr>
+        <td>Departure</td>
+        <td><%= @person.departure %></td>
+      </tr>
+      <tr>
+        <td>Languages</td>
+        <td>
+          <% @person.involvements.each do |inv| %>
+            (<%= InvolvementLevel.id(inv.level).name %>) <%= inv.language.name %><br />
+
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td>Created:</td>
+        <td><%= @person.created_at %></td>
+      </tr>
+      <tr>
+        <td>Last Updated:</td>
+        <td><%= @person.updated_at %></td>
+      </tr>
+      <tr>
+        <td><a href="" class="btn btn-danger">Delete (NOT WORKING)</a></td>
+        <td></td>
+      </tr>
+
+    </table>
+
+    <%= form_for @person, { url: attach_language_url(@person), method: :post } do |f| %>
+
+      Add a New Language This Person is Involved With:<br />
+
+      <table>
+        <tr>
+          <td>
+          <%= collection_select(:person, :involvement_ids, @levels, :id, :name, prompt: true) %>
+          </td>
+          <td>
+          <%= collection_select(:person, :language_ids, @languages, :id, :name, prompt: true) %>
+          </td>
+          <td>
+          <%= f.submit "Add", { class: 'btn btn-primary' } %>
+          </td>
+        </tr>
+      </table>
+
+    <% end %>
+  </div>
 </div>

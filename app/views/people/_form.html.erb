@@ -1,0 +1,48 @@
+      <div class="span3 offset1">
+        <legend>Infos Person</legend>
+        <div class="form-group">
+          <%= form.label :last_name %>
+          <%= form.text_field :last_name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= form.label :first_name %>
+          <%= form.text_field :first_name, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= form.label :nationality %>
+          <%= form.text_field :nationality, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= form.label :title %>
+          <%= form.text_field :title, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+            <%= form.label :gender %>
+            <%= radio_button_tag(:gender, "F") %><%= label_tag(:gender_f, "Female") %>
+            <%= radio_button_tag(:gender, "M") %><%= label_tag(:gender_m, "Male") %>
+        </div>
+      </div>
+
+       <div class="span3">
+        <legend>Job Caracteristics</legend>
+        <div class="form-group">
+            <%= form.label :job %>
+            <%= form.text_field :job, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+            <%= form.label :category %>
+            <%= form.text_field :category, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+            <%= form.label :arrival %>
+            <%= form.text_field :arrival, class: 'form-control', type: 'date'  %>
+        </div>
+        <div class="form-group">
+            <%= form.label :departure %>
+            <%= form.text_field :departure, class: 'form-control', type: 'date'  %>
+        </div>
+      </div>
+
+      <%= submit_tag %>
+      </div>
+

@@ -4,10 +4,12 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 
-one:
-  first_name: Person
-  last_name: One
+Ewondo:
+  id: 1
+  region: Centre
+  name: Ewondo
 
-two:
-  first_name: Person
-  last_name: Two
+English:
+  id: 2
+  region: Adamawa
+  name: English

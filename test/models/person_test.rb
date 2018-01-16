@@ -33,7 +33,7 @@ class PersonTest < ActiveSupport::TestCase
     assert(cf.valid?, "Camfranglais should be valid")
 
     cfinvolvement = Involvement.new
-    cfinvolvement.level = InvolvementLevel::PRIMARY # need to be enum
+    cfinvolvement.level = InvolvementLevel::PRIMARY.id # need to be enum
     cfinvolvement.language = cf
 
     person.involvements << cfinvolvement
@@ -63,14 +63,14 @@ class PersonTest < ActiveSupport::TestCase
     assert(vama.valid?, "vama is valid")
 
     vamainvolvement_two = Involvement.new
-    vamainvolvement_two.level = InvolvementLevel::TERTIARY
+    vamainvolvement_two.level = InvolvementLevel::TERTIARY.id
     vamainvolvement_two.language = vama
     vamainvolvement_two.person = person_two
     assert(vamainvolvement_two.valid?, "should be valid")
     vamainvolvement_two.save
 
     vamainvolvement = Involvement.new
-    vamainvolvement.level = InvolvementLevel::PRIMARY
+    vamainvolvement.level = InvolvementLevel::PRIMARY.id
     vamainvolvement.language = vama
     vamainvolvement.person = person
     assert(vamainvolvement.valid?, "should be valid")
