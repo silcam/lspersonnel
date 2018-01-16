@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Mail Merge/Document Template Processing
+gem 'sablon', '~> 0.1.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,6 +42,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Reading Docx files for test purposes
+  gem 'henkei', '~> 1.14', '>= 1.14.4'
 end
 
 group :development do
