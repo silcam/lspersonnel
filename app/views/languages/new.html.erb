@@ -1,16 +1,23 @@
-<h3 class="page-header text-info text-center">New language <br/><%= image_tag("lang.png", :alt=>"home") %></h3>
+<h3 class="page-header text-info text-center">New language</h3>
 <div class="row-fluid">
-  <div class="span6 offset4">
-    <%= form_tag "/languages" , method: "post" do %>
-      <input type="text" name="name"  placeholder="name language" required/>
-      <select name="region" required>
-          <option value="">Region</option>
-           <% @regions.each do |region| %>
-           <option value="<%= region.id %>"> <%= region.name %> </option>  
-           <% end %>
-        </select>
-      <button type="submit" class="btn btn-success">Add</button>
-<% end %>
+
+  <div class="col-md-3">
+  <%= form_tag "/languages" , method: "post" do %>
+
+    <div class="form-group">
+      <input class="form-control" type="text" name="name" placeholder="name language" required="required" />
+      <select class="form-control" name="region" required>
+        <option value="">Region</option>
+        <% @regions.each do |region| %>
+          <option value="<%= region.id %>"> <%= region.en %> </option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-group">
+    <button type="submit" class="btn btn-success">Add</button>
+    </div>
+
+  <% end %>
   </div>
 </div>
- 
