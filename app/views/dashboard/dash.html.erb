@@ -44,13 +44,12 @@
          <td>Nationality</td>
          <td>title</td>
          <td>genter</td>
-         <td>language</td>
        </tr>
         <% if @request != nil
             @request.each do |person|
         %>
        <tr>
-          <td><a href="">Delete</a></td>
+          <td><%= link_to "View", person_path(person) %></td>
           <td><%= person.first_name %></td>
           <td><%= person.last_name %></td>
           <td><%= person.category %></td>
@@ -60,7 +59,6 @@
           <td><%= person.nationality %></td>
           <td><%= person.title %></td>
           <td><%= person.gender %></td>
-          <td><%= Language.find(person.language_id).name %></td>
         </tr>
        <% end end %>
   </table>

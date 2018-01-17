@@ -1,8 +1,6 @@
-<br/><br/><br/>
  <div class="row-fluid">
   <div class="span11" style="margin-left: 30px;">
-    <h1 class="text-center"><%= image_tag("people.png", :alt=>"people") %></h1>
-    <h3 class="page-header text-info text-center">Person list <button class="btn"> <%= image_tag("print.png", :alt=>"print") %> Print list</button></h3>
+    <h3 class="page-header text-info text-center">Person list</h3>
     <table class="table table-bordered table-striped">
        <tr>
          <td>id_person</td>
@@ -30,8 +28,9 @@
           <td><%= person.title %></td>
           <td><%= person.gender %></td>
           <td>
-            <% person.languages.each do |lng| %>
-              <%= lang %>
+            <% person.involvements.each do |inv| %>
+              (<%= InvolvementLevel.id(inv.level).name %>)
+              <%= inv.language.name %><br />
             <% end %>
           </td>
         </tr>
