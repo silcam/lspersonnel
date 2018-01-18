@@ -9,6 +9,8 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
     @levels = InvolvementLevel.all
     @languages = Language.all
+
+    @leaves = Leave.leave_type_hash(@person)
   end
 
   def new

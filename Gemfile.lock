@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    ansi (1.5.0)
     arel (8.0.0)
     autoprefixer-rails (7.2.5)
       execjs
@@ -47,6 +48,7 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    brakeman (4.1.1)
     builder (3.2.3)
     byebug (9.0.6)
     capybara (2.14.3)
@@ -93,6 +95,25 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
+    minitest-capybara (0.8.2)
+      capybara (~> 2.2)
+      minitest (~> 5.0)
+      rake
+    minitest-metadata (0.6.0)
+      minitest (>= 4.7, < 6.0)
+    minitest-rails (3.0.0)
+      minitest (~> 5.8)
+      railties (~> 5.0)
+    minitest-rails-capybara (3.0.1)
+      capybara (~> 2.7)
+      minitest-capybara (~> 0.8)
+      minitest-metadata (~> 0.6)
+      minitest-rails (~> 3.0)
+    minitest-reporters (1.1.19)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     multi_json (1.12.1)
     nio4r (2.1.0)
     nokogiri (1.8.0)
@@ -129,6 +150,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sablon (0.1.1)
@@ -183,12 +205,16 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 3.3.7)
+  brakeman
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   henkei (~> 1.14, >= 1.14.4)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  minitest (~> 5.8, >= 5.8.4)
+  minitest-rails-capybara
+  minitest-reporters
   puma (~> 3.7)
   rails (~> 5.1.1)
   sablon (~> 0.1.1)

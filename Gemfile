@@ -46,6 +46,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Reading Docx files for test purposes
   gem 'henkei', '~> 1.14', '>= 1.14.4'
+  gem 'minitest-reporters'
+  gem 'minitest-rails-capybara'
+  gem 'brakeman', require: false
 end
 
 group :development do

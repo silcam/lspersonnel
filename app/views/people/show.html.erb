@@ -84,12 +84,17 @@
 
     <%= link_to("Add Leave", new_person_leave_path(@person), { class: "btn btn-primary" }) %><br /><br />
 
-    <% if @person.leaves.size == 0 %>
+    <% if @leaves.keys.size == 0 %>
       No Leaves.
     <% else %>
-      <% @person.leaves.each do |lv| %>
+      <% @leaves.keys.each do |leave_type| %>
+
+        <h4><%= leave_type.to_s.humanize %><h4>
+
+        <% @leaves[leave_type].each do |lv| %>
+
         <div class="bg-info">
-        From: <%= lv.start_date %> to: <%= lv.start_date %><br />
+        From: <%= lv.start_date %> to: <%= lv.end_date %><br />
         Reasons:
         <ul>
         <% lv.leave_reasons.each do |reason| %>
@@ -101,6 +106,8 @@
 
         </div>
         <br />
+
+        <% end %>
       <% end %>
     <% end %>
 

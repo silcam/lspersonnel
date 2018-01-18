@@ -1,0 +1,50 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+
+
+leave_2010:
+  start_date: 2010-01-20
+  end_date: 2010-12-20
+  leave_reasons:
+    - medical
+
+leave_2016:
+  start_date: 2016-03-03
+  end_date: 2016-04-04
+  leave_reasons:
+    - personal
+
+leave_2017:
+  start_date: 2017-12-30
+  end_date: 2018-02-17
+  leave_reasons:
+    - medical
+    - personal
+
+leave_2018:
+  start_date: 2018-02-21
+  end_date: 2018-10-31
+  leave_reasons:
+    - personal
+
+leave_2019:
+  start_date: 2019-03-31
+  end_date: 2019-11-30
+  leave_reasons:
+    - personal
+
+leave_2020:
+  start_date: 2020-01-20
+  end_date: 2020-11-11
+  leave_reasons:
+    - personal
+
+leave_2030:
+  start_date: 2030-01-22
+  end_date: 2030-09-22
+  leave_reasons:
+    - medical
+    - personal
