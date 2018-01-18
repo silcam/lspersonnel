@@ -29,4 +29,32 @@ class LeaveTest < ActiveSupport::TestCase
 
   end
 
+  test "Start Date must be before End Date" do
+
+    leave = Leave.new
+    refute(leave.valid?, "should not be valid without dates")
+
+    assert_includes(leave.errors.messages, :start_date, "has errors")
+    assert_includes(leave.errors.messages, :end_date, "has errors")
+
+    leave.start_date = "2035-11-30"
+    leave.end_date = "2018-10-15"
+
+    refute(leave.valid?, "should not be valid")
+    assert_includes(leave.errors.messages, :start_date, "has errors")
+    assert_includes(leave.errors.messages, :end_date, "has errors")
+
+    leave.start_date = "2018-10-15"
+
+    refute(leave.valid?, "should not be valid when dates are the same")
+    assert_includes(leave.errors.messages, :start_date, "has errors")
+    assert_includes(leave.errors.messages, :end_date, "has errors")
+
+    leave.start_date = "2018-09-01"
+    leave.valid?
+    refute_includes(leave.errors.messages, :start_date, "is now valid")
+    refute_includes(leave.errors.messages, :end_date, "is now valid")
+
+  end
+
 end

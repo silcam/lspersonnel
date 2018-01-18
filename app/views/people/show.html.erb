@@ -4,7 +4,6 @@
     <h2 class=""> <%= @person.first_name %> <%= @person.last_name %></h2>
 
     <%= link_to("Edit", edit_person_path(@person), { class: "btn btn-primary" }) %>
-    <%= link_to("Add Leave", edit_person_path(@person), { class: "btn btn-primary" }) %><br />
 
     <table class="table table-striped">
       <tr>
@@ -66,10 +65,10 @@
       <table>
         <tr>
           <td>
-          <%= collection_select(:person, :involvement_ids, @levels, :id, :name, prompt: true) %>
+          <%= collection_select(:person, :involvement_ids, @levels, :id, :name, { prompt: true }, { class: 'form-control' }) %>
           </td>
           <td>
-          <%= collection_select(:person, :language_ids, @languages, :id, :name, prompt: true) %>
+          <%= collection_select(:person, :language_ids, @languages, :id, :name, { prompt: true }, {class: 'form-control' }) %>
           </td>
           <td>
           <%= f.submit "Add", { class: 'btn btn-primary' } %>
@@ -83,11 +82,24 @@
   <div class="col-md-5">
     <h3>Leaves:</h3>
 
+    <%= link_to("Add Leave", new_person_leave_path(@person), { class: "btn btn-primary" }) %><br /><br />
+
     <% if @person.leaves.size == 0 %>
       No Leaves.
     <% else %>
       <% @person.leaves.each do |lv| %>
-        <%= lv %>
+        <div class="bg-info">
+        From: <%= lv.start_date %> to: <%= lv.start_date %><br />
+        Reasons:
+        <ul>
+        <% lv.leave_reasons.each do |reason| %>
+          <li><%= reason.reason %></li>
+        <% end %>
+        </ul>
+
+        <input class="btn btn-danger" value="Delete" />
+        </div>
+        <br />
       <% end %>
     <% end %>
 

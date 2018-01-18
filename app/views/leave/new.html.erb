@@ -1,0 +1,40 @@
+
+
+<% if @leave.errors.messages.size > 0 %>
+<div class="bg-danger">
+    <%= @leave.errors.messages.inspect %>
+</div>
+<% end %>
+
+<div class="row-fluid">
+  <div class="col-sm-5">
+    <h3 class="page-header text-info text-center">New Leave for <%= @person.first_name %> <%= @person.last_name %></h3>
+
+    <%= form_for @leave, url: person_leave_index_url(@person) do |f| %>
+
+      <div class="form-group">
+        <%= f.label :start_date %>
+        <%= f.text_field :start_date, { type: 'date', class: 'form-control' } %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :end_date %>
+        <%= f.text_field :end_date, { type: 'date', class: 'form-control' } %>
+      </div>
+
+      <div class="form-group">
+        Reasons for Leave:<br />
+
+        <% @reasons.each do |reason| %>
+          <%= check_box_tag("reason[#{reason.id}]", 1) %>
+          <%= f.label(reason.id, reason.reason) %><br />
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Add Leave" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+
+<h3>Leave Reasons</h3>
+
+<% if @reasons.size == 0 %>
+  <h3>No Reasons to Display</h3>
+  <img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/terminal05/2012/4/19/20/enhanced-buzz-21764-1334881394-7.jpg?downsize=715:*&output-format=auto&output-quality=auto">
+<% else %>
+  <% @reasons.each do |rsn| %>
+    <p class="bg-info"><%= rsn.reason %></p>
+  <% end %>
+<% end %>

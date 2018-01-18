@@ -1,0 +1,20 @@
+
+<div class="row-fluid">
+    <h3 class="page-header text-info text-center">New Person</h3>
+
+    <div class="span3 offset1">
+
+    <%= form_for(@reason) do |form| %>
+
+        <div class="form-group">
+          <%= form.label :reason %>
+          <%= form.text_field :reason, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= submit_tag %>
+        </div>
+
+    <% end %>
+    </div>
+</div>
