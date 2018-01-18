@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   resources :people do
     resources :leave, except: ["edit","update","show"]
+    resources :research_permits
+    resources :quarterly_reports
+    resources :primary_reports
   end
 
   resources :leave, only: ["index"]

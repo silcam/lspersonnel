@@ -6,6 +6,7 @@ class Person < ApplicationRecord
   has_many :leaves
   has_many :quarterly_reports
   has_many :primary_reports
+  has_many :research_permits
 
   validates :first_name, presence: true
   validates :last_name, presence: true

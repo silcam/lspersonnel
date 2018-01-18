@@ -15,6 +15,7 @@ class PeriodicDocumentTest < ActiveSupport::TestCase
     person.primary_reports << doc
     refute(doc.valid?, "should not be valid after association")
 
+    doc.language = languages :English
     doc.submission_date = "2018-12-01"
     doc.save
 
@@ -35,6 +36,7 @@ class PeriodicDocumentTest < ActiveSupport::TestCase
     person.quarterly_reports << doc
     refute(doc.valid?, "should not be valid after association")
 
+    doc.language = languages :English
     doc.submission_date = "2018-12-01"
     doc.save
 
@@ -54,12 +56,14 @@ class PeriodicDocumentTest < ActiveSupport::TestCase
     person.save
 
     qr = QuarterlyReport.new
+    qr.language = languages :English
     qr.submission_date = "2018-01-01"
     person.quarterly_reports << qr
     assert(qr.valid?, "QR should be valid now")
     qr.save
 
     pr = PrimaryReport.new
+    pr.language = languages :English
     pr.submission_date = "2018-01-01"
     person.primary_reports << pr
     assert(pr.valid?, "PR should be valid now")

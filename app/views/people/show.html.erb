@@ -80,6 +80,34 @@
   </div>
 
   <div class="col-md-5">
+
+    <h3>Research Permits</h3>
+
+    <%= link_to "Add Research Permit", new_person_research_permit_path(@person), { class: "btn btn-primary" } %><br />
+
+    <% @person.research_permits.each do |rp| %>
+      <div class="bg-warning">
+      Permit: <br />
+      Number: <%= rp.identifier.blank? ? "None Yet" : rp.identifier %><br />
+      Submitted: <%= rp.submission_date %><br />
+      Issue Date: <%= rp.issue_date.nil? ? "Awaiting Issue" : rp.issue_date %><br />
+
+      <%= link_to "Edit" %>
+      <%= link_to "Delete" %>
+
+      </div>
+      <br />
+    <% end %>
+
+    <h3>Primary Reports</h3>
+
+    <%= link_to "Add Primary Report", { class: "btn btn-primary" } %><br />
+
+    <h3>Quarterly Reports</h3>
+
+    <%= link_to "Add Quarterly Report", { class: "btn btn-primary" } %><br />
+
+
     <h3>Leaves:</h3>
 
     <%= link_to("Add Leave", new_person_leave_path(@person), { class: "btn btn-primary" }) %><br /><br />

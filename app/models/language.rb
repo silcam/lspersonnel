@@ -3,6 +3,9 @@ class Language < ActiveRecord::Base
 
     has_many :involvements
     has_many :people, through: :involvements
+    has_many :quarterly_reports
+    has_many :primary_reports
+    has_many :research_permits
 
     belongs_to :region
 

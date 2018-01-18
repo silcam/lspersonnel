@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180112112353) do
+ActiveRecord::Schema.define(version: 20180118141947) do
 
   create_table "involvements", force: :cascade do |t|
     t.integer "language_id"
@@ -96,6 +96,9 @@ ActiveRecord::Schema.define(version: 20180112112353) do
     t.integer "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "identifier"
+    t.integer "language_id"
+    t.index ["language_id"], name: "index_periodic_documents_on_language_id"
     t.index ["person_id"], name: "index_periodic_documents_on_person_id"
   end
 

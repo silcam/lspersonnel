@@ -1,0 +1,43 @@
+
+<% if @permit.errors.messages.size > 0 %>
+<div class="bg-danger">
+    <%= @permit.errors.messages.inspect %>
+</div>
+<% end %>
+
+<div class="row-fluid">
+  <div class="col-sm-5">
+    <h3 class="page-header text-info text-center">Research Permit for <%= @person.first_name %> <%= @person.last_name %></h3>
+
+    <%= form_for @permit, url: person_research_permits_path(@person) do |f| %>
+
+      <div class="form-group">
+        <%= f.label :issue_date %>
+        <%= f.text_field :issue_date, { type: 'date', class: 'form-control' } %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :expiry_date %>
+        <%= f.text_field :expiry_date, { type: 'date', class: 'form-control' } %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :submission_date %>
+        <%= f.text_field :submission_date, { type: 'date', class: 'form-control' } %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :identifier %>
+        <%= f.text_field :identifier, { class: 'form-control' } %>
+      </div>
+
+      <%= collection_select(:research_permit, :language_id, @languages, :id, :name, { prompt: true }, { class: 'form-control' }) %>
+
+
+      <div class="form-group">
+        <%= f.submit "Add Research Permit" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
