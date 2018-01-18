@@ -97,7 +97,8 @@
         <% end %>
         </ul>
 
-        <input class="btn btn-danger" value="Delete" />
+        <%= link_to t(:Delete), person_leave_url(@person, lv), method: :delete, data: { confirm: t(:Are_you_sure) }, class: 'btn btn-danger' %>
+
         </div>
         <br />
       <% end %>

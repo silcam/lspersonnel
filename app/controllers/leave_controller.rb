@@ -27,6 +27,16 @@ class LeaveController < ApplicationController
     end
   end
 
+  def destroy
+    @person = Person.find(params[:person_id])
+    @leave = Leave.find(params[:id])
+
+    @person.leaves.delete(@leave)
+    @leave.destroy
+
+    redirect_to @person
+  end
+
   private
 
   def leave_params

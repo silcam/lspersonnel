@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root "dashboard#dash"
 
   resources :people do
-    resources :leave
+    resources :leave, except: ["edit","update","show"]
   end
 
   resources :leave, only: ["index"]
