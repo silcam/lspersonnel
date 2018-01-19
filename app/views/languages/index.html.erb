@@ -1,20 +1,22 @@
-<h3 class="page-header text-info text-center">Languages list</h3>
-<div class="row-fluid">
-  <div class="span8 offset2"> 
-    <table class="table table-bordered table-striped">
-        <tr>
-          <td class="">id_language</td>
-          <td>language</td>
-          <td>id region</td>
-        </tr>
+<div class="container">
 
-        <% @languages.each do |language| %>
-        <tr>
-           <td><%= language.id %></td>
-           <td><%= language.name %></td>
-           <td><%= language.region.en %></td>
-        </tr>
-        <% end %>
-   </table>
+  <div class="page-header">
+    <h3>Languages list</h3>
   </div>
+
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Language</th>
+      <th>Region</th>
+    </tr>
+
+    <% @languages.each do |language| %>
+    <tr>
+       <td><%= language.id %></td>
+       <td><%= language.name %></td>
+       <td><%= language.region.en %></td>
+    </tr>
+    <% end %>
+  </table>
 </div>

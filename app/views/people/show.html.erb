@@ -1,113 +1,79 @@
-<div class="row-fluid">
+<div class="row">
+  <div class="col-sm-12">
 
-  <div class="col-md-5">
     <h2 id="person-name"> <%= @person.first_name %> <%= @person.last_name %></h2>
 
-    <%= link_to("Edit", edit_person_path(@person), { class: "btn btn-primary" }) %>
+    <div>Category: <%= @person.category %></div>
+    <div>Job: <%= @person.job %></div>
+    <div>Title: <%= @person.title %></div>
+    <div>Nationality: <%= @person.nationality %></div>
+    <div>Gender: <%= @person.gender %></div>
+    <div>Arrival in Branch: <%= @person.arrival %></div>
+    <div>Departure <%= @person.departure %></div>
 
-    <table class="table table-striped">
-      <tr>
-        <td>Category: </td>
-        <td><%= @person.category %></td>
-      </tr>
-      <tr>
-        <td>Job: </td>
-        <td><%= @person.job %></td>
-      </tr>
-      <tr>
-        <td>Title: </td>
-        <td><%= @person.title %></td>
-      </tr>
-      <tr>
-        <td>Nationality: </td>
-        <td><%= @person.nationality %></td>
-      </tr>
-      <tr>
-        <td>Gender: </td>
-        <td><%= @person.gender %></td>
-      </tr>
-      <tr>
-        <td>Arrival</td>
-        <td><%= @person.arrival %></td>
-      </tr>
-      <tr>
-        <td>Departure</td>
-        <td><%= @person.departure %></td>
-      </tr>
-      <tr>
-        <td>Languages</td>
-        <td>
-          <% @person.involvements.each do |inv| %>
-            (<%= InvolvementLevel.id(inv.level).name %>) <%= inv.language.name %><br />
+    <div>
+      <%= link_to("Edit", edit_person_path(@person), { class: "btn btn-primary" }) %>
+      <%= link_to("Delete", person_path(@person), method: 'delete', data: { confirm: t(:Are_you_sure) }, class: 'text-danger' )  %>
+    </div>
 
-          <% end %>
-        </td>
-      </tr>
-      <tr>
-        <td>Created:</td>
-        <td><%= @person.created_at %></td>
-      </tr>
-      <tr>
-        <td>Last Updated:</td>
-        <td><%= @person.updated_at %></td>
-      </tr>
-      <tr>
-        <td><a href="" class="btn btn-danger">Delete (NOT WORKING)</a></td>
-        <td></td>
-      </tr>
-
-    </table>
-
-    <%= form_for @person, { url: attach_language_url(@person), method: :post } do |f| %>
+    <div>
+      Languages:<br />
+      <% @person.involvements.each do |inv| %>
+        <%= inv.language.name %> (<%= InvolvementLevel.id(inv.level).name %>)<br />
+      <% end %>
+      <br />
 
       Add a New Language This Person is Involved With:<br />
+      <%= form_for @person, { url: attach_language_url(@person), method: :post } do |f| %>
 
-      <table>
-        <tr>
-          <td>
-          <%= collection_select(:person, :involvement_ids, @levels, :id, :name, { prompt: true }, { class: 'form-control' }) %>
-          </td>
-          <td>
-          <%= collection_select(:person, :language_ids, @languages, :id, :name, { prompt: true }, {class: 'form-control' }) %>
-          </td>
-          <td>
-          <%= f.submit "Add", { class: 'btn btn-primary' } %>
-          </td>
-        </tr>
-      </table>
-
-    <% end %>
+      <div class="form-group-inline">
+        <%= collection_select(:person, :involvement_ids, @levels, :id, :name, { prompt: true }, { class: 'form-control' }) %>
+        <%= collection_select(:person, :language_ids, @languages, :id, :name, { prompt: true }, {class: 'form-control' }) %>
+        <%= f.submit "Add", { class: 'btn btn-primary' } %>
+      </div>
+      <% end %>
+    </div>
   </div>
+</div>
 
-  <div class="col-md-5">
-
-    <h3>Research Permits</h3>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-headling">Research Permits</div>
+    <div class="panel-body">
 
     <%= link_to "Add Research Permit", new_person_research_permit_path(@person), { class: "btn btn-primary" } %><br />
 
     <% @person.research_permits.each do |rp| %>
       <div class="bg-warning">
-      Permit: <br />
       Number: <%= rp.identifier.blank? ? "None Yet" : rp.identifier %><br />
-      Submitted: <%= rp.submission_date %><br />
-      Issue Date: <%= rp.issue_date.nil? ? "Awaiting Issue" : rp.issue_date %><br />
+      Issue Date: <%= rp.issue_date.nil? ? "Awaiting Issue, Submitted #{rp.submission_date}" : rp.issue_date %><br />
       Expiration Date: <%= rp.expiry_date.nil? ? "None Yet" : rp.expiry_date %><br />
 
       <%= link_to "Edit", edit_person_research_permit_path(@person, rp), { class: 'btn btn-info' } %>
       <%= link_to "Delete", person_research_permit_path(@person, rp), method: :delete, data: { confirm: t(:Are_you_sure) }, class: 'text-danger' %>
 
       </div>
-      <br />
     <% end %>
+    </div>
+  </div>
+</div>
 
+<div class="row">
     <h3>Primary Reports</h3>
 
     <%= link_to "Add Primary Report", { class: "btn btn-primary" } %><br />
+
+</div>
+
+<div class="row">
 
     <h3>Quarterly Reports</h3>
 
     <%= link_to "Add Quarterly Report", { class: "btn btn-primary" } %><br />
 
+</div>
+
+<div class="row">
 
     <h3>Leaves:</h3>
 
@@ -139,8 +105,5 @@
         <% end %>
       <% end %>
     <% end %>
-
-
-  </div>
 
 </div>

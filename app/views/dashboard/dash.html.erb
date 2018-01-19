@@ -1,25 +1,53 @@
 
-<h1>Dashboard</h1>
-
-<div class="col-sm-6">
-  <h4>Number of People: <%= link_to @people.size, people_path() %></h4>
-  <h4>Number of Languages: <%= link_to @lang.size, languages_path() %></h4>
-  <h4>Number of Regions: <%= @region.size %></h4>
-</div>
-<div class="col-sm-6">
-  <h4 class="text-center">Search Person</h4>
-  <%= form_tag "/", method: "get" do %>
-    <div class="form-group">
-      <input type="search" name="key_word" placeholder="Input key word first name" class="form-control" />
-    </div>
-    <div class="form-group">
-      <button type="submit" class="btn btn-large btn-info">Search</button>
-    </div>
-  <% end %>
+<div class="col-sm-12">
+  <div class="page-header">
+    <h1>Dashboard</h1>
   </div>
 </div>
+
+<div class="col-sm-3">
+
+  <h3>Quick Stats</h3>
+
+  <div class="list-group">
+    <%= link_to people_path(), class: 'list-group-item' do %>
+      <span class="badge"><%= @people.size %></span>
+      Number of People:
+    <% end %>
+    <%= link_to languages_path(), class: 'list-group-item' do %>
+      <span class="badge"><%= @lang.size %></span>
+      Number of Languages:
+    <% end %>
+    <%= link_to '#', class: 'list-group-item' do %>
+      <span class="badge"><%= @region.size %></span>
+      Number of Regions:
+    <% end %>
+  </div>
+</div>
+
+<div class="col-sm-1"></div>
+
+<div class="col-sm-6">
+
+  <h3>Users Requiring Action</h3>
+
+  <ul class="list-group">
+    <button type="button" class="list-group-item">User 1</button>
+    <button type="button" class="list-group-item">User 1</button>
+    <button type="button" class="list-group-item">User 1</button>
+    <button type="button" class="list-group-item">User 1</button>
+    <button type="button" class="list-group-item">User 1</button>
+    <button type="button" class="list-group-item">User 1</button>
+    <button type="button" class="list-group-item">User 1</button>
+    <button type="button" class="list-group-item">User 1</button>
+    <button type="button" class="list-group-item">User 1</button>
+  </ul>
+
+</div>
+
 <br clear="all" />
 
+<% if @request != nil %>
 <div class="col-sm-12">
   <h4>search results</h4>
   <table class="table table-bordered table-striped">
@@ -35,9 +63,7 @@
       <td>title</td>
       <td>genter</td>
     </tr>
-    <% if @request != nil
-          @request.each do |person|
-    %>
+    <% @request.each do |person| %>
     <tr>
       <td><%= link_to "View", person_path(person) %></td>
       <td><%= person.first_name %></td>
@@ -50,7 +76,7 @@
       <td><%= person.title %></td>
       <td><%= person.gender %></td>
    </tr>
-   <% end
-      end %>
+   <% end %>
   </table>
 </div>
+<% end %>

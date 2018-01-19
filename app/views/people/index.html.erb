@@ -1,40 +1,36 @@
- <div class="row-fluid">
-  <div class="span11" style="margin-left: 30px;">
-    <h3 class="page-header text-info text-center">Person list</h3>
-    <table class="table table-bordered table-striped">
-       <tr>
-         <td>id_person</td>
-         <td>last name</td>
-         <td>fist name</td>
-         <td>category</td>
-         <td>Job</td>
-         <td>arrival</td>
-         <td>departure</td>
-         <td>Nationality</td>
-         <td>title</td>
-         <td>genter</td>
-         <td>language(s)</td>
-       </tr>
-       <% @people.each do |person| %>
-       <tr>
-          <td><%= person.id %></td>
-          <td><a href="/people/<%= person.id%>"><%= person.first_name %></a></td>
-          <td><%= person.last_name %></td>
-          <td><%= person.category %></td>
-          <td><%= person.job %></td>
-          <td><%= person.arrival %></td>
-          <td><%= person.departure %></td>
-          <td><%= person.nationality %></td>
-          <td><%= person.title %></td>
-          <td><%= person.gender %></td>
-          <td>
-            <% person.involvements.each do |inv| %>
-              (<%= InvolvementLevel.id(inv.level).name %>)
-              <%= inv.language.name %><br />
-            <% end %>
-          </td>
-        </tr>
-       <% end %>
-  </table>
+<div class="container">
+
+  <div class="page-header">
+    <h3>Person list</h3>
   </div>
+
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>category</th>
+      <th>Job</th>
+      <th>Arrival</th>
+      <th>Departure</th>
+      <th>Nationality</th>
+      <th>Title</th>
+      <th>Gender</th>
+    </tr>
+    <% @people.each do |person| %>
+    <tr>
+      <td><%= person.id %>
+      <td><%= link_to person.first_name, person %></td>
+      <td><%= person.last_name %></td>
+      <td><%= person.category %></td>
+      <td><%= person.job %></td>
+      <td><%= person.arrival %></td>
+      <td><%= person.departure %></td>
+      <td><%= person.nationality %></td>
+      <td><%= person.title %></td>
+      <td><%= person.gender %></td>
+    </tr>
+  <% end %>
+  </table>
+
 </div>
