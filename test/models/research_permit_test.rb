@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ResearchPermitTest < ActiveSupport::TestCase
 
-  test "something something" do
+  test "required fields" do
     permit = ResearchPermit.new
     refute(permit.valid?, "should not be valid")
 

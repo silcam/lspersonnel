@@ -2,26 +2,58 @@ class ResearchPermitsController < ApplicationController
 
   def new
     @person = Person.find(params[:person_id])
-    @permit = ResearchPermit.new
+    @research_permit = ResearchPermit.new
     @languages = @person.languages.distinct
   end
 
   def create
     @person = Person.find(params[:person_id])
     language = Language.find(params[:research_permit][:language_id])
-    @permit = ResearchPermit.new(research_permit_params)
-    @permit.person = @person
-    @permit.language = language
+    @research_permit = ResearchPermit.new(research_permit_params)
+    @research_permit.person = @person
+    @research_permit.language = language
 
-    if (@permit.valid?)
+    if (@research_permit.valid?)
 
-      @permit.save
+      @research_permit.save
 
       redirect_to @person
     else
       @languages = @person.languages.distinct
       render 'new'
     end
+  end
+
+  def edit
+    @person = Person.find(params[:person_id])
+    @research_permit = ResearchPermit.find(params[:id])
+    @languages = @person.languages.distinct
+  end
+
+  def update
+    @person = Person.find(params[:person_id])
+    @research_permit = ResearchPermit.find(params[:id])
+
+    if (@research_permit.update(research_permit_params))
+      @research_permit.save
+
+      redirect_to @person
+    else
+      @research_permit.valid?
+      @languages = @person.languages.distinct
+
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @person = Person.find(params[:person_id])
+    @research_permit = ResearchPermit.find(params[:id])
+
+    @person.research_permits.delete(@research_permit)
+    @research_permit.destroy
+
+    redirect_to @person
   end
 
   private

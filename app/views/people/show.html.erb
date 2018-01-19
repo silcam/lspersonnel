@@ -1,7 +1,7 @@
 <div class="row-fluid">
 
   <div class="col-md-5">
-    <h2 class=""> <%= @person.first_name %> <%= @person.last_name %></h2>
+    <h2 id="person-name"> <%= @person.first_name %> <%= @person.last_name %></h2>
 
     <%= link_to("Edit", edit_person_path(@person), { class: "btn btn-primary" }) %>
 
@@ -91,9 +91,10 @@
       Number: <%= rp.identifier.blank? ? "None Yet" : rp.identifier %><br />
       Submitted: <%= rp.submission_date %><br />
       Issue Date: <%= rp.issue_date.nil? ? "Awaiting Issue" : rp.issue_date %><br />
+      Expiration Date: <%= rp.expiry_date.nil? ? "None Yet" : rp.expiry_date %><br />
 
-      <%= link_to "Edit" %>
-      <%= link_to "Delete" %>
+      <%= link_to "Edit", edit_person_research_permit_path(@person, rp), { class: 'btn btn-info' } %>
+      <%= link_to "Delete", person_research_permit_path(@person, rp), method: :delete, data: { confirm: t(:Are_you_sure) }, class: 'text-danger' %>
 
       </div>
       <br />
