@@ -26,3 +26,28 @@ body {
 .navbar-brand {
   padding: 0px 0px;
 }
+
+.page-header {
+  padding-bottom: 0px;
+  letter-spacing: 0.10em;
+  margin-top: 20px;
+}
+
+.tab-content .tab-body {
+  padding: 20px 10px;
+}
+
+.tab-content {
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.periodic-documents {
+  margin-top: 20px;
+}
+
+.list-group-item > a > .glyphicon {
+  float: right;
+  margin-left: 15px;
+}

@@ -9,19 +9,26 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <%= link_to people_path(), { class: 'dropdown-toggle', 'data-toggle': 'dropdown',
-              role: 'button', 'aria-haspopup': "true", 'aria-expanded': "false" } do %>
-            People <span class="caret"></span>
-          <% end %>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">People <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Add</a></li>
+            <li><%= link_to "Person List", people_path() %></li>
+            <li><%= link_to "Add Person", new_person_path() %></li>
           </ul>
         </li>
-        <li><%= link_to "(Add)", new_person_path() %></li>
-        <li><%= link_to "Languages", languages_path() %></li>
-        <li><%= link_to "(Add)", new_language_path() %></li>
-        <li><%= link_to "Leave Reasons", leave_reasons_path() %></li>
-        <li><%= link_to "(Add)", new_leave_reason_path() %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Languages <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Languages List", languages_path() %></li>
+            <li><%= link_to "Add Language", new_language_path() %></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Leave Reasons <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Leave Reasons List", leave_reasons_path() %></li>
+            <li><%= link_to "Add Leave Reason", new_leave_reason_path() %></li>
+          </ul>
+        </li>
       </ul>
 
       <%= form_tag "/", { method: 'get', class: 'navbar-form navbar-right', role: 'search' } do %>
@@ -33,9 +40,6 @@
         </div>
       <% end %>
 
-
-
     </div>
-
   </div>
 </nav>
