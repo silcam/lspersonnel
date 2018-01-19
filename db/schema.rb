@@ -10,11 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180118141947) do
+ActiveRecord::Schema.define(version: 20180119144730) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "directors", force: :cascade do |t|
+    t.string "name"
+    t.string "title"
+    t.boolean "current", default: false, null: false
+  end
 
   create_table "involvements", force: :cascade do |t|
-    t.integer "language_id"
-    t.integer "person_id"
+    t.bigint "language_id"
+    t.bigint "person_id"
     t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,7 +35,7 @@ ActiveRecord::Schema.define(version: 20180118141947) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "region_id"
+    t.bigint "region_id"
     t.index ["region_id"], name: "index_languages_on_region_id"
   end
 
@@ -37,14 +46,14 @@ ActiveRecord::Schema.define(version: 20180118141947) do
   end
 
   create_table "leave_reasons_leaves", force: :cascade do |t|
-    t.integer "leave_id"
-    t.integer "leave_reason_id"
+    t.bigint "leave_id"
+    t.bigint "leave_reason_id"
     t.index ["leave_id"], name: "index_leave_reasons_leaves_on_leave_id"
     t.index ["leave_reason_id"], name: "index_leave_reasons_leaves_on_leave_reason_id"
   end
 
   create_table "leaves", force: :cascade do |t|
-    t.integer "person_id"
+    t.bigint "person_id"
     t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", null: false
@@ -73,6 +82,10 @@ ActiveRecord::Schema.define(version: 20180118141947) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "nationalities", force: :cascade do |t|
+    t.string "nationality"
+  end
+
   create_table "people", force: :cascade do |t|
     t.string "last_name"
     t.string "first_name"
@@ -85,6 +98,7 @@ ActiveRecord::Schema.define(version: 20180118141947) do
     t.string "gender", limit: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "cabtal", default: false, null: false
   end
 
   create_table "periodic_documents", force: :cascade do |t|
@@ -93,11 +107,11 @@ ActiveRecord::Schema.define(version: 20180118141947) do
     t.date "issue_date"
     t.date "expiry_date"
     t.date "submission_date"
-    t.integer "person_id"
+    t.bigint "person_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "identifier"
-    t.integer "language_id"
+    t.bigint "language_id"
     t.index ["language_id"], name: "index_periodic_documents_on_language_id"
     t.index ["person_id"], name: "index_periodic_documents_on_person_id"
   end
@@ -110,6 +124,10 @@ ActiveRecord::Schema.define(version: 20180118141947) do
     t.string "fr"
     t.string "full_en"
     t.string "full_fr"
+  end
+
+  create_table "titles", force: :cascade do |t|
+    t.string "titles"
   end
 
 end
