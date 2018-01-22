@@ -16,10 +16,15 @@
           <%= form.label :title %>
           <%= collection_select(:person, :title_id, @titles, :id, :title, { prompt: true }, { class: 'form-control' }) %>
         </div>
-        <div class="form-group">
-            <%= form.label :gender %>
-            <%= radio_button_tag(:gender, "F") %><%= label_tag(:gender_f, "Female") %>
-            <%= radio_button_tag(:gender, "M") %><%= label_tag(:gender_m, "Male") %>
+        <div class="radio">
+          <%= form.label :gender_f do %>
+            <%= form.radio_button(:gender, "F") %> Female
+          <% end %>
+        </div>
+        <div class="radio">
+          <%= form.label :gender_m do %>
+            <%= form.radio_button(:gender, "M") %> Male
+          <% end %>
         </div>
       </div>
 
@@ -43,5 +48,5 @@
         </div>
       </div>
 
-      <%= submit_tag "Add Person", { class: 'btn btn-primary' } %>
+      <%= submit_tag "Submit Person", { class: 'btn btn-primary' } %>
       </div>
