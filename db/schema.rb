@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180119144730) do
+ActiveRecord::Schema.define(version: 20180122101740) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,12 +93,14 @@ ActiveRecord::Schema.define(version: 20180119144730) do
     t.string "job"
     t.date "arrival"
     t.date "departure"
-    t.string "nationality"
-    t.string "title"
     t.string "gender", limit: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "cabtal", default: false, null: false
+    t.bigint "title_id"
+    t.bigint "nationality_id"
+    t.index ["nationality_id"], name: "index_people_on_nationality_id"
+    t.index ["title_id"], name: "index_people_on_title_id"
   end
 
   create_table "periodic_documents", force: :cascade do |t|

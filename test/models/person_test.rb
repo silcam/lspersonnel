@@ -13,10 +13,11 @@ class PersonTest < ActiveSupport::TestCase
 
     person.first_name = "FNAME"
     person.last_name = "LNAME"
+    person.nationality = nationalities :samoan
+    person.title = titles :mechanic
 
     assert(person.valid?, "first and last names should make valid")
   end
-
 
   test "person can be associated with language through involvement" do
     region = Region.where(region_code: "CM-AD").first
@@ -25,6 +26,8 @@ class PersonTest < ActiveSupport::TestCase
     person = Person.new
     person.first_name = "BOB"
     person.last_name = "OBBO"
+    person.nationality = nationalities :samoan
+    person.title = titles :mechanic
     assert(person.valid?, "Person should be valid")
 
     cf = Language.new
@@ -55,6 +58,8 @@ class PersonTest < ActiveSupport::TestCase
     person_two = Person.new
     person_two.first_name = "TOM"
     person_two.last_name = "OTMO"
+    person_two.nationality = nationalities :samoan
+    person_two.title = titles :mechanic
     assert(person_two.valid?, "person two is valid")
 
     vama = Language.new
@@ -97,6 +102,13 @@ class PersonTest < ActiveSupport::TestCase
     cabtal_people = Person.all_cabtal
     assert_equal(1, cabtal_people.size, "should return 1")
     assert_equal("Three", cabtal_people.first.last_name, "Three should be in list")
+  end
+
+  test "Title and Nationality are associated objects" do
+    person_two = people :two
+
+    person_two.nationality = nationalities :samoan
+    person_two.title = titles :assistant
   end
 
 end

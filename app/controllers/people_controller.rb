@@ -15,7 +15,10 @@ class PeopleController < ApplicationController
 
   def new
     @person = Person.new
+
     @languages = Language.order(:name)
+    @titles = Title.all
+    @nationalities = Nationality.all
   end
 
   def create
@@ -31,6 +34,9 @@ class PeopleController < ApplicationController
 
   def edit
     @person = Person.find(params[:id])
+
+    @titles = Title.all
+    @nationalities = Nationality.all
   end
 
   def update
@@ -39,6 +45,9 @@ class PeopleController < ApplicationController
     if @person.update person_params
       redirect_to @person
     else
+      @titles = Title.all
+      @nationalities = Nationality.all
+
       render 'edit'
     end
   end
@@ -81,8 +90,8 @@ class PeopleController < ApplicationController
       :job,
       :arrival,
       :departure,
-      :nationality,
-      :title,
+      :nationality_id,
+      :title_id,
       :gender
     ]
     params.require(:person).permit(permitted)

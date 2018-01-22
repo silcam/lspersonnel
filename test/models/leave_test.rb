@@ -85,6 +85,8 @@ class LeaveTest < ActiveSupport::TestCase
     person = Person.new
     person.first_name = "FN"
     person.last_name = "LN"
+    person.nationality = nationalities :samoan
+    person.title = titles :mechanic
     assert(person.valid?, "Person should be valid")
 
     leave = Leave.new

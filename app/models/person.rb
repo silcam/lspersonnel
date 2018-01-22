@@ -8,6 +8,9 @@ class Person < ApplicationRecord
   has_many :primary_reports
   has_many :research_permits
 
+  belongs_to :title
+  belongs_to :nationality
+
   validates :first_name, presence: true
   validates :last_name, presence: true
 

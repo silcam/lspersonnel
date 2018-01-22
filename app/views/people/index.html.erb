@@ -26,8 +26,8 @@
       <td><%= person.job %></td>
       <td><%= person.arrival %></td>
       <td><%= person.departure %></td>
-      <td><%= person.nationality %></td>
-      <td><%= person.title %></td>
+      <td><%= person.nationality&.nationality %></td>
+      <td><%= person.title&.title %></td>
       <td><%= person.gender %></td>
     </tr>
   <% end %>

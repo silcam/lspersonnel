@@ -7,14 +7,20 @@
 one:
   first_name: Person
   last_name: One
+  nationality: samoan
+  title: mechanic
   cabtal: false
 
 two:
   first_name: Person
   last_name: Two
+  nationality: norweigan
+  title: mechanic
   cabtal: false
 
 three:
   first_name: Person
   last_name: Three
+  nationality: norweigan
+  title: assistant
   cabtal: true
