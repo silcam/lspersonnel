@@ -1,0 +1,31 @@
+<%= form_with(model: director, local: true) do |form| %>
+  <% if director.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(director.errors.count, "error") %> prohibited this director from being saved:</h2>
+
+      <ul>
+      <% director.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :director_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :director_title, class: 'form-control' %>
+  </div>
+
+  <div class="checkbox">
+    <%= form.check_box :current, id: :director_current %> Current Director?
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Submit Record", class: 'btn btn-primary' %>
+  </div>
+<% end %>

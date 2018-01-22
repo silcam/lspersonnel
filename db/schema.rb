@@ -127,7 +127,7 @@ ActiveRecord::Schema.define(version: 20180119144730) do
   end
 
   create_table "titles", force: :cascade do |t|
-    t.string "titles"
+    t.string "title"
   end
 
 end

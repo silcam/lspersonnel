@@ -7,7 +7,7 @@ class NewAttributes < ActiveRecord::Migration[5.1]
     end
 
     create_table :titles do |t|
-      t.string :titles
+      t.string :title
     end
 
     create_table :directors do |t|

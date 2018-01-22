@@ -84,4 +84,19 @@ class PersonTest < ActiveSupport::TestCase
         "person one should have 2 involvements")
   end
 
+  test "CABTAL attribute" do
+
+    person_two = people :two
+    assert_equal(false, person_two.cabtal)
+    assert_equal(false, person_two.cabtal?)
+
+    person_three = people :three
+    assert_equal(true, person_three.cabtal)
+    assert_equal(true, person_three.cabtal?)
+
+    cabtal_people = Person.all_cabtal
+    assert_equal(1, cabtal_people.size, "should return 1")
+    assert_equal("Three", cabtal_people.first.last_name, "Three should be in list")
+  end
+
 end

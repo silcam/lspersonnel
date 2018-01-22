@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+assistant:
+  title: Assistant
+
+mechanic:
+  title: Mechanic
+
+one:
+  title:
+
+two:
+  title:

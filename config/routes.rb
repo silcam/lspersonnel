@@ -8,10 +8,15 @@ Rails.application.routes.draw do
     resources :primary_reports
   end
 
-  resources :leave, only: ["index"]
-  resources :leave_reasons, except: ["show"]
-
   post 'people/:person_id/attach_language', to: 'people#attach', as: :attach_language
+
+  resources :leave, only: ["index"]
+
+  resources :leave_reasons, except: ["show"]
+  resources :titles, except: ["show"]
+  resources :nationalities, except: ["show"]
+  resources :directors, except: ["show"]
+
 
   resources :languages
 end

@@ -11,6 +11,10 @@ class Person < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  def self.all_cabtal
+    where(cabtal: true)
+  end
+
   def self.import_csv
     fields = {id: 'id',
         last_name: 'Surname', first_name: 'Forename', category: 'Category',

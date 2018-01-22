@@ -1,11 +1,22 @@
 
 <h3>Leave Reasons</h3>
 
-<% if @reasons.size == 0 %>
-  <h3>No Reasons to Display</h3>
-  <img src="https://img.buzzfeed.com/buzzfeed-static/static/enhanced/terminal05/2012/4/19/20/enhanced-buzz-21764-1334881394-7.jpg?downsize=715:*&output-format=auto&output-quality=auto">
-<% else %>
-  <% @reasons.each do |rsn| %>
-    <p class="bg-info"><%= rsn.reason %></p>
-  <% end %>
-<% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reasons.each do |rsn| %>
+      <tr>
+        <td><%= rsn.reason %></td>
+        <td><%= link_to 'Edit', edit_leave_reason_path(rsn) %></td>
+        <td><%= link_to 'Destroy', rsn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Leave Reason", new_leave_reason_path(), class: 'btn btn-primary' %>

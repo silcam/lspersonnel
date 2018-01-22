@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+director_current:
+  name: Director One
+  title: Director
+  current: true
+
+director_old:
+  name: Director Two
+  title: Interim Director
+  current: false
+
+one:
+  name:
+  title:
+  current: false
+
+two:
+  name:
+  title:
+  current: false

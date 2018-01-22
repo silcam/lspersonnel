@@ -7,7 +7,14 @@
 one:
   first_name: Person
   last_name: One
+  cabtal: false
 
 two:
   first_name: Person
   last_name: Two
+  cabtal: false
+
+three:
+  first_name: Person
+  last_name: Three
+  cabtal: true
