@@ -4,6 +4,10 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# Files that shouldn't be public
+config/secrets.yml
+config/initializers/omniauth.rb
+
 # Ignore bundler config.
 /.bundle
 

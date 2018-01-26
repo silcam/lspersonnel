@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
   root "dashboard#dash"
 
+  # Sessions
+  get     'not_allowed',              to: 'people#not_allowed'
+  get     '/login',                   to: 'sessions#new'
+  delete  '/logout',                  to: 'sessions#destroy'
+  get     '/auth/:provider/callback', to: 'sessions#create'
+  get     '/auth/failure',            to: redirect('/')
+  get     '/login_as/:id',            to: 'sessions#login_as'
+
   resources :people do
     resources :leave, except: ["edit","update","show"]
     resources :research_permits

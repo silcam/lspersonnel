@@ -44,7 +44,12 @@
       <% end %>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Welcome, Brian</a></li>
+        <% if logged_in? %>
+        <li><a href="#">Welcome, <%= current_user.first_name %></a></li>
+        <li><%= link_to "Logout", logout_path(), { method: :delete, } %></li>
+        <% else %>
+        <li><%= link_to "Login", login_path() %></li>
+        <% end %>
       </ul>
 
     </div>

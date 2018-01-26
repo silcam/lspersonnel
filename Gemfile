@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# Google Authentication
+gem 'omniauth-google-oauth2', '~> 0.5.3'
+
 # Internationalization and Localization
 gem 'rails-i18n', '~> 5.0', '>= 5.0.4'
 
