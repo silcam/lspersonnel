@@ -1,4 +1,4 @@
-class Involvement < ActiveRecord::Base
+class Involvement < ApplicationRecord
 
   belongs_to :language
   belongs_to :person

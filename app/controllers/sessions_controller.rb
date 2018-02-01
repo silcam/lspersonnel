@@ -29,11 +29,13 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def login_as
-    new_user = User.find params[:id]
-    authorize! :login_as_others, new_user
-    log_in new_user
-    redirect_to root_path
+  def lang_toggle
+    session[:original_request] = request.referer
+
+    user = current_user
+    user.toggle_language
+
+    send_to_correct_page
   end
 
   private

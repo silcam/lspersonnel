@@ -1,4 +1,4 @@
-class Language < ActiveRecord::Base
+class Language < ApplicationRecord
     require 'csv_importer'
 
     has_many :involvements

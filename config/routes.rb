@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   delete  '/logout',                  to: 'sessions#destroy'
   get     '/auth/:provider/callback', to: 'sessions#create'
   get     '/auth/failure',            to: redirect('/')
-  get     '/login_as/:id',            to: 'sessions#login_as'
+  get     '/language/toggle',         to: 'sessions#lang_toggle'
 
   resources :people do
     resources :leave, except: ["edit","update","show"]

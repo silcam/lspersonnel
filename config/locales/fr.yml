@@ -1,0 +1,7 @@
+fr:
+  hello: "Bonjour monde"
+
+  # dashboard
+  Dashboard: Tableau de bord
+  Quick_stats: Les stats brèves
+  Users_requiring_action: Les Utilisateurs qui ont besoin de l'action
