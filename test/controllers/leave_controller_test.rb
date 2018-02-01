@@ -2,6 +2,10 @@ require 'test_helper'
 
 class LeaveControllerTest < ActionDispatch::IntegrationTest
 
+  def setup
+    do_login
+  end
+
   test "Creating leave for a person" do
     @person_one = people :one
     assert_equal(0, @person_one.leaves.size, "no leaves")

@@ -3,6 +3,10 @@ require "test_helper"
 describe NationalitiesController do
   let(:nationality) { nationalities :one }
 
+  before(:each) do
+    do_login
+  end
+
   it "gets index" do
     get nationalities_url
     value(response).must_be :success?

@@ -3,6 +3,10 @@ require "test_helper"
 describe TitlesController do
   let(:title) { titles :one }
 
+  before(:each) do
+    do_login
+  end
+
   it "gets index" do
     get titles_url
     value(response).must_be :success?

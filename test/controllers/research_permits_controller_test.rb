@@ -2,6 +2,10 @@ require 'test_helper'
 
 class ResearchPermitsControllerTest < ActionDispatch::IntegrationTest
 
+  def setup
+    do_login
+  end
+
   test "new form" do
     @person_one = people :one
     get new_person_research_permit_path(@person_one)

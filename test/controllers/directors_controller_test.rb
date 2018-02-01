@@ -3,6 +3,10 @@ require "test_helper"
 describe DirectorsController do
   let(:director) { directors :one }
 
+  before(:each) do
+    do_login
+  end
+
   it "gets index" do
     get directors_url
     value(response).must_be :success?

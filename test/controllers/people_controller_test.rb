@@ -2,6 +2,10 @@ require 'test_helper'
 
 class PeopleControllerTest < ActionDispatch::IntegrationTest
 
+  def setup
+    do_login
+  end
+
   test "edit form" do
     @person_one = people :one
     get edit_person_url(@person_one)

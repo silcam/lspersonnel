@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+login_user:
+  email: login-user@cmb.sil.org
+  first_name: Login
+  last_name: User
+  language: en
+
+unknown_user:
+  email:
+  first_name: Unknown
+  last_name: User
+  language: fr
