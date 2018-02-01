@@ -1,5 +1,7 @@
-<h1>New Title</h1>
+<div class="page-header">
+  <h3><%= t(:New_title) %></h3>
+</div>
 
 <%= render 'form', title: @title %>
 
-<%= link_to 'Back', titles_path %>
+<%= link_to t(:Back), titles_path %>

@@ -59,19 +59,19 @@
 
     <ul class="nav nav-tabs periodic-documents">
       <li class="active" role="presentation">
-        <a href="#research-permits" data-toggle="tab">Research Permits</a>
+        <a href="#research-permits" data-toggle="tab"><%= t(:Research_permits) %></a>
       </li>
       <li role="presentation">
-        <a href="#primary-reports" data-toggle="tab">Primary Reports</a>
+        <a href="#primary-reports" data-toggle="tab"><%= t(:Primary_reports) %></a>
       </li>
       <li role="presentation">
-        <a href="#quarterly-reports" data-toggle="tab">Quarterly Reports</a>
+        <a href="#quarterly-reports" data-toggle="tab"><%= t(:Quarterly_reports) %></a>
       </li>
       <li role="presentation">
-        <a href="#languages" data-toggle="tab">Languages</a>
+        <a href="#languages" data-toggle="tab"><%= t(:Languages) %></a>
       </li>
       <li role="presentation">
-        <a href="#leaves" data-toggle="tab">Leaves</a>
+        <a href="#leaves" data-toggle="tab"><%= t(:Leaves) %></a>
       </li>
     </ul>
 
@@ -79,25 +79,25 @@
       <div class="tab-pane active" id="research-permits">
 
         <div class="tab-body">
-          List of all of the researcher's research permits.<br />
-          <%= link_to "Add Research Permit", new_person_research_permit_path(@person), { class: "btn btn-primary" } %><br />
+          <%= t(:List_of_all_research_permits) %><br />
+          <%= link_to t(:Add_research_permit), new_person_research_permit_path(@person), { class: "btn btn-primary" } %><br />
         </div>
 
         <table class="table table-striped">
         <tr>
-          <th>Number</th>
-          <th>Issue Date</th>
-          <th>Expiration</th>
+          <th><%= t(:Number) %></th>
+          <th><%= t(:Issue_date) %></th>
+          <th><%= t(:Expiry_date) %></th>
           <th></th>
         </tr>
         <% @person.research_permits.each do |rp| %>
         <tr>
-          <td><%= rp.identifier.blank? ? "None Yet" : rp.identifier %></td>
-          <td><%= rp.issue_date.nil? ? "Submitted #{rp.submission_date}" : rp.issue_date %></td>
-          <td>Expiration Date: <%= rp.expiry_date.nil? ? "None Yet" : rp.expiry_date %></td>
+          <td><%= rp.identifier.blank? ? t(:None_yet) : rp.identifier %></td>
+          <td><%= rp.issue_date.nil? ? "#{t(:Submitted)} #{rp.submission_date}" : rp.issue_date %></td>
+          <td><%= rp.expiry_date.nil? ? t(:None_yet) : rp.expiry_date %></td>
           <td>
-            <%= link_to "Edit", edit_person_research_permit_path(@person, rp), { class: 'btn btn-info' } %>
-            <%= link_to "Delete", person_research_permit_path(@person, rp), method: :delete, data: { confirm: t(:Are_you_sure) }, class: 'text-danger' %>
+            <%= link_to t(:Edit), edit_person_research_permit_path(@person, rp), { class: 'btn btn-info' } %>
+            <%= link_to t(:Delete), person_research_permit_path(@person, rp), method: :delete, data: { confirm: t(:Are_you_sure) }, class: 'text-danger' %>
           </td>
         </tr>
         <% end %>
@@ -114,20 +114,20 @@
 
       <div class="tab-pane" id="languages">
         <div class="tab-body">
-          Language Involvement:<br />
+          <%= t(:Language_involvement) %><br />
           <br />
           <% @person.involvements.each do |inv| %>
             <%= inv.language.name %> (<em><%= InvolvementLevel.id(inv.level).name %></em>)<br />
           <% end %>
           <br />
 
-          Add a New Language This Person is Involved With:<br />
+          <%= t(:Add_a_new_involved_language) %>:<br />
           <%= form_for @person, url: attach_language_url(@person), method: :post, html: { class: 'form-inline' } do |f| %>
 
           <div class="form-group-inline">
             <%= collection_select(:person, :involvement_ids, @levels, :id, :name, { prompt: true }, { class: 'form-control' }) %>
             <%= collection_select(:person, :language_ids, @languages, :id, :name, { prompt: true }, {class: 'form-control' }) %>
-            <%= f.submit "Add", { class: 'btn btn-primary' } %>
+            <%= f.submit t(:Add), { class: 'btn btn-primary' } %>
           </div>
           <% end %>
         </div>
@@ -135,14 +135,14 @@
 
       <div class="tab-pane" id="leaves">
         <div class="tab-body">
-          <%= link_to("Add Leave", new_person_leave_path(@person), { class: "btn btn-primary" }) %><br /><br />
+          <%= link_to t(:Add_leave), new_person_leave_path(@person), { class: "btn btn-primary" } %><br /><br />
 
           <% if @leaves.keys.size == 0 %>
             No Leaves.
           <% else %>
             <% @leaves.keys.each do |leave_type| %>
 
-              <h4><%= leave_type.to_s.humanize %><h4>
+              <h4><%= t(leave_type.to_s) %><h4>
 
               <% @leaves[leave_type].each do |lv| %>
 

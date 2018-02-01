@@ -1,5 +1,7 @@
-<h1>New Nationality</h1>
+<div class="page-header">
+  <h3><%= t(:New_nationality) %></h3>
+</div>
 
 <%= render 'form', nationality: @nationality %>
 
-<%= link_to 'Back', nationalities_path %>
+<%= link_to t(:Back), nationalities_path %>

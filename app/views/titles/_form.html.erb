@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="form-group field">
-    <%= form.label :title %>
+    <%= form.label t(:Title) %>
     <%= form.text_field :title, id: :title_string, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Submit Title", class: 'btn btn-primary' %>
+    <%= form.submit t(:Submit), class: 'btn btn-primary' %>
   </div>
 <% end %>

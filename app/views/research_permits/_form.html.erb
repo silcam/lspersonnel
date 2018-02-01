@@ -5,28 +5,31 @@
 </div>
 <% end %>
 
-      <div class="form-group">
-        <%= form.label :issue_date %>
-        <%= form.text_field :issue_date, { type: 'date', class: 'form-control' } %>
-      </div>
+<div class="form-group">
+  <%= form.label t(:Issue_date) %>
+  <%= form.text_field :issue_date, { type: 'date', class: 'form-control' } %>
+</div>
 
-      <div class="form-group">
-        <%= form.label :expiry_date %>
-        <%= form.text_field :expiry_date, { type: 'date', class: 'form-control' } %>
-      </div>
+<div class="form-group">
+  <%= form.label t(:Expiry_date) %>
+  <%= form.text_field :expiry_date, { type: 'date', class: 'form-control' } %>
+</div>
 
-      <div class="form-group">
-        <%= form.label :submission_date %>
-        <%= form.text_field :submission_date, { type: 'date', class: 'form-control' } %>
-      </div>
+<div class="form-group">
+  <%= form.label t(:Submission_date) %>
+  <%= form.text_field :submission_date, { type: 'date', class: 'form-control' } %>
+</div>
 
-      <div class="form-group">
-        <%= form.label :identifier %>
-        <%= form.text_field :identifier, { class: 'form-control' } %>
-      </div>
+<div class="form-group">
+  <%= form.label t(:Identifier) %>
+  <%= form.text_field :identifier, { class: 'form-control' } %>
+</div>
 
-      <%= collection_select(:research_permit, :language_id, @languages, :id, :name, { prompt: true }, { class: 'form-control' }) %>
+<div class="form-group">
+  <%= form.label t(:Language_involvement) %>
+  <%= collection_select(:research_permit, :language_id, @languages, :id, :name, { prompt: true }, { class: 'form-control' }) %>
+</div>
 
-      <div class="form-group">
-        <%= form.submit "Add Research Permit" %>
-      </div>
+<div class="form-group">
+  <%= form.submit t(:Submit), class: 'btn btn-primary' %>
+</div>

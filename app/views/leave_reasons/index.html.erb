@@ -1,10 +1,12 @@
 
-<h3>Leave Reasons</h3>
+<div class="page-header">
+  <h3><%= t(:Leave_reasons) %></h3>
+</div>
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
+      <th><%= t(:Title) %></th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -12,11 +14,11 @@
     <% @reasons.each do |rsn| %>
       <tr>
         <td><%= rsn.reason %></td>
-        <td><%= link_to 'Edit', edit_leave_reason_path(rsn) %></td>
-        <td><%= link_to 'Destroy', rsn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:Edit), edit_leave_reason_path(rsn) %></td>
+        <td><%= link_to t(:Destroy), rsn, method: :delete, data: { confirm: t(:Are_you_sure) } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "New Leave Reason", new_leave_reason_path(), class: 'btn btn-primary' %>
+<%= link_to t(:New_leave_reason), new_leave_reason_path(), class: 'btn btn-primary' %>

@@ -1,16 +1,10 @@
 fr:
 
-  # Menu
-  Person_list: Toutes les personnes
-  Add_person: Ajouter une personne
-  Languages: Langues
-  Languages_list: Toutes les langues
-  Add_language: Adjouter une langue
-  Leave_reasons: Motifs de Congé
-  Directors: Directeurs
-  Nationalities: Nationalités
+  # General
+  None_yet: Pas encore
+  Submitted: Soumis le
 
-  # dashboard
+  # Dashboard
   Dashboard: Tableau de bord
   Quick_stats: Les stats brèves
   Users_requiring_action: Les Utilisateurs qui ont besoin de l'action
@@ -19,14 +13,69 @@ fr:
   Number_of_regions: Nombre de régions
 
   # People
+  Person_list: Toutes les personnes
+  Add_person: Ajouter une personne
   New_person: Nouvelle personne
   Edit_person: Modifier cette personne
   Arrival: Arrivée
   Departure: Départ
   Job: Job
 
+  # Languages
+  Language: Langue
+  Languages: Langues
+  Languages_list: Toutes les langues
+  Add_language: Ajouter une langue
+  Language_name: Nom de la langue
+  Add_a_new_involved_language: Ajouter une langue dans laquelle cette personne est impliquée
+
   # Research Permits
   Research_permit_expiry: Date d'expiration du permis de recherche
+  Research_permits: Permis de recherche
+  Add_research_permit: Ajouter un permis de recherche
+  List_of_all_research_permits: Tous les permis du chercheur
+  Issue_date: Date de déliverance
+  Expiry_date: Date d'expiration
+  Submission_date: Date de soumission
+  Identifier: Identifiant
+  New_research_permit_for: Nouvel permis de recherche de
+  Edit_research_permit_for: Modifier ce permis de recherche de
 
   # Leave
+  Leaves: Congés
   Next_leave: Le prochain congé
+  Add_leave: Ajouter un congé
+  future: futur
+  next_year: prochaine année
+  this_year: cette année
+  soon: bientôt
+  current: maintenant
+  last: dernier
+  old: ancien
+  New_leave_for: Nouvel congé de
+
+  # Leave Reasons
+  Leave_reasons: Motifs de congé
+  New_leave_reason: Nouvel motif de congé
+  Reason: Mofif
+
+  # Regions
+  Region: Région
+
+  # Directors
+  Directors: Directeurs
+  Edit_director: Modifier ce directeur
+  Current_director: Directeur Actuel
+  New_director: Nouveau Directeur
+
+  # Titles
+  Edit_title: Modifier ce titre
+  New_title: Nouveau titre
+
+  # Nationalities
+  Nationalities: Nationalités
+  Edit_nationality: Modifier cette nationalité
+  New_nationality: Nouvelle nationalité
+
+  # Language Involvement
+  Language_involvement: Implication des langues

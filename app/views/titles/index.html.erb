@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Titles</h1>
+<div class="page-header">
+  <h3><%= t(:Titles) %></h3>
+</div>
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Title</th>
+      <th><%= t(:Title) %></th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -14,8 +16,8 @@
     <% @titles.each do |title| %>
       <tr>
         <td><%= title.title %></td>
-        <td><%= link_to 'Edit', edit_title_path(title) %></td>
-        <td><%= link_to 'Destroy', title, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:Edit), edit_title_path(title) %></td>
+        <td><%= link_to t(:Destroy), title, method: :delete, data: { confirm: t(:Are_you_sure) } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Title', new_title_path, class: 'btn btn-primary' %>
+<%= link_to t(:New_title), new_title_path, class: 'btn btn-primary' %>

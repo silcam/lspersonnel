@@ -1,13 +1,7 @@
-
-
-<div class="row-fluid">
-  <div class="col-sm-5">
-    <h3 class="page-header text-info text-center">New Research Permit for <%= @person.first_name %> <%= @person.last_name %></h3>
-
-    <%= form_for @research_permit, url: person_research_permits_path(@person) do |f| %>
-
-      <%= render "form", form: f %>
-
-    <% end %>
-  </div>
+<div class="page-header">
+  <h3><%= t(:New_research_permit_for) %> <%= @person.first_name %> <%= @person.last_name %></h3>
 </div>
+
+<%= form_for @research_permit, url: person_research_permits_path(@person) do |f| %>
+<%= render "form", form: f %>
+<% end %>

@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="form-group field">
-    <%= form.label :nationality %>
+    <%= form.label t(:Nationality) %>
     <%= form.text_field :nationality, id: :nationality_string, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit "Submit Nationality", class: 'btn btn-primary' %>
+    <%= form.submit t(:Submit), class: 'btn btn-primary' %>
   </div>
 <% end %>

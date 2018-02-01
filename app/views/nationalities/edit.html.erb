@@ -1,6 +1,8 @@
-<h1>Editing Nationality</h1>
+<div class="page-header">
+  <h3><%= t(:Edit_Nationality) %></h3>
+</div>
 
 <%= render 'form', nationality: @nationality %>
 
-<%= link_to 'Show', @nationality %> |
-<%= link_to 'Back', nationalities_path %>
+<%= link_to t(:Show), @nationality %> |
+<%= link_to t(:Back), nationalities_path %>

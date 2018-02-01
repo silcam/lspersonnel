@@ -1,13 +1,14 @@
-<h3 class="page-header text-info text-center">New language</h3>
-<div class="row-fluid">
+<div class="page-header">
+  <h3><%= t(:Add_language) %></h3>
+</div>
 
-  <div class="col-md-3">
+<div class="col-md-3">
   <%= form_tag "/languages" , method: "post" do %>
 
     <div class="form-group">
-      <input class="form-control" type="text" name="name" placeholder="name language" required="required" />
+      <input class="form-control" type="text" name="name" placeholder="<%= t(:Language_name) %>" required="required" />
       <select class="form-control" name="region" required>
-        <option value="">Region</option>
+        <option value=""><%= t(:Region) %></option>
         <% @regions.each do |region| %>
           <option value="<%= region.id %>"> <%= region.en %> </option>
         <% end %>
@@ -19,5 +20,4 @@
     </div>
 
   <% end %>
-  </div>
 </div>

@@ -1,16 +1,10 @@
 en:
 
-  # Menu
-  Person_list: Person List
-  Add_person: Add Person
-  Languages: Languages
-  Languages_list: Person List
-  Add_language: Add Person
-  Leave_reasons: Leave Reasons
-  Directors: Directors
-  Nationalities: Nationalities
+  # General
+  None_yet: Not yet
+  Submitted: Submitted
 
-  # dashboard
+  # Dashboard
   Dashboard: Dashboard
   Quick_stats: Quick Stats
   Users_requiring_action: Users Requiring Action
@@ -19,14 +13,69 @@ en:
   Number_of_regions: Number of Regions
 
   # People
+  Person_list: Person List
+  Add_person: Add Person
   New_person: New Person
   Edit_person: Edit Person
   Arrival: Arrival
   Departure: Departure
   Job: Job
 
+  # Languages
+  Language: Languages
+  Languages: Languages
+  Languages_list: Person List
+  Add_language: Add Language
+  Language_name: Language Name
+  Add_a_new_involved_language: Add a Language This Person is Involved With
+
   # Research Permits
   Research_permit_expiry: Research Permit Expiry
+  Research_permits: Research Permits
+  Add_research_permit: Add Research Permit
+  List_of_all_research_permits: List of all the researcher's research permits.
+  Issue_date: Issue Date
+  Expiry_date: Expiration Date
+  Submission_date: Submission Date
+  Identifier: Identifier
+  New_research_permit_for: New Research Permit for
+  Edit_research_permit_for: Edit Research Permit for
 
   # Leave
+  Leaves: Leaves
   Next_leave: Next Leave
+  Add_leave: Add Leave
+  future: Future
+  next_year: Next Year
+  this_year: This Year
+  soon: Soon
+  current: Current
+  last: Last
+  old: Old
+  New_leave_for: New Leave for
+
+  # Leave Reasons
+  Leave_reasons: Leave Reasons
+  New_leave_reason: New Leave Reason
+  Reason: Reason
+
+  # Regions
+  Region: Region
+
+  # Directors
+  Directors: Directors
+  Edit_director: Edit Director
+  Current_director: Current Director
+  New_director: New Director
+
+  # Titles
+  Edit_title: Edit Title
+  New_title: New Title
+
+  # Nationalities
+  Nationalities: Nationalities
+  Edit_nationality: Edit Nationality
+  New_nationality: New Nationality
+
+  # Language Involvement
+  Language_involvement: Language Involvement

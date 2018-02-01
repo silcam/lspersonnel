@@ -12,20 +12,20 @@
   <% end %>
 
   <div class="form-group field">
-    <%= form.label :name %>
+    <%= form.label t(:Name) %>
     <%= form.text_field :name, id: :director_name, class: 'form-control' %>
   </div>
 
   <div class="form-group field">
-    <%= form.label :title %>
+    <%= form.label t(:Title) %>
     <%= form.text_field :title, id: :director_title, class: 'form-control' %>
   </div>
 
   <div class="checkbox">
-    <%= form.check_box :current, id: :director_current %> Current Director?
+    <%= form.check_box :current, id: :director_current %> <%= t(:Current_director) %>?
   </div>
 
   <div class="actions">
-    <%= form.submit "Submit Record", class: 'btn btn-primary' %>
+    <%= form.submit t(:Submit), class: 'btn btn-primary' %>
   </div>
 <% end %>

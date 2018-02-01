@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/silcam/cmb-base-translations.git
-  revision: a121cf5d67fc53e7d3001cced776b3d2b26159d9
+  revision: 20094ba136a8c464614dc5813ffecaaaad149fa3
   specs:
-    cmb-base-translations (0.1.8)
+    cmb-base-translations (0.1.10)
       rails (~> 5.1, >= 5.1.4)
       rails-i18n (~> 5.0, >= 5.0.4)
       railties (~> 5.0)
