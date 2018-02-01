@@ -13,42 +13,42 @@
 <div class="row">
   <div class="col-sm-4">
     <div class="page-header">
-      <h4>Personal Details</h4>
+      <h4><%= t(:Personal_details) %></h4>
     </div>
 
     <table class="table table-striped">
       <tr>
-        <th>Category:</th>
+        <th><%= t(:Category) %>:</th>
         <td><%= @person.category %></td>
       </tr>
       <tr>
-        <th>Job:</th>
+        <th><%= t(:Job) %>:</th>
         <td><%= @person.job %></td>
       </tr>
       <tr>
-        <th>Title:</th>
+        <th><%= t(:Title) %>:</th>
         <td><%= @person.title&.title %></td>
       </tr>
       <tr>
-        <th>Nationality:</th>
+        <th><%= t(:Nationality) %>:</th>
         <td><%= @person.nationality&.nationality %></td>
       </tr>
       <tr>
-        <th>Gender:</th>
+        <th><%= t(:Gender) %>:</th>
         <td><%= @person.gender %></td>
       </tr>
       <tr>
-        <th>Arrival in Branch:</th>
+        <th><%= t(:Arrival) %>:</th>
         <td><%= @person.arrival %></td>
       </tr>
       <tr>
-        <th>Departure</th>
+        <th><%= t(:Departure) %>:</th>
         <td><%= @person.departure %></td>
       </tr>
       <tr>
         <td colspan="2">
-        <%= link_to("Edit", edit_person_path(@person), { class: "btn btn-primary" }) %>
-        <%= link_to("Delete", person_path(@person), method: 'delete', data: { confirm: t(:Are_you_sure) }, class: 'text-danger' )  %>
+        <%= link_to(t(:Edit), edit_person_path(@person), { class: "btn btn-primary" }) %>
+        <%= link_to(t(:Delete), person_path(@person), method: 'delete', data: { confirm: t(:Are_you_sure) }, class: 'text-danger' )  %>
         </td>
       </tr>
     </table>

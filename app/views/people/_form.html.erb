@@ -1,52 +1,44 @@
-      <div class="span3 offset1">
-        <legend>Infos Person</legend>
-        <div class="form-group">
-          <%= form.label :last_name %>
-          <%= form.text_field :last_name, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= form.label :first_name %>
-          <%= form.text_field :first_name, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= form.label :nationality %>
-          <%= collection_select(:person, :nationality_id, @nationalities, :id, :nationality, { prompt: true }, { class: 'form-control' }) %>
-        </div>
-        <div class="form-group">
-          <%= form.label :title %>
-          <%= collection_select(:person, :title_id, @titles, :id, :title, { prompt: true }, { class: 'form-control' }) %>
-        </div>
-        <div class="radio">
-          <%= form.label :gender_f do %>
-            <%= form.radio_button(:gender, "F") %> Female
-          <% end %>
-        </div>
-        <div class="radio">
-          <%= form.label :gender_m do %>
-            <%= form.radio_button(:gender, "M") %> Male
-          <% end %>
-        </div>
-      </div>
+  <div class="form-group">
+    <%= form.label t(:Last_name) %>
+    <%= form.text_field :last_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label t(:First_name) %>
+    <%= form.text_field :first_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label t(:Nationality) %>
+    <%= collection_select(:person, :nationality_id, @nationalities, :id, :nationality, { prompt: true }, { class: 'form-control' }) %>
+  </div>
+  <div class="form-group">
+    <%= form.label t(:Title) %>
+    <%= collection_select(:person, :title_id, @titles, :id, :title, { prompt: true }, { class: 'form-control' }) %>
+  </div>
+  <div class="radio">
+    <%= form.label t(:gender_f) do %>
+      <%= form.radio_button(:gender, "F") %> Female
+    <% end %>
+  </div>
+  <div class="radio">
+    <%= form.label t(:gender_m) do %>
+      <%= form.radio_button(:gender, "M") %> Male
+    <% end %>
+  </div>
+  <div class="form-group">
+      <%= form.label t(:Job) %>
+      <%= form.text_field :job, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+      <%= form.label t(:Category) %>
+      <%= form.text_field :category, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+      <%= form.label (:Arrival) %>
+      <%= form.text_field :arrival, class: 'form-control', type: 'date'  %>
+  </div>
+  <div class="form-group">
+      <%= form.label t(:Departure) %>
+      <%= form.text_field :departure, class: 'form-control', type: 'date'  %>
+  </div>
 
-       <div class="span3">
-        <legend>Job Caracteristics</legend>
-        <div class="form-group">
-            <%= form.label :job %>
-            <%= form.text_field :job, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-            <%= form.label :category %>
-            <%= form.text_field :category, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-            <%= form.label :arrival %>
-            <%= form.text_field :arrival, class: 'form-control', type: 'date'  %>
-        </div>
-        <div class="form-group">
-            <%= form.label :departure %>
-            <%= form.text_field :departure, class: 'form-control', type: 'date'  %>
-        </div>
-      </div>
-
-      <%= submit_tag "Submit Person", { class: 'btn btn-primary' } %>
-      </div>
+  <%= submit_tag t(:Submit), { class: 'btn btn-primary' } %>

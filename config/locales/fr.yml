@@ -1,7 +1,32 @@
 fr:
-  hello: "Bonjour monde"
+
+  # Menu
+  Person_list: Toutes les personnes
+  Add_person: Ajouter une personne
+  Languages: Langues
+  Languages_list: Toutes les langues
+  Add_language: Adjouter une langue
+  Leave_reasons: Motifs de Congé
+  Directors: Directeurs
+  Nationalities: Nationalités
 
   # dashboard
   Dashboard: Tableau de bord
   Quick_stats: Les stats brèves
   Users_requiring_action: Les Utilisateurs qui ont besoin de l'action
+  Number_of_people: Nombre de personnes
+  Number_of_languages: Nombre de langues
+  Number_of_regions: Nombre de régions
+
+  # People
+  New_person: Nouvelle personne
+  Edit_person: Modifier cette personne
+  Arrival: Arrivée
+  Departure: Départ
+  Job: Job
+
+  # Research Permits
+  Research_permit_expiry: Date d'expiration du permis de recherche
+
+  # Leave
+  Next_leave: Le prochain congé

@@ -1,7 +1,32 @@
 en:
-  hello: "Hello world"
+
+  # Menu
+  Person_list: Person List
+  Add_person: Add Person
+  Languages: Languages
+  Languages_list: Person List
+  Add_language: Add Person
+  Leave_reasons: Leave Reasons
+  Directors: Directors
+  Nationalities: Nationalities
 
   # dashboard
   Dashboard: Dashboard
   Quick_stats: Quick Stats
   Users_requiring_action: Users Requiring Action
+  Number_of_people: Number of People
+  Number_of_languages: Number of Languages
+  Number_of_regions: Number of Regions
+
+  # People
+  New_person: New Person
+  Edit_person: Edit Person
+  Arrival: Arrival
+  Departure: Departure
+  Job: Job
+
+  # Research Permits
+  Research_permit_expiry: Research Permit Expiry
+
+  # Leave
+  Next_leave: Next Leave

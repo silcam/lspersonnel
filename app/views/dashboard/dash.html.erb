@@ -12,15 +12,15 @@
   <div class="list-group">
     <%= link_to people_path(), class: 'list-group-item' do %>
       <span class="badge"><%= @people.size %></span>
-      Number of People:
+      <%= t(:Number_of_people) %>
     <% end %>
     <%= link_to languages_path(), class: 'list-group-item' do %>
       <span class="badge"><%= @lang.size %></span>
-      Number of Languages:
+      <%= t(:Number_of_languages) %>
     <% end %>
     <%= link_to '#', class: 'list-group-item' do %>
       <span class="badge"><%= @region.size %></span>
-      Number of Regions:
+      <%= t(:Number_of_regions) %>
     <% end %>
   </div>
 </div>
