@@ -111,4 +111,25 @@ class PersonTest < ActiveSupport::TestCase
     person_two.title = titles :assistant
   end
 
+  test "next_expiration_date" do
+    on_date(Date.new(2018,2,1)) do
+      person_one = people :one
+      assert_equal(2, person_one.research_permits.size)
+      # should be from :first, not :beforefirst
+      assert_equal("2022-01-12", person_one.next_permit_expiration.to_s)
+    end
+  end
+
+  test "next_leave_start_date" do
+    on_date(Date.new(2018,2,1)) do
+      person_one = people :one
+
+      person_one.leaves << leaves(:leave_2018)
+      person_one.leaves << leaves(:leave_2019)
+
+      # should be 2018 and not 2019, or another date
+      assert_equal("2018-02-21", person_one.next_leave_start_date.to_s)
+    end
+  end
+
 end

@@ -14,9 +14,9 @@
     <% @people.each do |person| %>
     <tr>
       <td><%= link_to "#{person.first_name} #{person.last_name}", person %></td>
-      <td>NATIONALITY</td>
-      <td>NEVER</td>
-      <td>NEVER</td>
+      <td><%= person.nationality&.nationality %></td>
+      <td><%= person.next_permit_expiration || t(:None_m) %></td>
+      <td><%= person.next_leave_start_date || t(:None_m) %></td>
     </tr>
   <% end %>
   </table>

@@ -22,7 +22,7 @@ class ResearchPermitsControllerTest < ActionDispatch::IntegrationTest
 
   test "can show on person page" do
     @person_one = people :one
-    assert_equal(1, @person_one.research_permits.size, "should have 1 permit")
+    assert_equal(2, @person_one.research_permits.size, "should have 2 permit")
     @permit = @person_one.research_permits.first
 
     get person_url(@person_one)

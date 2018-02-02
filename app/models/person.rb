@@ -14,6 +14,14 @@ class Person < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
+  def next_leave_start_date
+    leaves.where("start_date > now()").order("start_date").first&.start_date
+  end
+
+  def next_permit_expiration
+    research_permits.where("expiry_date > now()").order("expiry_date").first&.expiry_date
+  end
+
   def self.all_cabtal
     where(cabtal: true)
   end

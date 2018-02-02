@@ -46,7 +46,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if logged_in? %>
           <li><a href="#"><%= t(:Welcome) %>, <%= current_user.first_name %></a></li>
-          <li><%= link_to "currently: #{current_user.language}", language_toggle_path() %></li>
+          <li><%= link_to "currently: #{current_user.language} - click to toggle", language_toggle_path() %></li>
           <li><%= link_to t(:Logout), logout_path(), { method: :delete, } %></li>
         <% else %>
           <li><%= link_to t(:Login), login_path() %></li>
