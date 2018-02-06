@@ -15,8 +15,34 @@ class PersonTest < ActiveSupport::TestCase
     person.last_name = "LNAME"
     person.nationality = nationalities :samoan
     person.title = titles :mechanic
+    person.gender = "F"
 
-    assert(person.valid?, "first and last names should make valid")
+    assert(person.valid?, "first and last names and gender should make valid")
+  end
+
+  test "Gender formats" do
+    person = Person.new
+    refute(person.valid?, "should not be valid without any attributes")
+
+    person.first_name = "FNAME"
+    person.last_name = "LNAME"
+    person.nationality = nationalities :samoan
+    person.title = titles :mechanic
+
+    person.gender = "Male"
+    refute(person.valid?, "gender must be M or F")
+
+    person.gender = "Female"
+    refute(person.valid?, "gender must be M or F")
+
+    person.gender = "F"
+    assert(person.valid?, "gender must be M or F")
+
+    person.gender = "M"
+    assert(person.valid?, "gender must be M or F")
+
+    person.gender = "U"
+    refute(person.valid?, "gender must be M or F")
   end
 
   test "person can be associated with language through involvement" do
@@ -28,6 +54,7 @@ class PersonTest < ActiveSupport::TestCase
     person.last_name = "OBBO"
     person.nationality = nationalities :samoan
     person.title = titles :mechanic
+    person.gender = "M"
     assert(person.valid?, "Person should be valid")
 
     cf = Language.new
@@ -53,12 +80,12 @@ class PersonTest < ActiveSupport::TestCase
     assert_equal(1, person.languages.size, "a person has a language now")
     assert_equal(1, cf.people.size, "a language has a person now")
 
-
     # many to many
     person_two = Person.new
     person_two.first_name = "TOM"
     person_two.last_name = "OTMO"
     person_two.nationality = nationalities :samoan
+    person_two.gender = "M"
     person_two.title = titles :mechanic
     assert(person_two.valid?, "person two is valid")
 
@@ -130,6 +157,34 @@ class PersonTest < ActiveSupport::TestCase
       # should be 2018 and not 2019, or another date
       assert_equal("2018-02-21", person_one.next_leave_start_date.to_s)
     end
+  end
+
+  test "adj_ending" do
+    person_male = people :male
+    assert_equal("é", person_male.adj_ending)
+    person_female = people :female
+    assert_equal("ée", person_female.adj_ending)
+  end
+
+  test "researcher_name" do
+    person_male = people :two
+    assert_equal("M. TWO Person", person_male.formal_name)
+
+    person_male = people :female
+    assert_equal("Mme. PERSON Female", person_male.formal_name)
+  end
+
+  test "researcher_name_short" do
+    person_male = people :two
+    assert_equal("M. TWO", person_male.formal_name_short)
+
+    person_male = people :male
+    assert_equal("M. PERSON", person_male.formal_name_short)
+  end
+
+  test "filename format" do
+    person_female = people :female
+    assert_equal("female_person", person_female.filename)
   end
 
 end

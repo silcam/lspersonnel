@@ -57,6 +57,17 @@
 
   <div class="col-sm-7 col-sm-offset-1">
 
+    <div class="page-header">
+      <h4><%= t(:Print_documents) %></h4>
+    </div>
+
+    <a href="#">Select this user for printing.</a><br />
+    <%= link_to "Print a MINREST letter or formulaire.", person_documents_path(@person) %><br />
+
+    <div class="page-header">
+      <h4><%= t(:Other_details) %></h4>
+    </div>
+
     <ul class="nav nav-tabs periodic-documents">
       <li class="active" role="presentation">
         <a href="#research-permits" data-toggle="tab"><%= t(:Research_permits) %></a>

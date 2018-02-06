@@ -11,4 +11,9 @@ class DirectorTest < ActiveSupport::TestCase
     assert(director.valid?, "should be valid now")
   end
 
+  test "Current Director" do
+    director = Director.current_director
+    assert(director, "must be a current director")
+  end
+
 end

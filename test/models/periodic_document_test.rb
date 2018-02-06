@@ -10,6 +10,7 @@ class PeriodicDocumentTest < ActiveSupport::TestCase
     person.first_name = "FA"
     person.last_name = "LA"
     person.nationality = nationalities :samoan
+    person.gender = "F"
     person.title = titles :mechanic
 
     assert(person.valid?, "person should be valid")
@@ -35,6 +36,7 @@ class PeriodicDocumentTest < ActiveSupport::TestCase
     person.last_name = "LA"
     person.nationality = nationalities :samoan
     person.title = titles :mechanic
+    person.gender = "M"
     assert(person.valid?, "person should be valid")
     person.save
 
@@ -59,6 +61,7 @@ class PeriodicDocumentTest < ActiveSupport::TestCase
     person.last_name = "LN"
     person.nationality = nationalities :samoan
     person.title = titles :mechanic
+    person.gender = "F"
     assert(person.valid?, "person is valid now")
     person.save
 

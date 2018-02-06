@@ -14,17 +14,16 @@ Rails.application.routes.draw do
     resources :research_permits
     resources :quarterly_reports
     resources :primary_reports
+    resources :documents, only: ["index"]
+    get 'documents/first_request', to: 'documents#first_request', as: 'person_first_request'
   end
 
   post 'people/:person_id/attach_language', to: 'people#attach', as: :attach_language
 
   resources :leave, only: ["index"]
-
   resources :leave_reasons, except: ["show"]
   resources :titles, except: ["show"]
   resources :nationalities, except: ["show"]
   resources :directors, except: ["show"]
-
-
   resources :languages
 end

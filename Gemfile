@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.1'
+gem 'rails', '= 5.1.2'
 # Use postgres as the database for Active Record
 gem 'pg', '~>0.21.0'
 # Use Puma as the app server
@@ -57,9 +57,11 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   # Reading Docx files for test purposes
-  gem 'henkei', '~> 1.14', '>= 1.14.4'
-  gem 'minitest-reporters'
+  gem 'henkei', '= 1.14.3'
+  # General testing
+  gem 'minitest-reporters', '~> 1.1', '>= 1.1.18'
   gem 'minitest-rails-capybara'
+  # Security
   gem 'brakeman', require: false
 end
 

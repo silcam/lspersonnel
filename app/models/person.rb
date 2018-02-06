@@ -13,6 +13,8 @@ class Person < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+  validates :gender, presence: true
+  validates :gender, format: { with: /\A[M|F]{1}\z/ }
 
   def next_leave_start_date
     leaves.where("start_date > now()").order("start_date").first&.start_date
@@ -20,6 +22,28 @@ class Person < ApplicationRecord
 
   def next_permit_expiration
     research_permits.where("expiry_date > now()").order("expiry_date").first&.expiry_date
+  end
+
+  # French adjective endings based on the person's gender.
+  def adj_ending
+    gender == 'M' ? "é" : "ée"
+  end
+
+  def salutation
+    # TODO: Handle Mlle
+    gender == 'M' ? "M." : "Mme."
+  end
+
+  def formal_name
+    "#{formal_name_short} #{first_name.humanize}"
+  end
+
+  def formal_name_short
+    "#{salutation} #{last_name.upcase}"
+  end
+
+  def filename
+    "#{first_name.downcase}_#{last_name.downcase}"
   end
 
   def self.all_cabtal

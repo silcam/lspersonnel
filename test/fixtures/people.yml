@@ -8,6 +8,7 @@ one:
   first_name: Person
   last_name: One
   nationality: samoan
+  gender: M
   title: mechanic
   cabtal: false
 
@@ -15,6 +16,7 @@ two:
   first_name: Person
   last_name: Two
   nationality: norweigan
+  gender: M
   title: mechanic
   cabtal: false
 
@@ -22,5 +24,22 @@ three:
   first_name: Person
   last_name: Three
   nationality: norweigan
+  gender: M
   title: assistant
   cabtal: true
+
+male:
+  first_name: Male
+  last_name: Person
+  nationality: norweigan
+  gender: M
+  title: assistant
+  cabtal: false
+
+female:
+  first_name: Female
+  last_name: Person
+  gender: F
+  nationality: norweigan
+  title: assistant
+  cabtal: false

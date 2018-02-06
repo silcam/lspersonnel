@@ -1,0 +1,38 @@
+
+<% if request.referer.nil? %>
+  <%= link_to "<< Return", people_path() %>
+<% else %>
+  <%= link_to "<< Return", request.referer %>
+<% end %>
+
+<div class="page-header">
+  <h3>Print a letter or formulaire</h3>
+</div>
+
+<p>
+Preview a Checklist of Data for printing
+</p>
+
+<p>
+Preview Member Notification of Permit Issue
+</p>
+
+<p>
+  <%= link_to "Preview Premiere Demande Letter", person_person_first_request_path(@person) %>
+</p>
+
+<p>
+Preview Renouvellement Letter
+</p>
+
+<p>
+Preview RESEARCH PERMIT letter
+</p>
+
+<p>
+ EDIT HEADING button
+</p>
+
+<p>
+Preview Rapport Primaire Letter + or - Future Activities
+</p>
