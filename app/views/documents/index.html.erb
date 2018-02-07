@@ -1,4 +1,8 @@
 
+<% if alert %>
+  <p id="document-error" class="bg-danger"><%= alert %></p>
+<% end %>
+
 <% if request.referer.nil? %>
   <%= link_to "<< Return", people_path() %>
 <% else %>
@@ -18,11 +22,11 @@ Preview Member Notification of Permit Issue
 </p>
 
 <p>
-  <%= link_to "Preview Premiere Demande Letter", person_person_first_request_path(@person) %>
+  <%= link_to "Preview Premiere Demande Letter", person_first_request_doc_path(@person) %>
 </p>
 
 <p>
-Preview Renouvellement Letter
+  <%= link_to "Preview Renouvellement Letter", person_renew_permit_doc_path(@person) %>
 </p>
 
 <p>
@@ -34,5 +38,5 @@ Preview RESEARCH PERMIT letter
 </p>
 
 <p>
-Preview Rapport Primaire Letter + or - Future Activities
+  <%= link_to "Preview Rapport Primaire Letter + or - Future Activities", person_primary_report_doc_path(@person) %>
 </p>

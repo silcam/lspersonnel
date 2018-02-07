@@ -46,6 +46,22 @@ class Person < ApplicationRecord
     "#{first_name.downcase}_#{last_name.downcase}"
   end
 
+  def research_permit_number
+    research_permits.select("identifier").
+        where("issue_date < now() and expiry_date > now()").
+            order("issue_date").limit(1).first&.identifier
+  end
+
+  # This is meant to be included in a renewal letter, something like "hey look at
+  # my last letter sent on XX Mon YYYY, I deserve another permit".  For now, we'll
+  # look at the latest submission date of a research permit and use that as the
+  # last letter date until there is a better solution.
+  def previous_letter_date
+    research_permits.select("submission_date").
+        where("submission_date < now()").
+          order("submission_date DESC").limit(1).first&.submission_date
+  end
+
   def self.all_cabtal
     where(cabtal: true)
   end

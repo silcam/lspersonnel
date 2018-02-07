@@ -16,3 +16,12 @@ beforefirst:
   identifier: 1234-1234-1233
   language: English
   person: one
+
+researcher_permit:
+  type: ResearchPermit
+  submission_date: 2017-12-22
+  expiry_date: 2022-01-12
+  issue_date: 2018-01-31
+  identifier: 1234-1234-2222
+  language: English
+  person: researcher

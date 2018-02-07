@@ -15,7 +15,10 @@ Rails.application.routes.draw do
     resources :quarterly_reports
     resources :primary_reports
     resources :documents, only: ["index"]
-    get 'documents/first_request', to: 'documents#first_request', as: 'person_first_request'
+    get 'documents/first_request', to: 'documents#first_request', as: 'first_request_doc'
+    get 'documents/primary_report', to: 'documents#primary_report', as: 'primary_report_doc'
+    get 'documents/renew_permit', to: 'documents#renew_permit', as: 'renew_permit_doc'
+    get 'documents/new_primary_report', to: 'documents#new_primary_report', as: 'new_primary_report_doc'
   end
 
   post 'people/:person_id/attach_language', to: 'people#attach', as: :attach_language

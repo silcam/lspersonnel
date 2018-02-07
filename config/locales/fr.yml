@@ -1,4 +1,7 @@
 fr:
+  date:
+    formats:
+      letter: '%d %b %Y'
 
   # General
   None_yet: Pas encore

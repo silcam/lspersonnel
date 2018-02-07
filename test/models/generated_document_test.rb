@@ -4,6 +4,10 @@ require 'henkei'
 
 class PersonTest < ActiveSupport::TestCase
 
+  ## TODO: Must put in reseach_description
+  ## TODO: Must put in future_plans.
+  ## TODO: Must put in request_period.
+
   test "First Request Can be Generated" do
     on_date(Date.new(2018,1,2)) do
 
@@ -38,6 +42,72 @@ class PersonTest < ActiveSupport::TestCase
             "should contain replacement text with researcher name in place #2")
         assert_match("Madame le Ministre,\n\nJ'ai l'honneur", file_text,
             "should contain replacement text with minister gender")
+      ensure
+        tmpfile.close
+        tmpfile.unlink
+      end
+
+    end
+  end
+
+  test "Handle Errors that prevent document from being generated" do
+
+    newguy = people :newguy
+    assert_equal(0, newguy.research_permits.size, "new guy has no permits")
+
+    # Attempt to renew with zero permits
+    tmpfile = Tempfile.new('test-gen-doc')
+
+    error = assert_raise(StandardError) do
+      begin
+        file_path = GeneratedDocument.renew_permit(newguy, tmpfile)
+      ensure
+        tmpfile.close
+        tmpfile.unlink
+      end
+    end
+
+    assert_equal(GeneratedDocument::RENEWAL_ERROR, error.message)
+  end
+
+  test "Renewal Doc Can be Generated" do
+    on_date(Date.new(2018,2,1)) do
+
+      # person to generate document for
+      researcher = people :researcher
+      dir = directors :director_current
+
+      tmpfile = Tempfile.new('test-gen-doc')
+
+      begin
+        # Set the locale to french to test date formats
+        # for this test.
+        tmp_locale = I18n.locale
+        I18n.locale = "fr"
+
+        file_path = GeneratedDocument.renew_permit(researcher, tmpfile)
+        assert(file_path, "file path after generate should exist")
+
+        doc = File.read file_path
+        file_text = Henkei.read :text, doc
+
+        assert_match("Yaoundé, le 01 fév. 2018", file_text,
+            "should contain 'today's' date in the document (IN FRENCH).")
+        assert_match("#{dir.name}\n#{dir.title}\nSIL", file_text,
+            "should contain replacement text with director information")
+        assert_match("de l'intéressée plus", file_text,
+            "should contain replacement text with adjective ending")
+        assert_match("en faveur de Mme. RESEARCHER Intelligent.", file_text,
+            "should contain replacement text with researcher name in place #2")
+        assert_match("Madame le Ministre,\nJ'ai l'honneur", file_text,
+            "should contain replacement text with minister gender")
+        assert_match("par notre lettre du 22 déc. 2017", file_text,
+            "should contain previous letter date")
+        assert_match("de recherche No. 1234-1234-2222 en faveur", file_text,
+            "should contain research permit number")
+
+        # set it back to how it was.
+        I18n.locale = tmp_locale
       ensure
         tmpfile.close
         tmpfile.unlink

@@ -43,3 +43,19 @@ female:
   nationality: norweigan
   title: assistant
   cabtal: false
+
+researcher:
+  first_name: Intelligent
+  last_name: Researcher
+  gender: F
+  nationality: norweigan
+  title: assistant
+  cabtal: false
+
+newguy:
+  first_name: Guy
+  last_name: New
+  gender: M
+  nationality: norweigan
+  title: assistant
+  cabtal: false

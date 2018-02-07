@@ -187,4 +187,58 @@ class PersonTest < ActiveSupport::TestCase
     assert_equal("female_person", person_female.filename)
   end
 
+  test "Research Permit" do
+    on_date(Date.new(2018,2,5)) do
+      person_one = people :one
+      assert_equal(2, person_one.research_permits.size, "should have 2")
+      assert_equal("1234-1234-1234", person_one.research_permit_number)
+
+      # Add and expire the old number
+      first = research_permits :first
+      assert(first.language, "should have a language")
+      assert_equal("English", first.language.name, "should be English")
+      first.expiry_date = "2018-01-01"
+      first.valid?
+      assert(first.valid?, "should be valid")
+      first.save
+
+      new_permit = ResearchPermit.new
+      new_permit.expiry_date = "2022-01-01"
+      new_permit.issue_date = "2018-01-01"
+      new_permit.submission_date = "2017-12-21"
+      new_permit.identifier = "1234-1234-1245"
+      new_permit.language = languages :English
+      person_one.research_permits << new_permit
+
+      assert_equal(3, person_one.research_permits.size, "should have 3")
+
+      assert_equal(new_permit.identifier, person_one.research_permit_number,
+          "new permit is now the identifier to be used")
+    end
+  end
+
+  test "if someone doesn't have a valid permit, it should return null" do
+    person_two = people :two
+    assert_nil(person_two.research_permit_number)
+  end
+
+  test "Previous Letter Date" do
+    on_date(Date.new(2018,2,5)) do
+      person_one = people :one
+
+      assert_equal("2017-01-12", person_one.previous_letter_date.to_s)
+
+      new_permit = ResearchPermit.new
+      new_permit.expiry_date = "2022-01-01"
+      new_permit.issue_date = "2018-02-15"
+      new_permit.submission_date = "2018-02-01"
+      new_permit.identifier = "1234-1234-1245"
+      new_permit.language = languages :English
+      person_one.research_permits << new_permit
+
+      # This advances the submission date to the new date
+      assert_equal("2018-02-01", person_one.previous_letter_date.to_s)
+    end
+  end
+
 end

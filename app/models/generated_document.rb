@@ -3,6 +3,8 @@ require 'sablon'
 
 class GeneratedDocument < ApplicationRecord
 
+  RENEWAL_ERROR = "Cannot renew without existing permit"
+
   FILES_DIRECTORY = "/app/helpers/documents/"
   FILENAMES = {
     first_request: "first_request.docx",
@@ -13,15 +15,51 @@ class GeneratedDocument < ApplicationRecord
 
   def self.first_request(person, tmpfile)
     template = Sablon.template(build_path(FILENAMES[:first_request]))
+    context = build_context(person)
+    doc = generate(template, context, tmpfile)
 
+    # This doesn't work -- not sure why.  Gem is probably busted.
+    #Omnidocx::Docx.merge_documents(all_docs, new_output_path, true)
+    doc
+  end
+
+  def self.renew_permit(person, tmpfile)
+    template = Sablon.template(build_path(FILENAMES[:permit_renew]))
+    previous_letter_date = person.previous_letter_date
+
+    context = build_context(person)
+
+    if (previous_letter_date.nil?)
+      raise RENEWAL_ERROR
+    end
+
+    context[:research_permit_number] = person.research_permit_number
+    context[:prev_letter_date] = I18n.l(previous_letter_date, format: :letter)
+
+    doc = generate(template, context, tmpfile)
+  end
+
+  def self.primary_report(person, tmpfile)
+    template = Sablon.template(build_path(FILENAMES[:primary_report]))
+    context = build_context(person)
+    doc = generate(template, context, tmpfile)
+  end
+
+  def self.second_primary_report(person, tmpfile)
+    template = Sablon.template(build_path(FILENAMES[:second_primary_report]))
+    context = build_context(person)
+    doc = generate(template, context, tmpfile)
+  end
+
+  private
+
+  def self.build_context(person)
     # Context is dependant on file requested to be created.
     # But some things are common
     context = {
           # Where does this come from?
       minister_gender: 'Madame',
-          # TODO: make it formattable in the
-          # localization configurations.
-      request_date: Date.today.strftime('%d %b %Y'),
+      request_date: I18n.l(Date.today, format: :letter),
       researcher_name: person.formal_name,
       researcher_name_short: person.formal_name_short,
           # Where does this come from?
@@ -34,16 +72,7 @@ class GeneratedDocument < ApplicationRecord
       director_name: Director.current_director.name,
       director_title: Director.current_director.title
     }
-
-    doc = generate(template, context, tmpfile)
-
-    # This doesn't work -- not sure why.  Gem is probably busted.
-    #Omnidocx::Docx.merge_documents(all_docs, new_output_path, true)
-
-    doc
   end
-
-  private
 
   def self.build_path(filename)
     base_path = File.expand_path("../../../", __FILE__)
