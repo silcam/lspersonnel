@@ -92,7 +92,9 @@ class PeopleController < ApplicationController
       :departure,
       :nationality_id,
       :title_id,
-      :gender
+      :gender,
+      :future_activities,
+      :request_period
     ]
     params.require(:person).permit(permitted)
   end

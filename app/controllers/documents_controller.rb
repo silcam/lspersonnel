@@ -35,7 +35,7 @@ class DocumentsController < ApplicationController
       send_data doc,
           type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
           disposition: "attachment",
-          filename: "first_request_#{@person.filename}.docx"
+          filename: "renew_permit_#{@person.filename}.docx"
     rescue
       redirect_to person_documents_path(@person), alert: "Error creating renewal document, does user have existing research permits?"
     ensure

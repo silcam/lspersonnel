@@ -6,13 +6,17 @@
   <table class="table table-striped">
     <tr>
       <th><%= t(:Language) %></th>
-      <th><%= t(:Region) %></th>
+      <th><%= t(:Department) %></th>
     </tr>
 
     <% @languages.each do |language| %>
     <tr>
-       <td><%= language.name %></td>
-       <td><%= language.region.en %></td>
+       <td><%= link_to language.name, edit_language_url(language) %></td>
+       <td>
+        <% language.departments.each do |d| %>
+          <%= d.name %>
+        <% end %>
+       </td>
     </tr>
     <% end %>
   </table>

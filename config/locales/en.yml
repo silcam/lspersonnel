@@ -23,14 +23,19 @@ en:
   Arrival: Arrival
   Departure: Departure
   Job: Job
+  Future_activities: Future Activities
+  Request_period: Research Request Period
 
   # Languages
   Language: Languages
   Languages: Languages
-  Languages_list: Person List
+  Languages_list: Languages List
   Add_language: Add Language
   Language_name: Language Name
   Add_a_new_involved_language: Add a Language This Person is Involved With
+
+  # Departments
+  Department: Department
 
   # Research Permits
   Research_permit_expiry: Research Permit Expiry

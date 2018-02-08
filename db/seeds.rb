@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require 'yaml'
 
 # There should only be one record in this table
@@ -12,7 +5,7 @@ while MinForm.all.size > 0
   MinForm.first.delete
 end
 
-data = YAML.load_file('db/min_forms.yml')
+data = YAML.load_file('db/load/min_forms.yml')
 
 minform = MinForm.new
 minform.top_left = data["top_left"]
@@ -32,11 +25,9 @@ minform.decree5_fr = data["decree5_fr"]
 minform.save
 
 # Delete all regions first.
-Region.all.each do |r|
-  r.delete
-end
+Region.all.each { |r| r.delete }
 
-data = YAML.load_file('db/regions.yml')
+data = YAML.load_file('db/load/regions.yml')
 
 data["regions"].each do |k,v|
   region = Region.new
@@ -48,5 +39,20 @@ data["regions"].each do |k,v|
   region.full_fr = v["full_fr"]
 
   region.save
+end
 
+# Delete all departments first.
+Department.all.each { |d| d.delete }
+
+data = YAML.load_file('db/load/departments.yml')
+
+data["departments"].each do |k,v|
+  region = Region.where("region_code = ?", v["region"])
+
+  d = Department.new
+  d.name = k
+  d.gender = v["gender"]
+  d.region = region.take
+
+  d.save
 end

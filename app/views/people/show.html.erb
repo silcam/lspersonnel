@@ -46,6 +46,14 @@
         <td><%= @person.departure %></td>
       </tr>
       <tr>
+        <th><%= t(:Future_activities) %>:</th>
+        <td><%= @person.future_activities %></td>
+      </tr>
+      <tr>
+        <th><%= t(:Request_period) %>:</th>
+        <td><%= @person.request_period %></td>
+      </tr>
+      <tr>
         <td colspan="2">
         <%= link_to(t(:Edit), edit_person_path(@person), { class: "btn btn-primary" }) %>
         <%= link_to(t(:Delete), person_path(@person), method: 'delete', data: { confirm: t(:Are_you_sure) }, class: 'text-danger' )  %>

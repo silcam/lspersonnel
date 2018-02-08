@@ -3,21 +3,5 @@
 </div>
 
 <div class="col-md-3">
-  <%= form_tag "/languages" , method: "post" do %>
-
-    <div class="form-group">
-      <input class="form-control" type="text" name="name" placeholder="<%= t(:Language_name) %>" required="required" />
-      <select class="form-control" name="region" required>
-        <option value=""><%= t(:Region) %></option>
-        <% @regions.each do |region| %>
-          <option value="<%= region.id %>"> <%= region.en %> </option>
-        <% end %>
-      </select>
-    </div>
-
-    <div class="form-group">
-    <button type="submit" class="btn btn-success">Add</button>
-    </div>
-
-  <% end %>
+  <%= render "form" %>
 </div>

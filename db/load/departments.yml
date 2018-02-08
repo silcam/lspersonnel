@@ -1,0 +1,176 @@
+---
+departments:
+  Djérem:
+    gender: M
+    region: CM-AD
+  Faro-et-Déo:
+    gender: M
+    region: CM-AD
+  Mayo-Banyo:
+    gender: M
+    region: CM-AD
+  Mbéré:
+    gender: M
+    region: CM-AD
+  Vina:
+    gender: F
+    region: CM-AD
+  Haute-Sanaga:
+    gender: F
+    region: CM-CE
+  Lekié:
+    gender: F
+    region: CM-CE
+  Mbam-et-Inoubou:
+    gender: M
+    region: CM-CE
+  Mbam-et-Kim:
+    gender: M
+    region: CM-CE
+  Méfou-et-Afamba:
+    gender: M
+    region: CM-CE
+  Méfou-et-Akono:
+    gender: F
+    region: CM-CE
+  Mfoundi:
+    gender: M
+    region: CM-CE
+  Nyong-et-Kéllé:
+    gender: M
+    region: CM-CE
+  Nyong-et-Mfoumou:
+    gender: M
+    region: CM-CE
+  Nyong-et-So'o:
+    ender: M
+    region: CM-CE
+  Boumba-et-Ngoko:
+    gender: M
+    region: CM-ES
+  Haut-Nyong:
+    gender: M
+    region: CM-ES
+  Kadey:
+    gender: F
+    region: CM-ES
+  Lom-et-Djerem:
+    gender: M
+    region: CM-ES
+  Diamaré:
+    gender: M
+    region: CM-EN
+  Logone-et-Chari:
+    gender: M
+    region: CM-EN
+  Mayo-Danay:
+    gender: M
+    region: CM-EN
+  Mayo-Kani:
+    gender: M
+    region: CM-EN
+  Mayo-Sava:
+    gender: M
+    region: CM-EN
+  Mayo-Tsanaga:
+    gender: M
+    region: CM-EN
+  Moungo:
+    gender: M
+    region: CM-LT
+  Nkam:
+    gender: M
+    region: CM-LT
+  Sanaga-Maritime:
+    gender: F
+    region: CM-LT
+  Wouri:
+    gender: M
+    region: CM-LT
+  Bénoué:
+    gender: F
+    region: CM-NO
+  Faro:
+    gender: M
+    region: CM-NO
+  Mayo-Louti:
+    gender: M
+    region: CM-NO
+  Mayo-Rey:
+    gender: M
+    region: CM-NO
+  Boyo:
+    gender: M
+    region: CM-NW
+  Bui:
+    gender: M
+    region: CM-NW
+  Donga-Mantung:
+    gender: M
+    region: CM-NW
+  Menchum:
+    gender: M
+    region: CM-NW
+  Mezam:
+    gender: M
+    region: CM-NW
+  Momo:
+    gender: M
+    region: CM-NW
+  Ngo-ketunjia:
+    gender: M
+    region: CM-NW
+  Dja-et-Lobo:
+    gender: M
+    region: CM-SU
+  Mvila:
+    gender: F
+    region: CM-SU
+  Océan:
+    gender: M
+    region: CM-SU
+  Vallée-du-Ntem:
+    gender: F
+    region: CM-SU
+  Fako:
+    gender: M
+    region: CM-SW
+  Koupé-Manengouba:
+    gender: M
+    region: CM-SW
+  Lebialem:
+    gender: M
+    region: CM-SW
+  Manyu:
+    gender: F
+    region: CM-SW
+  Meme:
+    gender: F
+    region: CM-SW
+  Ndian:
+    gender: M
+    region: CM-SW
+  Bamboutos:
+    gender: M
+    region: CM-OU
+  Haut-Nkam:
+    gender: M
+    region: CM-OU
+  Hauts-Plateaux:
+    gender: M
+    region: CM-OU
+  Koung-Khi:
+    gender: M
+    region: CM-OU
+  Menoua:
+    gender: F
+    region: CM-OU
+  Mifi:
+    gender: F
+    region: CM-OU
+  Ndé:
+    gender: M
+    region: CM-OU
+  Noun:
+    gender: M
+    region: CM-OU

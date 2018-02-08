@@ -23,6 +23,8 @@ fr:
   Arrival: Arrivée
   Departure: Départ
   Job: Job
+  Future_activities: Les activités prévus
+  Request_period: Période de recherche sollicitée
 
   # Languages
   Language: Langue
@@ -31,6 +33,9 @@ fr:
   Add_language: Ajouter une langue
   Language_name: Nom de la langue
   Add_a_new_involved_language: Ajouter une langue dans laquelle cette personne est impliquée
+
+  # Departments
+  Department: Département
 
   # Research Permits
   Research_permit_expiry: Date d'expiration du permis de recherche
