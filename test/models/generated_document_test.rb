@@ -4,10 +4,6 @@ require 'henkei'
 
 class PersonTest < ActiveSupport::TestCase
 
-  ## TODO: Must put in reseach_description
-  ## TODO: Must put in future_plans.
-  ## TODO: Must put in request_period.
-
   test "First Request Can be Generated" do
     on_date(Date.new(2018,1,2)) do
 
@@ -19,11 +15,25 @@ class PersonTest < ActiveSupport::TestCase
       person1.gender = "M"
       person1.title = titles :mechanic
 
+      person1.future_activities = "To not sell anything, buy anything, or process anything"
+      person1.request_period = "six mois"
+
+      ewondo = languages :Ewondo
+      inv = Involvement.new
+      inv.level = InvolvementLevel::PRIMARY.id
+      inv.language = ewondo
+      person1.involvements << inv
+
       dir = directors :director_current
 
       tmpfile = Tempfile.new('test-gen-doc')
 
       begin
+        # Set the locale to french to test date formats
+        # for this test.
+        tmp_locale = I18n.locale
+        I18n.locale = "en"
+
         file_path = GeneratedDocument.first_request(person1, tmpfile)
         assert(file_path, "file path after generate should exist")
 
@@ -42,11 +52,20 @@ class PersonTest < ActiveSupport::TestCase
             "should contain replacement text with researcher name in place #2")
         assert_match("Madame le Ministre,\n\nJ'ai l'honneur", file_text,
             "should contain replacement text with minister gender")
+
+        assert_match("les activités suivantes : \n#{person1.future_activities}", file_text,
+            "letter contains future plans")
+        assert_match("sollicitée pour une période de six mois", file_text,
+            "request period is in the letter")
+        assert_match("d'aborder ses recherches #{person1.research_statement}",
+            file_text, "research statement is in the letter")
+
+        # set it back to how it was.
+        I18n.locale = tmp_locale
       ensure
         tmpfile.close
         tmpfile.unlink
       end
-
     end
   end
 
@@ -77,6 +96,15 @@ class PersonTest < ActiveSupport::TestCase
       researcher = people :researcher
       dir = directors :director_current
 
+      researcher.future_activities = "To not sell anything, buy anything, or process anything"
+      researcher.request_period = "un an"
+
+      lamnso = languages :Lamnso
+      inv= Involvement.new
+      inv.level = InvolvementLevel::PRIMARY.id # need to be enum
+      inv.language = lamnso
+      researcher.involvements << inv
+
       tmpfile = Tempfile.new('test-gen-doc')
 
       begin
@@ -106,13 +134,19 @@ class PersonTest < ActiveSupport::TestCase
         assert_match("de recherche No. 1234-1234-2222 en faveur", file_text,
             "should contain research permit number")
 
+        assert_match("les activités suivantes : #{researcher.future_activities}", file_text,
+            "letter contains future plans")
+        assert_match("sollicitée pour une période d'un an", file_text,
+            "request period is in the letter")
+        assert_match("de continuer ses recherches #{researcher.research_statement}",
+            file_text, "research statement is in the letter")
+
         # set it back to how it was.
         I18n.locale = tmp_locale
       ensure
         tmpfile.close
         tmpfile.unlink
       end
-
     end
   end
 

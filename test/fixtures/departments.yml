@@ -1,0 +1,24 @@
+Mfoundi:
+  name: Mfoundi
+  gender: M
+  region: Centre
+
+Faro:
+  name: Faro
+  gender: M
+  region: North
+
+Mvila:
+  name: Mvila
+  gender: F
+  region: South
+
+Ocean:
+  name: Océan
+  gender: M
+  region: South
+
+HautsPlateaux:
+  name: Hauts-Plateaux
+  gender: M
+  region: South

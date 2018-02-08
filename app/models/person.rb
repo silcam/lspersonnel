@@ -62,6 +62,36 @@ class Person < ApplicationRecord
           order("submission_date DESC").limit(1).first&.submission_date
   end
 
+  def request_period_for_letter
+    if (/^[a|e|i|o|u|y]/ =~ request_period)
+      "d'#{request_period}"
+    else
+      "de #{request_period}"
+    end
+  end
+
+  def research_statement
+    languages = {}
+    departments = {}
+
+    invs = involvements.select{ |i| i.level == InvolvementLevel::PRIMARY::id }
+    return nil if invs.size == 0
+
+    # TODO: There has to be a better way than this.
+    invs.each do |inv|
+      languages[inv.language.name] = inv.language
+      inv.language.departments.each do |dep|
+        departments[dep.name] = dep
+      end
+    end
+
+    languages_string = Language.build_research_string(languages.values)
+    departments_string = Department.build_research_string(departments.values)
+    return nil if (languages_string.nil? || departments_string.nil?)
+
+    statement = "sur #{languages_string} #{departments_string}"
+  end
+
   def self.all_cabtal
     where(cabtal: true)
   end

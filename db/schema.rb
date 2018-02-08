@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180130103621) do
+ActiveRecord::Schema.define(version: 20180207103818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "departments", force: :cascade do |t|
+    t.string "name"
+    t.string "gender", limit: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "region_id"
+    t.index ["region_id"], name: "index_departments_on_region_id"
+  end
+
+  create_table "departments_languages", force: :cascade do |t|
+    t.bigint "language_id"
+    t.bigint "department_id"
+    t.index ["department_id"], name: "index_departments_languages_on_department_id"
+    t.index ["language_id"], name: "index_departments_languages_on_language_id"
+  end
 
   create_table "directors", force: :cascade do |t|
     t.string "name"
@@ -35,8 +51,6 @@ ActiveRecord::Schema.define(version: 20180130103621) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "region_id"
-    t.index ["region_id"], name: "index_languages_on_region_id"
   end
 
   create_table "leave_reasons", force: :cascade do |t|
@@ -99,6 +113,8 @@ ActiveRecord::Schema.define(version: 20180130103621) do
     t.boolean "cabtal", default: false, null: false
     t.bigint "title_id"
     t.bigint "nationality_id"
+    t.string "future_activities"
+    t.string "request_period"
     t.index ["nationality_id"], name: "index_people_on_nationality_id"
     t.index ["title_id"], name: "index_people_on_title_id"
   end

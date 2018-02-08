@@ -45,6 +45,7 @@ class PersonTest < ActiveSupport::TestCase
     refute(person.valid?, "gender must be M or F")
   end
 
+  # TODO: This test is really long
   test "person can be associated with language through involvement" do
     region = Region.where(region_code: "CM-AD").first
     assert(region.valid?, "region should be valid")
@@ -57,9 +58,18 @@ class PersonTest < ActiveSupport::TestCase
     person.gender = "M"
     assert(person.valid?, "Person should be valid")
 
+    r = regions :Centre
+
+    d = Department.new
+    d.name = "Mfoundi"
+    d.gender = "M"
+    d.region = r
+
     cf = Language.new
     cf.name = "Camfranglais"
-    cf.region = region
+    cf.departments << d
+    cf.valid?
+    d.valid?
     assert(cf.valid?, "Camfranglais should be valid")
 
     cfinvolvement = Involvement.new
@@ -89,9 +99,16 @@ class PersonTest < ActiveSupport::TestCase
     person_two.title = titles :mechanic
     assert(person_two.valid?, "person two is valid")
 
+    r = regions :North
+
+    d = Department.new
+    d.name = "Noun"
+    d.gender = "M"
+    d.region = r
+
     vama = Language.new
     vama.name = "Vama"
-    vama.region = region
+    vama.departments << d
     assert(vama.valid?, "vama is valid")
 
     vamainvolvement_two = Involvement.new
@@ -117,7 +134,6 @@ class PersonTest < ActiveSupport::TestCase
   end
 
   test "CABTAL attribute" do
-
     person_two = people :two
     assert_equal(false, person_two.cabtal)
     assert_equal(false, person_two.cabtal?)
@@ -239,6 +255,184 @@ class PersonTest < ActiveSupport::TestCase
       # This advances the submission date to the new date
       assert_equal("2018-02-01", person_one.previous_letter_date.to_s)
     end
+  end
+
+  test "Research Request Period and Future Plans" do
+    activities =  "Learn Karate"
+    period = "un quinquennat"
+
+    person_one = people :one
+    person_one.future_activities = activities
+    person_one.request_period = period
+
+    assert_equal(activities, person_one.future_activities, "good activities")
+    assert_equal(period, person_one.request_period, "good period")
+
+    assert(person_one.valid?, "person one is valid")
+  end
+
+  test "Request Period uses correct grammar" do
+    person_one = people :one
+
+    person_one.request_period = "un an"
+    assert_equal("d'un an", person_one.request_period_for_letter,
+        "can format request period correctly")
+
+    person_one.request_period = "un quinquennat"
+    assert_equal("d'un quinquennat", person_one.request_period_for_letter,
+        "can format request period correctly")
+
+    person_one.request_period = "sept mois"
+    assert_equal("de sept mois", person_one.request_period_for_letter,
+        "can format request period correctly")
+  end
+
+  test "Primary Language Involvement is language on letter" do
+    person_one = people :one
+    assert_equal(0, person_one.involvements.size, "Should not have any involvements at the beginning")
+
+    # Now add some
+    lamnso = languages :Lamnso
+
+    inv= Involvement.new
+    inv.level = InvolvementLevel::PRIMARY.id # need to be enum
+    inv.language = lamnso
+
+    person_one.involvements << inv
+    assert(inv.valid?, "Involvement should be valid")
+    assert(person_one.valid?, "Person should be valid")
+
+    assert_equal("sur la langue lamnso parlée dans le département du Faro", person_one.research_statement,
+        "Can find research statement for user's research languages")
+  end
+
+  test "that languages with many departments create a correct research statement" do
+    person_one = people :one
+    assert_equal(0, person_one.involvements.size, "Should not have any involvements at the beginning")
+
+    ewondo = languages :Ewondo
+    assert_equal(1, ewondo.departments.size, "should have 1")
+
+    faro = departments :Faro
+    ewondo.departments << faro
+
+    assert_equal(2, ewondo.departments.size, "now should have 2")
+    assert(ewondo.valid?, "valid now")
+
+    inv= Involvement.new
+    inv.level = InvolvementLevel::PRIMARY.id # need to be enum
+    inv.language = ewondo
+
+    person_one.involvements << inv
+    assert(inv.valid?, "Involvement should be valid")
+    assert(person_one.valid?, "Person should be valid")
+
+    assert_equal(
+        "sur la langue ewondo parlée dans les départements du Mfoundi et du Faro",
+          person_one.research_statement, "should make correct research statement")
+  end
+
+  test "research statement with three and females" do
+    person_one = people :one
+    assert_equal(0, person_one.involvements.size, "Should not have any involvements at the beginning")
+
+    ewondo = languages :Ewondo
+    assert_equal(1, ewondo.departments.size, "should have 1")
+
+    faro = departments :Faro
+    ewondo.departments << faro
+
+    mvila = departments :Mvila
+    ewondo.departments << mvila
+
+    assert_equal(3, ewondo.departments.size, "now should have 3")
+    assert(ewondo.valid?, "valid now")
+
+    inv= Involvement.new
+    inv.level = InvolvementLevel::PRIMARY.id # need to be enum
+    inv.language = ewondo
+
+    person_one.involvements << inv
+    assert(inv.valid?, "Involvement should be valid")
+    assert(person_one.valid?, "Person should be valid")
+
+    assert_equal(
+        "sur la langue ewondo parlée dans les départements du Mfoundi, et du Faro, et de la Mvila",
+          person_one.research_statement, "should make correct research statement")
+  end
+
+  test "research statement with exceptions" do
+    person_one = people :one
+    assert_equal(0, person_one.involvements.size, "Should not have any involvements at the beginning")
+
+    ewondo = languages :Ewondo
+    assert_equal(1, ewondo.departments.size, "should have 1")
+
+    ocean = departments :Ocean
+    ewondo.departments << ocean
+    hp = departments :HautsPlateaux
+    ewondo.departments << hp
+
+    assert_equal(3, ewondo.departments.size, "now should have 3")
+    assert(ewondo.valid?, "valid now")
+
+    inv= Involvement.new
+    inv.level = InvolvementLevel::PRIMARY.id # need to be enum
+    inv.language = ewondo
+
+    person_one.involvements << inv
+    assert(inv.valid?, "Involvement should be valid")
+    assert(person_one.valid?, "Person should be valid")
+
+    assert_equal(
+        "sur la langue ewondo parlée dans les départements du Mfoundi, et de l'Océan, et des Hauts-Plateaux",
+          person_one.research_statement, "should make correct research statement")
+  end
+
+  test "research statement with multiple languages" do
+    person_one = people :one
+    assert_equal(0, person_one.involvements.size, "Should not have any involvements at the beginning")
+
+    ewondo = languages :Ewondo
+    assert_equal(1, ewondo.departments.size, "should have 1")
+
+    ocean = departments :Ocean
+    ewondo.departments << ocean
+    hp = departments :HautsPlateaux
+    ewondo.departments << hp
+
+    assert_equal(3, ewondo.departments.size, "now should have 3")
+    assert(ewondo.valid?, "valid now")
+
+    inv= Involvement.new
+    inv.level = InvolvementLevel::PRIMARY.id # need to be enum
+    inv.language = ewondo
+
+    lamnso = languages :Lamnso
+    inv2= Involvement.new
+    inv2.level = InvolvementLevel::PRIMARY.id # need to be enum
+    inv2.language = lamnso
+
+    person_one.involvements << inv
+    person_one.involvements << inv2
+    assert(inv.valid?, "Involvement should be valid")
+    assert(person_one.valid?, "Person should be valid")
+
+    assert_equal(
+        "sur les langues ewondo et lamnso parlées dans les départements du Mfoundi, et de l'Océan, et des Hauts-Plateaux, et du Faro",
+          person_one.research_statement, "should make correct research statement")
+
+    # Add another language to make 3
+    sso = languages :Sso
+    inv3= Involvement.new
+    inv3.level = InvolvementLevel::PRIMARY.id # need to be enum
+    inv3.language = sso
+    person_one.involvements << inv3
+    assert_equal(3, person_one.involvements.size, "should be 3 now")
+
+    assert_equal(
+        "sur les langues ewondo, et lamnso, et sso parlées dans les départements du Mfoundi, et de l'Océan, et des Hauts-Plateaux, et du Faro",
+          person_one.research_statement, "should make correct research statement")
   end
 
 end

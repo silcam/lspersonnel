@@ -1,7 +1,15 @@
 Ewondo:
-  region: Centre
   name: Ewondo
+  departments: Mfoundi
 
 English:
-  region: Adamawa
   name: English
+  departments: Mfoundi, Faro
+
+Lamnso:
+  name: Lamnso
+  departments: Faro
+
+Sso:
+  name: Sso
+  departments: Faro

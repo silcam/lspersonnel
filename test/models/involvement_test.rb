@@ -6,9 +6,13 @@ class InvolvementTest < ActiveSupport::TestCase
 
     cent = Region.where(region_code: "CM-CE").first
 
+    d = Department.new
+    d.name = "Noun"
+    d.gender = "M"
+
     lang = Language.new
     lang.name = "TESTLANG"
-    lang.region = cent
+    lang.departments << d
 
     pers = Person.new
     pers.first_name = "BOB"

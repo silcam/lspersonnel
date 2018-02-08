@@ -1,9 +1,3 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-
 Adamawa:
   en: Adamawa
   fr: Adamaoua
@@ -16,3 +10,15 @@ Centre:
   full_en: Centre Region
   full_fr: Région du Centre
   region_code: CM-CE
+North:
+  en: North
+  fr: Nord
+  full_en: North Region
+  full_fr: Région du Nord
+  region_code: CM-NO
+South:
+  en: South
+  fr: Sud
+  full_en: South Region
+  full_fr: Région du Sud
+  region_code: CM-SO

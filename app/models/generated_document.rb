@@ -57,18 +57,14 @@ class GeneratedDocument < ApplicationRecord
     # Context is dependant on file requested to be created.
     # But some things are common
     context = {
-          # Where does this come from?
-      minister_gender: 'Madame',
+      minister_gender: 'Madame', # Where does this come from?
       request_date: I18n.l(Date.today, format: :letter),
       researcher_name: person.formal_name,
       researcher_name_short: person.formal_name_short,
-          # Where does this come from?
-      research_description: 'Research Description',
-          # Where does this come from?
-      future_activities: 'FUTR ACTIVTIES',
+      research_description: person.research_statement,
+      future_activities: person.future_activities,
       adj_ending: person.adj_ending,
-          # Where does this come form?
-      request_period: 'un an',
+      request_period: person.request_period_for_letter,
       director_name: Director.current_director.name,
       director_title: Director.current_director.title
     }
