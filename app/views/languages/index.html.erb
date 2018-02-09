@@ -6,17 +6,17 @@
   <table class="table table-striped">
     <tr>
       <th><%= t(:Language) %></th>
-      <th><%= t(:Department) %></th>
+      <th><%= t(:Departments_spoken_in) %></th>
     </tr>
 
     <% @languages.each do |language| %>
     <tr>
        <td><%= link_to language.name, edit_language_url(language) %></td>
        <td>
-        <% language.departments.each do |d| %>
-          <%= d.name %>
-        <% end %>
+        <%= Department.build_research_string(language.departments) %>
        </td>
     </tr>
     <% end %>
   </table>
+
+  <%= link_to t(:Add_language), new_language_path(), class: 'btn btn-primary' %>

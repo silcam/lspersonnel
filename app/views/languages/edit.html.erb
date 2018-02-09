@@ -1,3 +1,7 @@
-Edit Template
+<div class="page-header">
+  <h3><%= t(:Edit_language) %></h3>
+</div>
 
-  <%= render "form" %>
+<%= form_for(@language) do |form| %>
+  <%= render "form", form: form %>
+<% end %>

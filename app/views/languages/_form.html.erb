@@ -1,18 +1,33 @@
 
-  <%= form_tag "/languages" , method: "post" do %>
+  <div class="form-group">
+    <%= form.label t(:Language_name) %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
 
-    <div class="form-group">
-      <input class="form-control" type="text" name="name" placeholder="<%= t(:Language_name) %>" required="required" />
-      <select class="form-control" name="region" required>
-        <option value=""><%= t(:Region) %></option>
-        <% @regions.each do |region| %>
-          <option value="<%= region.id %>"> <%= region.en %> </option>
-        <% end %>
-      </select>
+  <p><%= t(:Choose_the_departments) %></p>
+
+  <div class="row">
+  <% @regions.each.with_index do |r,index| %>
+    <div class="col-sm-3">
+      <b><%= r.en %></b><br />
+      <% r.departments.each do |d| %>
+        <div class="checkbox">
+          <%= label_tag "department_#{d.id}" do %>
+            <%= check_box_tag "department_#{d.id}", d.id, @language.departments.include?(d), :name => 'language[department_ids][]' %>
+            <%= d.name %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
-    <div class="form-group">
-    <button type="submit" class="btn btn-success">Add</button>
-    </div>
-
+    <% if (index + 1) % 4 == 0 %>
+      </div>
+      <div class="row">
+    <% end %>
   <% end %>
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-success">Add</button>
+  </div>
+

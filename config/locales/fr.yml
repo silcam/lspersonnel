@@ -33,9 +33,12 @@ fr:
   Add_language: Ajouter une langue
   Language_name: Nom de la langue
   Add_a_new_involved_language: Ajouter une langue dans laquelle cette personne est impliquée
+  Choose_the_departments: Choisissez les départements dans lesquels cette langue est parlée
 
   # Departments
   Department: Département
+  Departments: Départements
+  Departments_spoken_in: Les départements dans lesquels la langue est parlée
 
   # Research Permits
   Research_permit_expiry: Date d'expiration du permis de recherche

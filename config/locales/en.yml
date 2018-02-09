@@ -33,9 +33,12 @@ en:
   Add_language: Add Language
   Language_name: Language Name
   Add_a_new_involved_language: Add a Language This Person is Involved With
+  Choose_the_departments: Choose the Departments this Language is Spoken In
 
   # Departments
   Department: Department
+  Departments: Departments
+  Departments_spoken_in: Departments Spoken In
 
   # Research Permits
   Research_permit_expiry: Research Permit Expiry

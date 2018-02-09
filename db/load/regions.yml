@@ -50,8 +50,8 @@ regions:
     fr: Ouest
     full_en: West Region
     full_fr: Région de l'Ouest
-  CM-CM: # I made this one up, but it's in the old database, it is not part of the ISO-3166-2:CM spec
-    en: Cameroon
-    fr: Cameroun
-    full_en: Throughout Cameroon
-    full_fr: Sur l'ensemble du territoire national
+#  CM-CM: # I made this one up, but it's in the old database, it is not part of the ISO-3166-2:CM spec
+#    en: Cameroon
+#    fr: Cameroun
+#    full_en: Throughout Cameroon
+#    full_fr: Sur l'ensemble du territoire national
