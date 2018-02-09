@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   post 'people/:person_id/attach_language', to: 'people#attach', as: :attach_language
 
+  resources :documents, only: [ "edit", "update" ]
   resources :leave, only: ["index"]
   resources :leave_reasons, except: ["show"]
   resources :titles, except: ["show"]

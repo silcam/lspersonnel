@@ -1,10 +1,9 @@
 require 'sablon'
 #require 'omnidocx'
 
-class GeneratedDocument < ApplicationRecord
+class Document < ApplicationRecord
 
   RENEWAL_ERROR = "Cannot renew without existing permit"
-
   FILES_DIRECTORY = "/app/helpers/documents/"
   FILENAMES = {
     first_request: "first_request.docx",
@@ -12,6 +11,14 @@ class GeneratedDocument < ApplicationRecord
     permit_renew: "permit_renew.docx",
     second_primary_report: "second_primary_report.docx"
   }
+
+  validates :minister_gender, presence: true
+  validates :minister_gender, format: { with: /\A[M|F]{1}\z/ }
+
+  def self.minister_gender_salutation
+    doc = Document.take
+    doc.minister_gender == "M" ? "Monsieur" : "Madame"
+  end
 
   def self.first_request(person, tmpfile)
     template = Sablon.template(build_path(FILENAMES[:first_request]))
@@ -57,7 +64,7 @@ class GeneratedDocument < ApplicationRecord
     # Context is dependant on file requested to be created.
     # But some things are common
     context = {
-      minister_gender: 'Madame', # Where does this come from?
+      minister_gender: minister_gender_salutation(),
       request_date: I18n.l(Date.today, format: :letter),
       researcher_name: person.formal_name,
       researcher_name_short: person.formal_name_short,

@@ -2,7 +2,41 @@ require 'test_helper'
 require 'sablon'
 require 'henkei'
 
-class PersonTest < ActiveSupport::TestCase
+class DocumentTest < ActiveSupport::TestCase
+
+  test "Minister Gender format" do
+    Document.all.each { |d| d.delete }
+
+    d = Document.new
+    refute(d.valid?, "needs gender to be valid")
+
+    d.minister_gender = 'M'
+    assert(d.valid?, "valid now")
+
+    d.minister_gender = 'F'
+    assert(d.valid?, "valid now")
+
+    d.minister_gender = 'X'
+    refute(d.valid?, "X is not valid")
+
+    d.minister_gender = 'Male'
+    refute(d.valid?, "Male is not valid")
+  end
+
+  test "Minister Gender" do
+    Document.all.each { |d| d.delete }
+
+    d = Document.new
+    d.minister_gender = 'M'
+    assert(d.save, "saved correctly")
+
+    assert_equal('Monsieur', Document.minister_gender_salutation, "salutation correct for male")
+
+    d.minister_gender = 'F'
+    assert(d.save, "saved correctly")
+
+    assert_equal('Madame', Document.minister_gender_salutation, "salutation correct for female")
+  end
 
   test "First Request Can be Generated" do
     on_date(Date.new(2018,1,2)) do
@@ -34,7 +68,7 @@ class PersonTest < ActiveSupport::TestCase
         tmp_locale = I18n.locale
         I18n.locale = "en"
 
-        file_path = GeneratedDocument.first_request(person1, tmpfile)
+        file_path = Document.first_request(person1, tmpfile)
         assert(file_path, "file path after generate should exist")
 
         doc = File.read file_path
@@ -79,14 +113,14 @@ class PersonTest < ActiveSupport::TestCase
 
     error = assert_raise(StandardError) do
       begin
-        file_path = GeneratedDocument.renew_permit(newguy, tmpfile)
+        file_path = Document.renew_permit(newguy, tmpfile)
       ensure
         tmpfile.close
         tmpfile.unlink
       end
     end
 
-    assert_equal(GeneratedDocument::RENEWAL_ERROR, error.message)
+    assert_equal(Document::RENEWAL_ERROR, error.message)
   end
 
   test "Renewal Doc Can be Generated" do
@@ -113,7 +147,7 @@ class PersonTest < ActiveSupport::TestCase
         tmp_locale = I18n.locale
         I18n.locale = "fr"
 
-        file_path = GeneratedDocument.renew_permit(researcher, tmpfile)
+        file_path = Document.renew_permit(researcher, tmpfile)
         assert(file_path, "file path after generate should exist")
 
         doc = File.read file_path

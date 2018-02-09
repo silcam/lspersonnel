@@ -56,3 +56,11 @@ data["departments"].each do |k,v|
 
   d.save
 end
+
+# Delete all
+Document.all.each { |d| d.delete }
+
+doc = Document.new
+doc.minister_gender = "F"
+doc.save
+puts doc.inspect

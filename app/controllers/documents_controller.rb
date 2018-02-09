@@ -4,12 +4,26 @@ class DocumentsController < ApplicationController
     @person = Person.find(params[:person_id])
   end
 
+  def edit
+    @document = Document.find(params[:id])
+  end
+
+  def update
+    @document = Document.find(params[:id])
+
+    if @document.update document_params
+      redirect_to edit_document_url(@document), alert: 'Saved.'
+    else
+      render 'edit', alert: 'Error.'
+    end
+  end
+
   def first_request
     @person = Person.find(params[:person_id])
 
     tmpfile = Tempfile.new('gen-doc')
     begin
-      file_path = GeneratedDocument.first_request(@person, tmpfile)
+      file_path = Document.first_request(@person, tmpfile)
 
       doc = File.read file_path
       # this MIME type could be longer...
@@ -28,7 +42,7 @@ class DocumentsController < ApplicationController
 
     tmpfile = Tempfile.new('gen-doc')
     begin
-      file_path = GeneratedDocument.renew_permit(@person, tmpfile)
+      file_path = Document.renew_permit(@person, tmpfile)
 
       doc = File.read file_path
       # this MIME type could be longer...
@@ -45,5 +59,13 @@ class DocumentsController < ApplicationController
   end
 
   private
+
+  def document_params
+    permitted = [
+      :minister_gender
+    ]
+    params.require(:document).permit(permitted)
+
+  end
 
 end

@@ -1,0 +1,20 @@
+
+<% if alert %>
+  <p><%= alert %></p>
+<% end %>
+
+<div class="page-header">
+  <h3><%= t(:Edit_document_metadata) %></h3>
+</div>
+
+<%= form_for @document do |form| %>
+<div class="form-group">
+  <%= t(:MINREST_Minister_is) %>: <%= select(:document, :minister_gender, [[I18n.t(:Male),'M'], [I18n.t(:Female),'F']], {}, { class: 'form-control'}) %>
+</div>
+
+<div class="form-group">
+  <%= form.submit t(:Submit), class: 'btn btn-primary' %>
+</div>
+
+
+<% end %>

@@ -6,6 +6,9 @@ fr:
   # General
   None_yet: Pas encore
   Submitted: Soumis le
+  Write_in_french: Rédigez en français SVP
+  Male: Mâle
+  Female: Femelle
 
   # Dashboard
   Dashboard: Tableau de bord
@@ -90,3 +93,8 @@ fr:
 
   # Language Involvement
   Language_involvement: Implication des langues
+
+  # Documents
+  Document_metadata: Métadonnées des documents
+  Edit_document_metadata: Modifier les métadonnées des documents
+  MINREST_Minister_is: Le Ministre de MINREST est

@@ -30,6 +30,7 @@
             <li><%= link_to t(:Directors), directors_path() %></li>
             <li><%= link_to t(:Titles), titles_path() %></li>
             <li><%= link_to t(:Nationalities), nationalities_path() %></li>
+            <li><%= link_to t(:Document_metadata), edit_document_path(Document.all.take) %></li>
           </ul>
         </li>
       </ul>

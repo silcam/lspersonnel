@@ -6,6 +6,9 @@ en:
   # General
   None_yet: Not yet
   Submitted: Submitted
+  Write_in_french: Please enter in French
+  Male: Male
+  Female: Female
 
   # Dashboard
   Dashboard: Dashboard
@@ -90,3 +93,8 @@ en:
 
   # Language Involvement
   Language_involvement: Language Involvement
+
+  # Documents
+  Document_metadata: Document Metadata
+  Edit_document_metadata: Edit Document Metadata
+  MINREST_Minister_is: The MINREST Minister is

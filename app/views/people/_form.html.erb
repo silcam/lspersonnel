@@ -43,13 +43,12 @@
   <div class="form-group">
       <%= form.label t(:Future_activities) %>
       <%= form.text_field :future_activities, class: 'form-control' %>
-      <span class="help-block">Please enter in french.</span>
+      <span class="help-block"><%= t(:Write_in_french) %></span>
   </div>
   <div class="form-group">
       <%= form.label t(:Request_period) %>
       <%= form.text_field :request_period, class: 'form-control' %>
-      <span class="help-block">Please enter in french.</span>
+      <span class="help-block"><%= t(:Write_in_french) %></span>
   </div>
-
 
   <%= submit_tag t(:Submit), { class: 'btn btn-primary' } %>
