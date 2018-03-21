@@ -46,6 +46,9 @@ gem 'sablon', '~> 0.1.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# declare I want fixed version
+gem 'loofah', '~> 2.2.1'
+
 # CMB Gems.
 # Base translations
 gem 'cmb-base-translations', :git => 'https://github.com/silcam/cmb-base-translations.git'
