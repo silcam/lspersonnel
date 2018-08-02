@@ -46,9 +46,9 @@ gem 'sablon', '~> 0.1.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# declare I want fixed version
+# bump these gems' versions due to CVEs
 gem 'loofah', '~> 2.2.1'
-# bump version due to CVE
+gem 'rails-html-sanitizer', '~> 1.0.4'
 gem 'sprockets', '~> 3.7.2'
 
 # CMB Gems.
