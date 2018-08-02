@@ -17,7 +17,7 @@ class Person < ApplicationRecord
   validates :gender, format: { with: /\A[M|F]{1}\z/ }
 
   def next_leave_start_date
-    leaves.where("start_date > now()").order("start_date").first&.start_date
+    leaves.where("start_date > ?", Date.today).order("start_date").first&.start_date
   end
 
   def next_permit_expiration

@@ -48,6 +48,8 @@ gem 'sablon', '~> 0.1.1'
 
 # declare I want fixed version
 gem 'loofah', '~> 2.2.1'
+# bump version due to CVE
+gem 'sprockets', '~> 3.7.2'
 
 # CMB Gems.
 # Base translations
