@@ -50,6 +50,7 @@ gem 'sablon', '~> 0.1.1'
 gem 'loofah', '~> 2.2.1'
 gem 'rails-html-sanitizer', '~> 1.0.4'
 gem 'sprockets', '~> 3.7.2'
+gem 'rubyzip', '~> 1.2.2'
 
 # CMB Gems.
 # Base translations
